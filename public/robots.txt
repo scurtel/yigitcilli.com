@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yigitcilli.com/sitemap.xml
+Sitemap: https://yigitcilli.com/sitemap_index.xml

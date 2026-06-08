@@ -1,0 +1,64 @@
+---
+import SectionCard from './SectionCard.astro';
+import { referanslarOverviewCard } from '@/data/home';
+import { sections } from '@/data/sections';
+
+const overviewSections = [
+  sections[0],
+  sections[1],
+  sections[2],
+  referanslarOverviewCard,
+  sections[3],
+  sections[4],
+];
+---
+
+<section id="alanlar" class="section home-overview" aria-labelledby="home-overview-title">
+  <div class="container">
+    <header class="section__header" data-reveal>
+      <p class="section__eyebrow">Çalışma alanları</p>
+      <h2 id="home-overview-title" class="section__title">Ne üzerinde çalışıyorum?</h2>
+      <p class="section__description">
+        Yazılım, ürün geliştirme, tercüme ve stoacı düşünce — her alan için ayrıntılı sayfalar.
+      </p>
+    </header>
+
+    <ul class="home-overview__grid" role="list">
+      {
+        overviewSections.map((section) => (
+          <li>
+            <SectionCard {...section} />
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .home-overview {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .home-overview__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  @media (min-width: 640px) {
+    .home-overview__grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-grid);
+    }
+  }
+
+  @media (min-width: 1100px) {
+    .home-overview__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-grid-lg);
+    }
+  }
+</style>

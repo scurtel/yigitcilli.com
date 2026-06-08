@@ -1,0 +1,438 @@
+---
+import { site } from '@/config/site';
+import ImagePlaceholder from './ImagePlaceholder.astro';
+
+const heroAlt =
+  'Yiğit Cilli — yazılım, dijital ürünler, tercüme ve stoacı düşünce';
+---
+
+<section class="hero hero--sequence" data-hero-opening data-hero aria-label="Açılış">
+  <script is:inline>
+    (function () {
+      var el = document.currentScript && document.currentScript.parentElement;
+      if (!el) return;
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        el.dataset.opening = 'skip';
+        document.body.classList.add('hero-opening-ready');
+        return;
+      }
+      var short = document.documentElement.classList.contains('hero-opening-short');
+      el.dataset.opening = short ? 'short' : 'full';
+    })();
+  </script>
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__grid hero__seq"></div>
+    <div class="hero__glow hero__glow--a hero__seq hero__seq--glow"></div>
+    <div class="hero__glow hero__glow--b hero__seq hero__seq--glow"></div>
+    <div class="hero__spotlight hero__seq hero__seq--spotlight" data-hero-spotlight></div>
+  </div>
+
+  <div class="container hero__content">
+    <p class="hero__eyebrow hero__seq hero__seq--eyebrow">{site.hero.eyebrow}</p>
+    <h1 class="hero__title hero__seq hero__seq--title">{site.name}</h1>
+    <p class="hero__subtitle hero__seq hero__seq--subtitle">{site.hero.subtitle}</p>
+    <p class="hero__slogan hero__seq hero__seq--slogan">{site.slogan}</p>
+    <div class="hero__actions hero__seq hero__seq--actions">
+      <a href="#alanlar" class="hero__cta hero__cta--primary">{site.hero.ctaPrimary}</a>
+      <a href="/iletisim" class="hero__cta hero__cta--ghost">{site.hero.ctaSecondary}</a>
+    </div>
+  </div>
+
+  <div class="hero__visual container hero__seq hero__seq--visual">
+    <ImagePlaceholder
+      src="/images/hero.webp"
+      alt={heroAlt}
+      variant="hero"
+      loading="eager"
+      fetchPriority="high"
+      width={1280}
+      height={960}
+    />
+  </div>
+</section>
+
+<script src="@/scripts/hero-opening.ts"></script>
+<script src="@/scripts/hero-spotlight.ts"></script>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100dvh;
+    display: grid;
+    align-content: center;
+    padding-top: calc(var(--header-height) + var(--space-xl));
+    padding-bottom: var(--space-2xl);
+    overflow: hidden;
+  }
+
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 82% 72% at 50% 42%, black 22%, transparent 76%);
+    opacity: 0.9;
+  }
+
+  .hero__glow {
+    position: absolute;
+    width: min(55vw, 28rem);
+    height: min(55vw, 28rem);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0;
+    will-change: transform, opacity;
+  }
+
+  .hero__glow--a {
+    top: 10%;
+    left: 15%;
+    background: radial-gradient(circle, var(--color-glow) 0%, transparent 70%);
+  }
+
+  .hero__glow--b {
+    bottom: 5%;
+    right: 10%;
+    background: radial-gradient(circle, var(--color-glow-warm) 0%, transparent 70%);
+  }
+
+  .hero--sequence-complete .hero__glow--a {
+    animation: glow-drift-a 18s var(--ease-out) infinite alternate;
+  }
+
+  .hero--sequence-complete .hero__glow--b {
+    animation: glow-drift-b 22s var(--ease-out) infinite alternate;
+  }
+
+  .hero__spotlight {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at var(--spot-x, 50%) var(--spot-y, 40%),
+      rgba(255, 255, 255, 0.06) 0%,
+      transparent 42%
+    );
+    opacity: 0;
+    transition: opacity var(--duration-base) var(--ease-out);
+  }
+
+  .hero--sequence-complete .hero__spotlight {
+    opacity: 0.9;
+  }
+
+  .hero__content {
+    position: relative;
+    z-index: 1;
+    max-width: 42rem;
+    padding-block: var(--space-lg);
+  }
+
+  .hero__eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+    margin: 0 0 var(--space-md);
+  }
+
+  .hero__title {
+    font-size: clamp(2.75rem, 8vw, 4.5rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+    color: var(--color-text);
+    margin: 0 0 var(--space-md);
+  }
+
+  .hero__subtitle {
+    font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-sm);
+    max-width: 38ch;
+  }
+
+  .hero__slogan {
+    font-size: 0.9rem;
+    letter-spacing: 0.04em;
+    color: var(--color-text-faint);
+    margin: 0 0 var(--space-xl);
+    max-width: 34ch;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+  }
+
+  .hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1.2rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition:
+      background var(--duration-fast) var(--ease-out),
+      border-color var(--duration-fast) var(--ease-out),
+      color var(--duration-fast) var(--ease-out);
+  }
+
+  .hero__cta--primary {
+    background: var(--color-navy);
+    border: 1px solid var(--color-border-strong);
+    color: var(--color-text);
+  }
+
+  .hero__cta--primary:hover {
+    background: var(--color-surface-hover);
+  }
+
+  .hero__cta--ghost {
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+  }
+
+  .hero__cta--ghost:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+  }
+
+  .hero__visual {
+    position: relative;
+    z-index: 1;
+    margin-top: var(--space-lg);
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  @keyframes glow-drift-a {
+    from {
+      transform: translate(0, 0) scale(1);
+    }
+    to {
+      transform: translate(8%, 12%) scale(1.08);
+    }
+  }
+
+  @keyframes glow-drift-b {
+    from {
+      transform: translate(0, 0) scale(1);
+    }
+    to {
+      transform: translate(-10%, -8%) scale(1.05);
+    }
+  }
+
+  @keyframes hero-grid-reveal {
+    from {
+      opacity: 0;
+      clip-path: circle(0% at 50% 42%);
+    }
+    to {
+      opacity: 0.9;
+      clip-path: circle(78% at 50% 42%);
+    }
+  }
+
+  @keyframes hero-glow-in {
+    from {
+      opacity: 0;
+      transform: scale(0.82);
+    }
+    to {
+      opacity: 0.38;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes hero-rise {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes hero-image-in {
+    from {
+      opacity: 0;
+      transform: translateY(16px) scale(0.97);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Açılış sekansı — tam (~2s) */
+  @media (prefers-reduced-motion: no-preference) {
+    .hero--sequence:not(.hero--sequence-complete) .hero__seq {
+      opacity: 0;
+    }
+
+    .hero--sequence:not([data-opening='skip']) .hero__grid {
+      animation: hero-grid-reveal 0.55s var(--ease-out) forwards;
+    }
+
+    .hero--sequence[data-opening='full'] .hero__seq--glow {
+      animation: hero-glow-in 0.6s var(--ease-out) 0.32s forwards;
+    }
+
+    .hero--sequence[data-opening='full'] .hero__seq--eyebrow {
+      animation: hero-rise 0.45s var(--ease-out) 0.58s forwards;
+    }
+
+    .hero--sequence[data-opening='full'] .hero__seq--title {
+      animation: hero-rise 0.5s var(--ease-out) 0.72s forwards;
+    }
+
+    .hero--sequence[data-opening='full'] .hero__seq--subtitle {
+      animation: hero-rise 0.45s var(--ease-out) 0.9s forwards;
+    }
+
+    .hero--sequence[data-opening='full'] .hero__seq--slogan {
+      animation: hero-rise 0.45s var(--ease-out) 1.02s forwards;
+    }
+
+    .hero--sequence[data-opening='full'] .hero__seq--actions {
+      animation: hero-rise 0.45s var(--ease-out) 1.14s forwards;
+    }
+
+    .hero--sequence[data-opening='full'] .hero__seq--visual {
+      animation: hero-image-in 0.65s var(--ease-out) 1.28s forwards;
+    }
+
+    .hero--sequence[data-opening='full'] .hero__seq--spotlight {
+      animation: hero-rise 0.5s var(--ease-out) 1.05s forwards;
+    }
+
+    /* Kısaltılmış — aynı oturumda tekrar ziyaret */
+    .hero--sequence[data-opening='short'] .hero__grid {
+      animation: hero-grid-reveal 0.28s var(--ease-out) forwards;
+    }
+
+    .hero--sequence[data-opening='short'] .hero__seq--glow {
+      animation: hero-glow-in 0.32s var(--ease-out) 0.04s forwards;
+    }
+
+    .hero--sequence[data-opening='short'] .hero__seq--eyebrow {
+      animation: hero-rise 0.3s var(--ease-out) 0.1s forwards;
+    }
+
+    .hero--sequence[data-opening='short'] .hero__seq--title {
+      animation: hero-rise 0.32s var(--ease-out) 0.16s forwards;
+    }
+
+    .hero--sequence[data-opening='short'] .hero__seq--subtitle {
+      animation: hero-rise 0.3s var(--ease-out) 0.24s forwards;
+    }
+
+    .hero--sequence[data-opening='short'] .hero__seq--slogan {
+      animation: hero-rise 0.3s var(--ease-out) 0.3s forwards;
+    }
+
+    .hero--sequence[data-opening='short'] .hero__seq--actions {
+      animation: hero-rise 0.3s var(--ease-out) 0.36s forwards;
+    }
+
+    .hero--sequence[data-opening='short'] .hero__seq--visual {
+      animation: hero-image-in 0.38s var(--ease-out) 0.42s forwards;
+    }
+
+    .hero--sequence[data-opening='short'] .hero__seq--spotlight {
+      animation: hero-rise 0.35s var(--ease-out) 0.32s forwards;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .hero {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      column-gap: var(--space-xl);
+    }
+
+    .hero__visual {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      min-height: auto;
+      padding-top: calc(var(--header-height) + var(--space-lg));
+      padding-bottom: var(--space-lg);
+    }
+
+    .hero__glow {
+      filter: blur(60px);
+    }
+
+    .hero--sequence-complete .hero__glow {
+      opacity: 0.35;
+    }
+
+    .hero__grid {
+      background-size: 32px 32px;
+    }
+
+    .hero__visual {
+      max-width: min(100%, 22rem);
+      margin-inline: auto;
+    }
+
+    .hero__visual :global(.media-card--hero .media-card__frame) {
+      max-height: 50vh;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+      .hero--sequence[data-opening='full'] .hero__seq--title {
+        animation-delay: 0.64s;
+      }
+
+      .hero--sequence[data-opening='full'] .hero__seq--visual {
+        animation-delay: 1.12s;
+      }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero--sequence-complete .hero__glow--a,
+    .hero--sequence-complete .hero__glow--b {
+      animation: none;
+    }
+
+    .hero--sequence[data-opening='skip'] .hero__seq,
+    .hero--sequence[data-opening='skip'] .hero__grid,
+    .hero--sequence-complete .hero__seq,
+    .hero--sequence-complete .hero__grid {
+      animation: none !important;
+      opacity: 1;
+      transform: none;
+      clip-path: none;
+    }
+
+    .hero--sequence[data-opening='skip'] .hero__glow,
+    .hero--sequence-complete .hero__glow {
+      opacity: 0.35;
+    }
+
+    .hero--sequence[data-opening='skip'] .hero__spotlight,
+    .hero--sequence-complete .hero__spotlight {
+      opacity: 0.9;
+    }
+  }
+</style>

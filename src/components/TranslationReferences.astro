@@ -1,0 +1,411 @@
+---
+import { translationReferenceRows } from '@/data/references';
+
+interface Props {
+  embedded?: boolean;
+  /** Ayrı /referanslar sayfası */
+  page?: boolean;
+  /** Sayfa içinde hero’dan hemen sonra (üstte) gösterilirken */
+  leading?: boolean;
+  /** Scroll-reveal beklemeden hemen göster */
+  visibleOnLoad?: boolean;
+}
+
+const { embedded = false, page = false, leading = false, visibleOnLoad = false } = Astro.props;
+const isStandalonePage = page && !embedded;
+---
+
+<section
+  id={isStandalonePage ? 'referanslar' : 'tercume-referanslar'}
+  class:list={[
+    'translation-refs',
+    'section',
+    !isStandalonePage && 'section--tight',
+    embedded && 'translation-refs--embedded',
+    isStandalonePage && 'translation-refs--page',
+    leading && 'translation-refs--leading',
+  ]}
+  aria-label={isStandalonePage ? 'Referans kurumları listesi' : undefined}
+  aria-labelledby={isStandalonePage ? undefined : 'translation-refs-title'}
+>
+  <div class="container">
+    <div
+      class:list={['translation-refs__panel', visibleOnLoad && 'is-visible']}
+      {...(!visibleOnLoad && { 'data-reveal': true })}
+    >
+      <header class="translation-refs__header">
+        {
+          !isStandalonePage && (
+            <>
+              <p class="translation-refs__eyebrow">Tercüme</p>
+              <h2 id="translation-refs-title" class="translation-refs__title">Referanslarımız</h2>
+            </>
+          )
+        }
+        <p class="translation-refs__note">
+          {
+            isStandalonePage
+              ? 'Aşağıda listelenen kurumlarla resmi, kurumsal ve teknik metinlerde uzun süreli çalışma yürütülmüştür.'
+              : 'Resmi, kurumsal ve teknik metinlerde uzun süreli iş birliği yapılan kurumlar — kamu, sanayi, akademi ve sivil toplum alanında.'
+          }
+        </p>
+      </header>
+
+      <div class="translation-refs__rows">
+        {
+          translationReferenceRows.map((row, rowIndex) => (
+            <>
+              {rowIndex > 0 && <div class="translation-refs__row-divider" aria-hidden="true" />}
+              <ul class="translation-refs__bar" role="list">
+                {
+                  row.references.map((ref, index) => (
+                    <li
+                      class:list={[
+                        'translation-refs__item',
+                        index > 0 && 'translation-refs__item--sep',
+                      ]}
+                      style={`--item-delay: ${rowIndex * 240 + index * 60}ms`}
+                    >
+                      <figure class="translation-refs__figure">
+                        <div
+                          class:list={[
+                            'translation-refs__logo',
+                            ref.lightBackdrop && 'translation-refs__logo--light',
+                          ]}
+                        >
+                          <img
+                            src={ref.logo}
+                            alt={ref.logoAlt}
+                            width={140}
+                            height={48}
+                            loading="lazy"
+                            decoding="async"
+                          />
+                        </div>
+                        <figcaption class="translation-refs__caption">
+                          <span class="translation-refs__name">{ref.name}</span>
+                          <span class="translation-refs__tag">{ref.tagline}</span>
+                        </figcaption>
+                      </figure>
+                    </li>
+                  ))
+                }
+              </ul>
+            </>
+          ))
+        }
+      </div>
+
+      {
+        isStandalonePage && (
+          <div class="translation-refs__actions">
+            <a href="/tercume" class="translation-refs__action translation-refs__action--ghost">
+              Tercüme alanı
+            </a>
+            <a href="/iletisim" class="translation-refs__action translation-refs__action--primary">
+              Tercüme talebi
+            </a>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .translation-refs {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .translation-refs--page {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .translation-refs--page .translation-refs__header {
+    border-bottom: none;
+    margin-bottom: var(--space-md);
+    padding-bottom: 0;
+  }
+
+  .translation-refs--page .translation-refs__note {
+    max-width: 56ch;
+    font-size: 0.9375rem;
+  }
+
+  .translation-refs--embedded {
+    padding-block: var(--space-md);
+  }
+
+  .translation-refs--leading {
+    border-top: none;
+    padding-top: var(--space-md);
+    padding-bottom: var(--space-lg);
+  }
+
+  .translation-refs__panel {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: linear-gradient(
+      165deg,
+      rgba(14, 16, 24, 0.92) 0%,
+      rgba(17, 21, 32, 0.88) 100%
+    );
+    box-shadow: var(--shadow-panel);
+  }
+
+  .translation-refs__header {
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .translation-refs__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+    margin: 0 0 0.35rem;
+  }
+
+  .translation-refs__title {
+    font-size: clamp(1.15rem, 2.5vw, 1.35rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin: 0 0 0.4rem;
+  }
+
+  .translation-refs__note {
+    margin: 0;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    max-width: 48ch;
+  }
+
+  .translation-refs__rows {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .translation-refs__row-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-border-strong) 15%,
+      var(--color-border-strong) 85%,
+      transparent
+    );
+  }
+
+  .translation-refs__bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: center;
+    gap: var(--space-md) var(--space-xl);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .translation-refs__item {
+    position: relative;
+    flex: 1 1 7.5rem;
+    min-width: 6.5rem;
+    max-width: 11rem;
+    animation: refs-item-in 0.5s var(--ease-out) var(--item-delay, 0ms) both;
+  }
+
+  .translation-refs__item--sep::before {
+    content: '';
+    position: absolute;
+    left: calc(var(--space-xl) / -2);
+    top: 12%;
+    width: 1px;
+    height: 76%;
+    background: linear-gradient(
+      180deg,
+      transparent,
+      var(--color-border-strong) 25%,
+      var(--color-border-strong) 75%,
+      transparent
+    );
+  }
+
+  .translation-refs__figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    gap: 0.5rem;
+  }
+
+  .translation-refs__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 3.25rem;
+    padding: 0.25rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    transition:
+      border-color var(--duration-fast) var(--ease-out),
+      transform var(--duration-fast) var(--ease-out);
+  }
+
+  .translation-refs__logo img {
+    display: block;
+    max-width: 100%;
+    max-height: 2.75rem;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(1) opacity(0.72);
+    transition:
+      filter var(--duration-base) var(--ease-out),
+      transform var(--duration-base) var(--ease-out);
+  }
+
+  .translation-refs__logo--light {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    padding: 0.3rem 0.4rem;
+    background: rgba(255, 255, 255, 0.94);
+    border-color: var(--color-border);
+  }
+
+  .translation-refs__logo--light img {
+    filter: grayscale(0.15) opacity(0.88);
+  }
+
+  .translation-refs__caption {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+    text-align: center;
+  }
+
+  .translation-refs__name {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-soft);
+    line-height: 1.3;
+  }
+
+  .translation-refs__tag {
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+  }
+
+  .translation-refs__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--color-border);
+  }
+
+  .translation-refs__action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.55rem 1rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition:
+      background var(--duration-fast) var(--ease-out),
+      border-color var(--duration-fast) var(--ease-out),
+      color var(--duration-fast) var(--ease-out);
+  }
+
+  .translation-refs__action--primary {
+    background: var(--color-navy);
+    border: 1px solid var(--color-border-strong);
+    color: var(--color-text);
+  }
+
+  .translation-refs__action--primary:hover {
+    background: var(--color-surface-hover);
+  }
+
+  .translation-refs__action--ghost {
+    border: 1px solid var(--color-border);
+    color: var(--color-text-muted);
+  }
+
+  .translation-refs__action--ghost:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+  }
+
+  @keyframes refs-item-in {
+    from {
+      opacity: 0;
+      transform: translateY(6px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (hover: hover) {
+    .translation-refs__figure:hover .translation-refs__logo {
+      border-color: var(--color-border-strong);
+      transform: translateY(-2px);
+    }
+
+    .translation-refs__figure:hover .translation-refs__logo img {
+      filter: grayscale(0) opacity(1);
+    }
+  }
+
+  @media (max-width: 639px) {
+    .translation-refs__panel {
+      padding: var(--space-md);
+    }
+
+    .translation-refs__bar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-md);
+    }
+
+    .translation-refs__item--sep::before {
+      display: none;
+    }
+
+    .translation-refs__item {
+      max-width: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .translation-refs__item {
+      animation: none;
+    }
+
+    .translation-refs__logo img {
+      filter: grayscale(0.25) opacity(0.85);
+    }
+
+    .translation-refs__figure:hover .translation-refs__logo {
+      transform: none;
+    }
+  }
+</style>

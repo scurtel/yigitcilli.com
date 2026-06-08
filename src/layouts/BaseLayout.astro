@@ -1,0 +1,95 @@
+---
+import '@/styles/global.css';
+import { site } from '@/config/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+  ogDescription?: string;
+  canonical?: string;
+  ogImage?: string;
+  noindex?: boolean;
+  preloadHero?: boolean;
+  heroOpening?: boolean;
+}
+
+const {
+  title = site.title,
+  description = site.description,
+  ogDescription,
+  canonical = Astro.url.pathname === '/' ? site.url : new URL(Astro.url.pathname, site.url).href,
+  ogImage = '/images/hero.webp',
+  noindex = false,
+  preloadHero = false,
+  heroOpening = false,
+} = Astro.props;
+
+const resolvedOgDescription = ogDescription ?? site.ogDescription ?? description;
+
+const ogImageUrl = new URL(ogImage, site.url).href;
+---
+
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#05060a" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonical} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={site.name} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={resolvedOgDescription} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={site.locale} />
+    <meta property="og:image" content={ogImageUrl} />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <link rel="icon" type="image/png" href="/images/falcon-logo.png" />
+    <link rel="apple-touch-icon" href="/images/falcon-logo.png" />
+    {
+      heroOpening && (
+        <script is:inline>
+          {`(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  try {
+    if (sessionStorage.getItem('yc-hero-opening-v1') === '1') {
+      document.documentElement.classList.add('hero-opening-short');
+    }
+  } catch (_) {}
+})();`}
+        </script>
+      )
+    }
+    {
+      preloadHero && (
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero.webp"
+          type="image/webp"
+          fetchpriority="high"
+        />
+      )
+    }
+  </head>
+  <body class:list={[heroOpening && 'has-hero-opening']}>
+    <slot />
+    <script src="@/scripts/scroll-reveal.ts"></script>
+  </body>
+</html>

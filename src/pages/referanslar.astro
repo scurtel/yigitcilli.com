@@ -1,0 +1,28 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import TranslationReferences from '@/components/TranslationReferences.astro';
+import { getPage } from '@/data/pages';
+
+const page = getPage('referanslar')!;
+---
+
+<SiteLayout
+  title={page.seo.title}
+  description={page.seo.description}
+  ogDescription={page.seo.ogDescription}
+  ogImage={page.seo.ogImage}
+  breadcrumb={[
+    { label: 'Ana sayfa', href: '/' },
+    { label: page.hero.title },
+  ]}
+>
+  <PageHero
+    eyebrow={page.hero.eyebrow}
+    title={page.hero.title}
+    description={page.hero.description}
+    compactTop
+    visibleOnLoad
+  />
+  <TranslationReferences page leading visibleOnLoad />
+</SiteLayout>

@@ -1,0 +1,49 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import PageHero from '@/components/PageHero.astro';
+import DetailContent from '@/components/DetailContent.astro';
+import DevelopedApps from '@/components/DevelopedApps.astro';
+import { getPage, pageSlugs } from '@/data/pages';
+import { site } from '@/config/site';
+
+export function getStaticPaths() {
+  return pageSlugs
+    .filter((slug) => slug !== 'referanslar')
+    .map((slug) => ({ params: { slug } }));
+}
+
+const { slug } = Astro.params;
+const page = getPage(slug!)!;
+const isContact = slug === 'iletisim';
+const showDevelopedApps = slug === 'aplikasyonlar';
+---
+
+<SiteLayout
+  title={page.seo.title}
+  description={page.seo.description}
+  ogDescription={page.seo.ogDescription}
+  ogImage={page.seo.ogImage}
+  preloadHero={Boolean(page.hero.image)}
+  breadcrumb={[
+    { label: 'Ana sayfa', href: '/' },
+    { label: page.hero.title },
+  ]}
+>
+  <PageHero
+    eyebrow={page.hero.eyebrow}
+    title={page.hero.title}
+    description={page.hero.description}
+    image={page.hero.image}
+    compactTop
+  />
+  <DetailContent
+    blocks={page.blocks}
+    highlights={page.highlights}
+    faq={page.faq}
+    relatedLinks={page.relatedLinks}
+    cta={page.cta}
+    secondaryCta={page.secondaryCta}
+    email={isContact ? site.email : undefined}
+  />
+  {showDevelopedApps && <DevelopedApps />}
+</SiteLayout>

@@ -1,0 +1,121 @@
+---
+import ImagePlaceholder from './ImagePlaceholder.astro';
+
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image?: {
+    src: string;
+    alt: string;
+  };
+  compactTop?: boolean;
+  /** İlk yüklemede görünür (scroll-reveal kapalı) */
+  visibleOnLoad?: boolean;
+}
+
+const { eyebrow, title, description, image, compactTop = false, visibleOnLoad = false } =
+  Astro.props;
+---
+
+<section
+  class:list={['page-hero', 'section', compactTop && 'page-hero--compact']}
+  aria-labelledby="page-hero-title"
+>
+  <div class="page-hero__bg" aria-hidden="true">
+    <div class="page-hero__grid"></div>
+  </div>
+
+  <div class="container page-hero__inner">
+    <div
+      class:list={['page-hero__copy', visibleOnLoad && 'is-visible']}
+      {...(!visibleOnLoad && { 'data-reveal': true })}
+    >
+      <p class="section__eyebrow">{eyebrow}</p>
+      <h1 id="page-hero-title" class="page-hero__title">{title}</h1>
+      <p class="page-hero__description">{description}</p>
+    </div>
+
+    {
+      image && (
+        <div class="page-hero__media" data-reveal>
+          <ImagePlaceholder
+            src={image.src}
+            alt={image.alt}
+            variant="section"
+            loading="eager"
+            fetchPriority="high"
+          />
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .page-hero {
+    position: relative;
+    padding-top: calc(var(--header-height) + var(--space-xl));
+    padding-bottom: var(--space-xl);
+    overflow: hidden;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .page-hero--compact {
+    padding-top: var(--space-lg);
+  }
+
+  .page-hero__bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .page-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(var(--grid-line) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 30%, black 15%, transparent 70%);
+    opacity: 0.7;
+  }
+
+  .page-hero__inner {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: var(--space-grid);
+    align-items: center;
+  }
+
+  .page-hero__title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    color: var(--color-text);
+    margin: 0 0 var(--space-md);
+  }
+
+  .page-hero__description {
+    margin: 0;
+    max-width: 40ch;
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+
+  .page-hero__media {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  @media (min-width: 900px) {
+    .page-hero__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-grid-lg);
+    }
+  }
+</style>

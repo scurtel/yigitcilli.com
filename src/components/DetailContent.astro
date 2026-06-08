@@ -1,0 +1,282 @@
+---
+import type { PageBlock, PageCta, PageFaqItem, PageRelatedLink } from '@/data/pages';
+
+interface Props {
+  blocks: PageBlock[];
+  highlights: string[];
+  faq?: PageFaqItem[];
+  relatedLinks?: PageRelatedLink[];
+  cta?: PageCta;
+  secondaryCta?: PageCta;
+  email?: string;
+}
+
+const { blocks, highlights, faq, relatedLinks, cta, secondaryCta, email } = Astro.props;
+---
+
+<section class="detail-content section">
+  <div class="container">
+    <div class="detail-content__grid" data-reveal>
+      <div class="detail-content__body">
+        {
+          blocks.map((block) => (
+            <div class="detail-content__block">
+              {block.heading && <h2 class="detail-content__heading">{block.heading}</h2>}
+              {block.paragraphs.map((p) => (
+                <p class="detail-content__text">{p}</p>
+              ))}
+            </div>
+          ))
+        }
+        {
+          faq && faq.length > 0 && (
+            <div class="detail-content__block detail-content__faq">
+              <h2 class="detail-content__heading">Sık sorulan sorular</h2>
+              <dl class="detail-content__faq-list">
+                {faq.map((item) => (
+                  <div class="detail-content__faq-item">
+                    <dt>{item.question}</dt>
+                    <dd>{item.answer}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          )
+        }
+        {
+          relatedLinks && relatedLinks.length > 0 && (
+            <nav class="detail-content__related" aria-label="İlgili sayfalar">
+              <h2 class="detail-content__heading">İlgili sayfalar</h2>
+              <ul>
+                {relatedLinks.map((link) => (
+                  <li>
+                    <a href={link.href}>{link.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          )
+        }
+        {
+          email && (
+            <p class="detail-content__email-wrap">
+              <a href={`mailto:${email}`} class="detail-content__email">
+                {email}
+              </a>
+            </p>
+          )
+        }
+        {
+          (cta || secondaryCta) && (
+            <div class="detail-content__ctas">
+              {
+                secondaryCta && (
+                  <a href={secondaryCta.href} class="section__cta detail-content__cta detail-content__cta--secondary">
+                    {secondaryCta.label}
+                  </a>
+                )
+              }
+              {
+                cta && (
+                  <a href={cta.href} class="section__cta detail-content__cta">
+                    {cta.label}
+                  </a>
+                )
+              }
+            </div>
+          )
+        }
+      </div>
+
+      {
+        highlights.length > 0 && (
+          <aside class="detail-content__aside" aria-label="Öne çıkanlar">
+            <h2 class="detail-content__aside-title">Öne çıkanlar</h2>
+            <ul class="section__highlights">
+              {highlights.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </aside>
+        )
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .detail-content {
+    padding-bottom: var(--space-3xl);
+  }
+
+  .detail-content__grid {
+    display: grid;
+    gap: var(--space-grid-lg);
+  }
+
+  .detail-content__block + .detail-content__block {
+    margin-top: var(--space-xl);
+  }
+
+  .detail-content__heading {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text);
+    margin: 0 0 var(--space-sm);
+    letter-spacing: -0.01em;
+  }
+
+  .detail-content__text {
+    margin: 0 0 var(--space-md);
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    max-width: 58ch;
+  }
+
+  .detail-content__text:last-child {
+    margin-bottom: 0;
+  }
+
+  .detail-content__email-wrap {
+    margin: var(--space-lg) 0 0;
+  }
+
+  .detail-content__email {
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border-strong);
+    padding-bottom: 0.25rem;
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .detail-content__email:hover {
+    color: var(--color-accent-soft);
+  }
+
+  .detail-content__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    margin-top: var(--space-lg);
+  }
+
+  .detail-content__cta {
+    margin-top: 0;
+  }
+
+  .detail-content__cta--secondary {
+    color: var(--color-text-muted);
+  }
+
+  .detail-content__aside {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: var(--color-bg-elevated);
+    align-self: start;
+  }
+
+  .detail-content__aside-title {
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+    margin: 0 0 var(--space-md);
+    font-weight: 500;
+  }
+
+  .detail-content__aside .section__highlights {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .detail-content__aside .section__highlights li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .detail-content__aside .section__highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-accent-soft);
+    opacity: 0.85;
+  }
+
+  .detail-content__cta {
+    display: inline-flex;
+    padding: 0.65rem 1.1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-border);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-text-soft);
+    transition:
+      border-color var(--duration-fast) var(--ease-out),
+      color var(--duration-fast) var(--ease-out);
+  }
+
+  .detail-content__cta:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+  }
+
+  .detail-content__faq-list {
+    margin: 0;
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  .detail-content__faq-list dt {
+    font-weight: 600;
+    color: var(--color-text-soft);
+    margin: 0;
+    font-size: 1rem;
+  }
+
+  .detail-content__faq-list dd {
+    margin: 0.35rem 0 0;
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+    line-height: 1.65;
+    max-width: 58ch;
+  }
+
+  .detail-content__related ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+  }
+
+  .detail-content__related a {
+    font-size: 0.9rem;
+    color: var(--color-accent-soft);
+    border-bottom: 1px solid var(--color-border);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .detail-content__related a:hover {
+    color: var(--color-text);
+  }
+
+  @media (min-width: 900px) {
+    .detail-content__grid {
+      grid-template-columns: 1.4fr 1fr;
+      align-items: start;
+    }
+  }
+</style>

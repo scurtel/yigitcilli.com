@@ -1,0 +1,126 @@
+---
+import { nav, site } from '@/config/site';
+---
+
+<footer id="iletisim" class="footer section section--tight" aria-labelledby="iletisim-title">
+  <div class="container">
+    <div class="footer__grid" data-reveal>
+      <div>
+        <p class="section__eyebrow">İletişim</p>
+        <h2 id="iletisim-title" class="section__title">{site.footer.title}</h2>
+        <p class="section__description">{site.footer.description}</p>
+      </div>
+
+      <div class="footer__aside">
+        <nav class="footer__nav" aria-label="Site haritası">
+          <ul class="footer__nav-list" role="list">
+            {
+              nav.map((item) => (
+                <li>
+                  <a href={item.href} class="footer__nav-link">
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+
+        <div class="footer__contact">
+          <a href={`mailto:${site.email}`} class="footer__email">{site.email}</a>
+          <p class="footer__note">© {new Date().getFullYear()} {site.name}. Tüm hakları saklıdır.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer__line" aria-hidden="true"></div>
+  </div>
+</footer>
+
+<style>
+  .footer__grid {
+    display: grid;
+    gap: var(--space-lg);
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .footer__grid {
+      grid-template-columns: 1.15fr 1fr;
+      gap: var(--space-xl);
+    }
+  }
+
+  .footer__aside {
+    display: grid;
+    gap: var(--space-md);
+  }
+
+  @media (min-width: 768px) {
+    .footer__aside {
+      justify-items: end;
+      text-align: right;
+    }
+  }
+
+  .footer__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.75rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  @media (min-width: 768px) {
+    .footer__nav-list {
+      justify-content: flex-end;
+    }
+  }
+
+  .footer__nav-link {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .footer__nav-link:hover {
+    color: var(--color-text);
+  }
+
+  .footer__contact {
+    display: grid;
+    gap: var(--space-sm);
+  }
+
+  .footer__email {
+    font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    color: var(--color-text);
+    border-bottom: 1px solid var(--color-border-strong);
+    padding-bottom: 0.25rem;
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .footer__email:hover {
+    color: var(--color-accent-soft);
+  }
+
+  .footer__note {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-text-faint);
+  }
+
+  .footer__line {
+    margin-top: var(--space-lg);
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--color-border-strong) 20%,
+      var(--color-border-strong) 80%,
+      transparent
+    );
+  }
+</style>

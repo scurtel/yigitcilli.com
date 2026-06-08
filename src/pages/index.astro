@@ -1,0 +1,22 @@
+---
+import SiteLayout from '@/layouts/SiteLayout.astro';
+import Hero from '@/components/Hero.astro';
+import HomeInPageNav from '@/components/HomeInPageNav.astro';
+import HomeOverview from '@/components/HomeOverview.astro';
+import DevelopedApps from '@/components/DevelopedApps.astro';
+import { site } from '@/config/site';
+---
+
+<SiteLayout
+  title={site.title}
+  description={site.description}
+  ogDescription={site.ogDescription}
+  ogImage="/images/hero.webp"
+  preloadHero
+  heroOpening
+>
+  <Hero />
+  <HomeInPageNav />
+  <HomeOverview />
+  <DevelopedApps compact />
+</SiteLayout>

@@ -1,0 +1,267 @@
+---
+import { nav, site } from '@/config/site';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+
+function isActive(href: string) {
+  const normalized = href.replace(/\/$/, '') || '/';
+  return path === normalized;
+}
+---
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="/" class="header__brand">
+      <img
+        src={site.logo.src}
+        alt=""
+        class="header__brand-logo"
+        width={36}
+        height={36}
+        decoding="async"
+      />
+      <span class="header__brand-name">{site.name}</span>
+    </a>
+
+    <nav class="header__nav" aria-label="Ana menü">
+      <ul class="header__list">
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class:list={['header__link', isActive(item.href) && 'header__link--active']}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <button
+      type="button"
+      class="header__toggle"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Menüyü aç"
+    >
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <nav id="mobile-menu" class="header__mobile" aria-label="Mobil menü" hidden>
+    <ul>
+      {
+        nav.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={['header__mobile-link', isActive(item.href) && 'header__mobile-link--active']}
+              aria-current={isActive(item.href) ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.querySelector('.header__toggle');
+  const menu = document.querySelector('#mobile-menu');
+
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    toggle.setAttribute('aria-label', open ? 'Menüyü aç' : 'Menüyü kapat');
+    if (menu) menu.hidden = open;
+  });
+
+  menu?.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      if (menu) menu.hidden = true;
+      toggle?.setAttribute('aria-expanded', 'false');
+      toggle?.setAttribute('aria-label', 'Menüyü aç');
+    });
+  });
+</script>
+
+<style>
+  .header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 100;
+    height: var(--header-height);
+    border-bottom: 1px solid var(--color-border);
+    background: rgba(5, 6, 10, 0.88);
+    backdrop-filter: blur(10px);
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+      opacity 0.45s var(--ease-out),
+      transform 0.45s var(--ease-out);
+  }
+
+  body.has-hero-opening:not(.hero-opening-ready) .header {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+  }
+
+  body.has-hero-opening.hero-opening-ready .header,
+  body.has-hero-opening .header.header--sequence-visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  html.hero-opening-short body.has-hero-opening:not(.hero-opening-ready) .header {
+    transition-duration: 0.28s;
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    gap: var(--space-md);
+  }
+
+  .header__brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--color-text);
+    white-space: nowrap;
+    transition: opacity var(--duration-fast) var(--ease-out);
+  }
+
+  .header__brand:hover {
+    opacity: 0.92;
+  }
+
+  .header__brand-logo {
+    display: block;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+    object-position: 38% center;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 0 20px rgba(61, 95, 138, 0.2);
+  }
+
+  .header__brand-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: -0.02em;
+  }
+
+  .header__nav {
+    display: none;
+  }
+
+  .header__list {
+    display: flex;
+    gap: 0.15rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .header__link {
+    display: block;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-sm);
+    transition:
+      color var(--duration-fast) var(--ease-out),
+      background var(--duration-fast) var(--ease-out);
+  }
+
+  .header__link:hover {
+    color: var(--color-text-soft);
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .header__link--active {
+    color: var(--color-text);
+    background: rgba(61, 95, 138, 0.12);
+    box-shadow: inset 0 -1px 0 var(--color-accent);
+  }
+
+  .header__toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+  }
+
+  .header__toggle span {
+    display: block;
+    height: 1px;
+    background: var(--color-text-soft);
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .header__toggle[aria-expanded='true'] span:first-child {
+    transform: translateY(3.5px) rotate(45deg);
+  }
+
+  .header__toggle[aria-expanded='true'] span:last-child {
+    transform: translateY(-3.5px) rotate(-45deg);
+  }
+
+  .header__mobile {
+    position: absolute;
+    inset: var(--header-height) 0 auto;
+    background: rgba(5, 6, 10, 0.98);
+    border-bottom: 1px solid var(--color-border);
+    padding: var(--space-md) var(--container-padding) var(--space-lg);
+  }
+
+  .header__mobile ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.25rem;
+  }
+
+  .header__mobile-link {
+    display: block;
+    padding: 0.55rem 0.5rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    border-radius: var(--radius-sm);
+  }
+
+  .header__mobile-link--active {
+    color: var(--color-text);
+    background: rgba(61, 95, 138, 0.12);
+  }
+
+  @media (min-width: 900px) {
+    .header__nav {
+      display: block;
+    }
+
+    .header__toggle,
+    .header__mobile {
+      display: none;
+    }
+  }
+</style>

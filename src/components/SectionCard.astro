@@ -1,0 +1,175 @@
+---
+import ImagePlaceholder from './ImagePlaceholder.astro';
+import type { SectionItem } from '@/data/sections';
+
+interface Props extends SectionItem {}
+
+const { id, title, eyebrow, description, homeTeaser, highlights, cta, image } = Astro.props;
+const summary = homeTeaser ?? description;
+---
+
+<article class="section-card" data-reveal aria-labelledby={`${id}-card-title`}>
+  <a href={cta?.href ?? `#${id}`} class="section-card__media-link">
+    <ImagePlaceholder
+      src={image.src}
+      alt={image.alt}
+      variant="card"
+      loading="lazy"
+      fetchPriority="auto"
+    />
+  </a>
+
+  <div class="section-card__body">
+    <p class="section-card__eyebrow">{eyebrow}</p>
+    <h3 id={`${id}-card-title`} class="section-card__title">
+      <a href={cta?.href ?? `#${id}`}>{title}</a>
+    </h3>
+    <p class="section-card__summary">{summary}</p>
+
+    {
+      highlights.length > 0 && (
+        <ul class="section-card__highlights">
+          {highlights.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      )
+    }
+
+    {
+      cta && (
+        <a href={cta.href} class="section-card__cta">
+          {cta.label}
+        </a>
+      )
+    }
+  </div>
+</article>
+
+<style>
+  .section-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: linear-gradient(165deg, var(--color-bg-elevated) 0%, var(--color-surface) 100%);
+    box-shadow: var(--shadow-panel);
+    overflow: hidden;
+    transition:
+      border-color var(--duration-base) var(--ease-out),
+      transform var(--duration-base) var(--ease-out);
+  }
+
+  @media (hover: hover) {
+    .section-card:hover {
+      border-color: var(--color-border-strong);
+      transform: translateY(-2px);
+    }
+  }
+
+  .section-card__media-link {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  .section-card__media-link :global(.media-card__frame) {
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid var(--color-border);
+    box-shadow: none;
+  }
+
+  .section-card__body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: var(--space-lg) var(--space-md);
+    gap: var(--space-sm);
+  }
+
+  .section-card__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+    margin: 0;
+  }
+
+  .section-card__title {
+    font-size: clamp(1.15rem, 2vw, 1.3rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin: 0;
+    line-height: 1.25;
+  }
+
+  .section-card__title a {
+    color: var(--color-text);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .section-card__title a:hover {
+    color: var(--color-accent-soft);
+  }
+
+  .section-card__summary {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.65;
+    color: var(--color-text-muted);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .section-card__highlights {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .section-card__highlights li {
+    position: relative;
+    padding-left: 0.95rem;
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .section-card__highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--color-accent-soft);
+    opacity: 0.85;
+  }
+
+  .section-card__cta {
+    display: inline-flex;
+    margin-top: auto;
+    padding: 0.55rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-text-soft);
+    transition:
+      border-color var(--duration-fast) var(--ease-out),
+      color var(--duration-fast) var(--ease-out);
+  }
+
+  .section-card__cta:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+  }
+</style>

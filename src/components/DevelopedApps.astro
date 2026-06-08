@@ -1,0 +1,265 @@
+---
+import { developedApps } from '@/data/apps';
+
+interface Props {
+  /** Ana sayfada yalnızca öne çıkan uygulama + portföy linki */
+  compact?: boolean;
+}
+
+const { compact = false } = Astro.props;
+const apps = compact ? developedApps.slice(0, 1) : developedApps;
+---
+
+<section
+  id="gelistirdigim-uygulamalar"
+  class:list={['section', 'developed-apps', compact && 'developed-apps--compact section--tight']}
+  aria-labelledby="developed-apps-title"
+>
+  <div class="container">
+    <header class="developed-apps__header" data-reveal>
+      <p class="section__eyebrow">Portföy</p>
+      <h2 id="developed-apps-title" class="section__title">Geliştirdiğim Uygulamalar</h2>
+      <p class="developed-apps__intro section__description">
+        {
+          compact
+            ? 'Üretim sürecinde geliştirdiğim mobil ürünlerden öne çıkanlar.'
+            : 'Üretim sürecinde geliştirdiğim mobil ürünler. Her biri kullanıcı deneyimi, performans ve net bir ürün diliyle tasarlandı.'
+        }
+      </p>
+      {
+        compact && (
+          <a href="/aplikasyonlar" class="developed-apps__all-link">
+            Tüm yazılım çalışmaları
+          </a>
+        )
+      }
+    </header>
+
+    <ul class="developed-apps__grid" role="list">
+      {
+        apps.map((app) => (
+          <li>
+            <article class="app-card" data-reveal aria-labelledby={`app-${app.id}-title`}>
+              <div class="app-card__icon-wrap">
+                <img
+                  src={app.icon}
+                  alt={app.iconAlt}
+                  width={80}
+                  height={80}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+
+              <div class="app-card__body">
+                <div class="app-card__meta">
+                  <span class="app-card__platform">{app.platform}</span>
+                  <ul class="app-card__tags" aria-label="Kategoriler">
+                    {app.categories.map((cat) => (
+                      <li>{cat}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <h3 id={`app-${app.id}-title`} class="app-card__title">
+                  {app.name}
+                </h3>
+                <p class="app-card__tagline">{app.tagline}</p>
+                {
+                  !compact && <p class="app-card__description">{app.description}</p>
+                }
+
+                <a
+                  href={app.storeUrl}
+                  class="app-card__cta"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {app.storeLabel}
+                </a>
+              </div>
+            </article>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<style>
+  .developed-apps {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .developed-apps__header {
+    margin-bottom: var(--space-lg);
+    max-width: 40rem;
+  }
+
+  .developed-apps--compact .developed-apps__header {
+    margin-bottom: var(--space-lg);
+  }
+
+  .developed-apps__intro {
+    max-width: 48ch;
+  }
+
+  .developed-apps__all-link {
+    display: inline-flex;
+    margin-top: var(--space-sm);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: var(--color-accent-soft);
+    transition: color var(--duration-fast) var(--ease-out);
+  }
+
+  .developed-apps__all-link:hover {
+    color: var(--color-text);
+  }
+
+  .developed-apps__grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: var(--space-lg);
+  }
+
+  .app-card {
+    display: grid;
+    gap: var(--space-lg);
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: linear-gradient(165deg, var(--color-bg-elevated) 0%, var(--color-surface) 100%);
+    box-shadow: var(--shadow-panel);
+  }
+
+  .developed-apps--compact .app-card {
+    gap: var(--space-sm);
+    padding: var(--space-md);
+  }
+
+  .app-card__icon-wrap {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .app-card__icon-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .app-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-bottom: 0.35rem;
+  }
+
+  .app-card__platform {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+  }
+
+  .app-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .app-card__tags li {
+    font-size: 0.6875rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .app-card__title {
+    font-size: clamp(1.1rem, 2.5vw, 1.25rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--color-text);
+    margin: 0 0 0.3rem;
+    line-height: 1.25;
+  }
+
+  .app-card__tagline {
+    margin: 0 0 var(--space-sm);
+    font-size: 0.9rem;
+    color: var(--color-text-soft);
+    line-height: 1.5;
+  }
+
+  .developed-apps--compact .app-card__tagline {
+    margin-bottom: var(--space-sm);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .app-card__description {
+    margin: 0 0 var(--space-sm);
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    line-height: 1.65;
+    max-width: 52ch;
+  }
+
+  .app-card__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: auto;
+    padding: 0.55rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border-strong);
+    background: var(--color-navy);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-text);
+    transition:
+      background var(--duration-fast) var(--ease-out),
+      border-color var(--duration-fast) var(--ease-out);
+  }
+
+  .app-card__cta:hover {
+    background: var(--color-surface-hover);
+    border-color: var(--color-accent-soft);
+  }
+
+  @media (min-width: 768px) {
+    .app-card {
+      grid-template-columns: auto 1fr;
+      align-items: start;
+      padding: var(--space-lg);
+    }
+
+    .developed-apps--compact .app-card {
+      padding: var(--space-md) var(--space-lg);
+    }
+
+    .app-card__icon-wrap {
+      width: 4.5rem;
+      height: 4.5rem;
+    }
+  }
+</style>

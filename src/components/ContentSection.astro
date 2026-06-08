@@ -1,0 +1,126 @@
+---
+import ImagePlaceholder from './ImagePlaceholder.astro';
+import type { SectionItem } from '@/data/sections';
+
+interface Props extends SectionItem {}
+
+const { id, title, eyebrow, description, highlights, cta, image, reverse = false } = Astro.props;
+---
+
+<section id={id} class="section content-section" aria-labelledby={`${id}-title`}>
+  <div class="container">
+    <div class:list={['content-section__grid', reverse && 'content-section__grid--reverse']} data-reveal>
+      <div class="content-section__copy">
+        <p class="section__eyebrow">{eyebrow}</p>
+        <h2 id={`${id}-title`} class="section__title">{title}</h2>
+        <p class="section__description">{description}</p>
+        {
+          highlights.length > 0 && (
+            <ul class="section__highlights">
+              {highlights.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          )
+        }
+        {
+          cta && (
+            <a href={cta.href} class="section__cta">
+              {cta.label}
+            </a>
+          )
+        }
+      </div>
+
+      <div class="content-section__media">
+        <ImagePlaceholder
+          src={image.src}
+          alt={image.alt}
+          variant="section"
+          loading="lazy"
+          fetchPriority="auto"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .content-section {
+    border-top: 1px solid var(--color-border);
+  }
+
+  .content-section__grid {
+    display: grid;
+    gap: var(--space-grid-lg);
+    align-items: start;
+  }
+
+  .content-section__media {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .section__highlights {
+    list-style: none;
+    margin: var(--space-sm) 0 0;
+    padding: 0;
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .section__highlights li {
+    position: relative;
+    padding-left: 1.1rem;
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .section__highlights li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--color-accent-soft);
+    opacity: 0.85;
+  }
+
+  .section__cta {
+    display: inline-flex;
+    margin-top: var(--space-sm);
+    padding: 0.55rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+    font-size: 0.8125rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: var(--color-text-soft);
+    transition:
+      border-color var(--duration-fast) var(--ease-out),
+      color var(--duration-fast) var(--ease-out);
+  }
+
+  .section__cta:hover {
+    color: var(--color-text);
+    border-color: var(--color-border-strong);
+  }
+
+  @media (min-width: 900px) {
+    .content-section__grid {
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-grid-lg);
+    }
+
+    .content-section__grid--reverse .content-section__copy {
+      order: 2;
+    }
+
+    .content-section__grid--reverse .content-section__media {
+      order: 1;
+    }
+  }
+</style>
