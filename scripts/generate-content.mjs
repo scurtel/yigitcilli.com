@@ -207,7 +207,7 @@ const siteTs = `export const site = {
   url: 'https://yigitcilli.com',
   locale: 'tr_TR',
   author: 'Yiğit Cilli',
-  email: 'hello@yigitcilli.com',
+  email: 'info@yigitcilli.com',
   hero: {
     eyebrow: ${JSON.stringify(content.hero.eyebrow)},
     subtitle: ${JSON.stringify(content.hero.subtitle)},

@@ -9,7 +9,7 @@ export const site = {
   url: 'https://yigitcilli.com',
   locale: 'tr_TR',
   author: 'Yiğit Cilli',
-  email: 'hello@yigitcilli.com',
+  email: 'info@yigitcilli.com',
   logo: {
     src: '/images/falcon-logo.png',
     alt: 'Yiğit Cilli — falcon marka logosu',
@@ -24,7 +24,7 @@ export const site = {
   footer: {
     title: 'İletişim',
     description:
-      'Bir proje, metin veya iş birliği için yazmanız yeterli. Uygun olduğunda kısa bir dönüş yaparım.',
+      'Bir proje, metin veya iş birliği için info@yigitcilli.com adresine yazmanız yeterli. Uygun olduğunda kısa bir dönüş yaparım.',
   },
 } as const;
 

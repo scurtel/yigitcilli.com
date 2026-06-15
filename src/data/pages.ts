@@ -47,15 +47,15 @@ export const pages: Record<string, PageContent> = {
   yazilim: {
     slug: "yazilim",
     seo: {
-      title: "Yazılım Geliştirme ve Dijital Çözümler | Yiğit Cilli",
-      description: "Web sitesi geliştirme, yapay zekâ destekli yazılım, mobil uygulama ve SEO araçları entegrasyonu ile dijital projelere özel çözümler sunuyorum.",
-      ogDescription: "Yiğit Cilli, web sitesi geliştirme, yapay zekâ destekli yazılım ve mobil uygulama projelerinizde modern ve performans odaklı çözümler sunar.",
+      title: "Yazılım Geliştirme, Web Sitesi ve Uygulama Çözümleri | Yiğit Cilli",
+      description: "Web sitesi geliştirme, yapay zekâ destekli yazılım çözümleri ve mobil uygulama hizmetleri için Yiğit Cilli. Performans odaklı, modern teknolojilerle dijital…",
+      ogDescription: "Dijital ihtiyaçlarınıza özel web sitesi ve mobil uygulama geliştirme hizmetleri. Yapay zekâ entegrasyonu ve SEO uyumlu çözümlerle projelerinize değer katın.",
       ogImage: "/images/software.webp",
     },
     hero: {
-      eyebrow: "Yazılım",
-      title: "Dijital Varlığınız İçin Yazılım Çözümleri",
-      description: "Günümüz dijital dünyasında etkili bir varlık göstermek, doğru yazılım çözümleriyle mümkündür. İşletmenizin veya kişisel markanızın ihtiyaçlarına özel, performans odaklı ve güncel teknolojilerle desteklenmiş yazılımlar geliştiriyorum. Web sitesi projelerinden yapay zekâ destekli uygulamalara kadar geniş bir yelpazede hizmet sunuyorum.",
+      eyebrow: "Yazılım Geliştirme",
+      title: "Dijital Varlığınızı Güçlendiren Yazılım Çözümleri",
+      description: "Günümüz dijital dünyasında rekabetçi kalmak için güçlü ve işlevsel yazılım çözümlerine ihtiyaç duyulmaktadır. İşletmenizin hedeflerine ulaşması için modern teknolojilerle desteklenen, kullanıcı odaklı web sitesi ve mobil uygulama geliştirme hizmetleri sunuyorum. Performans ve mimari prensiplerine sadık kalarak, dijital projelerinizi hayata geçirmenize yardımcı oluyorum.",
       image: {
         src: "/images/software.webp",
         alt: "Yiğit Cilli yazılım ve dijital ürünler",
@@ -63,51 +63,58 @@ export const pages: Record<string, PageContent> = {
     },
     blocks: [
       {
-        heading: "Web Sitesi Geliştirme ve Modern Teknolojiler",
+        heading: "Web Sitesi Geliştirme: Modern ve Performans Odaklı Yaklaşım",
         paragraphs: [
-          "Dijital dünyada markanızın yüzü olan web siteniz, sadece bir bilgi kaynağı değil, aynı zamanda etkileşim ve dönüşüm aracıdır. Kullanıcı dostu arayüzler ve güçlü altyapılarla, işletmenizin hedeflerine ulaşmasını sağlayacak web siteleri geliştiriyorum. WordPress gibi yaygın ve esnek platformlardan, Astro ve Next.js gibi modern, hızlı ve performans odaklı teknolojilere kadar farklı ihtiyaçlara yönelik çözümler sunmaktayım.",
-          "Her projenin kendine özgü dinamikleri olduğunu bilerek, baştan sona düşünülmüş bir mimariyle çalışıyorum. Mobil uyumluluk, hızlı yükleme süreleri ve kolay yönetilebilirlik gibi temel beklentilerin ötesinde, kullanıcı deneyimini merkeze alan tasarımlarla dijital varlığınızı güçlendiriyorum. Böylece ziyaretçilerinizle anlamlı bir bağ kurmanıza yardımcı oluyorum."
+          "Dijital varlığınızın temelini oluşturan web siteleri, sadece birer bilgi kaynağı olmanın ötesinde, kullanıcı deneyimini ve işlevselliği ön planda tutmalıdır. Bu anlayışla, işletmenizin ihtiyaçlarına özel, modern web sitesi geliştirme hizmetleri sunuyorum. İster dinamik bir içerik yönetim sistemi olan WordPress ile hızlı çözümler arayın, ister yüksek performanslı ve statik site jeneratörleri Astro veya Next.js gibi teknolojilerle özelleştirilmiş projeler isteyin, her aşamada yanınızdayım.",
+          "Web sitenizin sadece görsel olarak çekici değil, aynı zamanda arama motorları için optimize edilmiş, hızlı yüklenen ve her cihazda sorunsuz çalışan bir yapıya sahip olması, dijital başarınız için kritik öneme sahiptir. Kullanıcıların kolayca gezinebildiği, güvenlik standartlarına uygun ve geleceğe dönük bir mimariyle tasarlanmış web siteleriyle marka değerinizi artırıyoruz. Performans ve mimari odaklı yaklaşımımızla, sitenizin dijital dünyadaki yerini sağlamlaştırıyoruz."
         ],
       },
       {
-        heading: "Yapay Zekâ Destekli Yazılım Çözümleri",
+        heading: "Yapay Zekâ Entegrasyonu ile Akıllı Çözümler",
         paragraphs: [
-          "Yapay zekâ (YZ) teknolojileri, iş süreçlerini optimize etme ve karar alma mekanizmalarını güçlendirme potansiyeli sunar. İşletmenizin özel ihtiyaçlarına göre tasarlanmış yapay zekâ destekli yazılımlarla, veri analizi, otomasyon ve kişiselleştirilmiş deneyimler gibi alanlarda fark yaratabilirsiniz. Bu çözümler, operasyonel verimliliği artırırken, müşterilerinize daha iyi hizmet sunmanız için yeni kapılar açar.",
-          "Mevcut sistemlerinize yapay zekâ entegrasyonu veya sıfırdan yapay zekâ odaklı yeni uygulamalar geliştirme konusunda destek sağlıyorum. Hedefimiz, işletmenizin potansiyelini maksimize eden, akıllı ve ölçeklenebilir yazılımlarla dijital dönüşüm yolculuğunuzda size eşlik etmektir. Veriye dayalı içgörülerle daha bilinçli adımlar atmanızı kolaylaştırıyorum."
+          "Yapay zekâ (YZ) teknolojileri, günümüz yazılım çözümlerine akıl ve otomasyon katmanın anahtarıdır. İş süreçlerinizi optimize etmek, veri analizi yeteneklerinizi geliştirmek veya müşteri deneyimini kişiselleştirmek amacıyla yapay zekâ destekli yazılım çözümleri geliştiriyorum. Özel ihtiyaçlarınıza göre tasarlanan YZ entegrasyonları ile işletmenizin verimliliğini ve rekabet gücünü artırmayı hedefliyorum.",
+          "Müşteri hizmetleri botlarından, veri tabanlı karar destek sistemlerine, içerik üretim otomasyonlarından, kişiselleştirilmiş öneri motorlarına kadar geniş bir yelpazede yapay zekâ çözümleri sunulmaktadır. Bu akıllı sistemler, sadece iş yükünü azaltmakla kalmaz, aynı zamanda daha doğru ve hızlı kararlar almanıza olanak tanır. Projenizin ölçeği ne olursa olsun, yapay zekânın sunduğu potansiyeli işinize adapte etmenize yardımcı oluyorum."
         ],
       },
       {
-        heading: "Mobil Uygulama Geliştirme ve Performans",
+        heading: "Mobil Uygulama Geliştirme ile Erişimi Genişletin",
         paragraphs: [
-          "Akıllı telefonların yaygınlaşmasıyla birlikte, mobil uygulamalar markaların müşterilerine ulaşmasında kritik bir rol oynamaktadır. Kullanıcı dostu, hızlı ve performanslı mobil uygulamalar geliştirerek, markanızın mobil dünyadaki erişimini ve etkileşimini artırıyorum. İster iOS ister Android platformları için olsun, kullanıcı deneyimini ön planda tutan çözümler sunuyorum. Detaylı bilgi için [Mobil uygulamalar](/aplikasyonlar/) sayfamı ziyaret edebilirsiniz.",
-          "Bir mobil uygulamanın başarısı, sadece işlevselliğiyle değil, aynı zamanda akıcı performansı ve sezgisel arayüzüyle de ölçülür. Projelerimde, uygulamanızın cihazlar arası tutarlı bir deneyim sunmasını ve kullanıcıların beklentilerini karşılamasını sağlıyorum. Böylece, mobil dünyada hedef kitlenizle güçlü ve sürekli bir iletişim kurmanıza yardımcı oluyorum."
+          "Mobil cihazların hayatımızdaki yeri her geçen gün artarken, işletmeler için mobil uygulama geliştirme, hedef kitlelerine ulaşmanın ve onlarla etkileşim kurmanın vazgeçilmez bir yolu haline gelmiştir. Kullanıcı dostu arayüzler ve güçlü arka plan mimarileriyle tasarlanmış mobil uygulamalar, markanızın erişimini genişletirken, müşterilerinize değer katmanızı sağlar. Detaylı bilgi için [Mobil uygulamalar](/aplikasyonlar/) sayfamı ziyaret edebilirsiniz.",
+          "İster iOS ister Android platformları için özel çözümler arayın, ister her iki platformda da çalışacak hibrit uygulamalar geliştirilmesini isteyin, projenizin her aşamasında teknik uzmanlık sunuyorum. Uygulamanızın fikir aşamasından yayınlanmasına kadar tüm süreçleri yöneterek, kullanıcılarınızın beklentilerini karşılayan, sorunsuz ve performanslı bir mobil deneyim sunmayı amaçlıyorum. Odak noktam, uygulamanızın sadece çalışması değil, aynı zamanda kullanıcılar tarafından sevilerek kullanılmasıdır."
         ],
       },
       {
-        heading: "SEO Odaklı Yazılım Mimarisi ve Araçları",
+        heading: "SEO Uyumlu Yazılım ve Özel Araçlar",
         paragraphs: [
-          "Dijital dünyada görünür olmak için sadece iyi bir yazılıma sahip olmak yetmez; arama motorlarında da üst sıralarda yer almak önemlidir. Geliştirdiğim yazılımlarda, temiz kod yapısı, hızlı yükleme süreleri ve semantik HTML gibi teknik SEO prensiplerini baştan itibaren uyguluyorum. Bu yaklaşım, web sitenizin arama motorları tarafından daha kolay taranmasını ve dizine eklenmesini sağlar, böylece organik trafiğinizi artırmanıza yardımcı olur.",
-          "Yazılım projelerinde, içeriğin arama motoru dostu bir şekilde sunulması için gerekli altyapıyı kuruyorum. Anahtar kelime araştırması ve rakip analizi gibi SEO süreçlerini destekleyen araç entegrasyonları ile web sitenizin performansını düzenli olarak izlemenizi sağlıyorum. Böylece dijital varlığınızın sadece estetik değil, aynı zamanda işlevsel ve keşfedilebilir olmasını temin ediyorum."
+          "Dijital görünürlük, günümüz iş dünyasında başarı için temel bir gerekliliktir. Geliştirdiğim yazılım çözümlerinde SEO (Arama Motoru Optimizasyonu) uyumluluğunu en başından itibaren mimariye dahil ediyorum. Bu sayede web siteniz veya uygulamanız, arama motorlarında daha üst sıralarda yer alarak potansiyel müşterilere daha kolay ulaşır. Sadece teknik bir altyapı sunmakla kalmıyor, aynı zamanda içerik ve yapısal SEO stratejilerini de yazılım geliştirme sürecine entegre ediyorum.",
+          "İşletmenizin dijital pazarlama stratejilerini desteklemek amacıyla özel SEO araçları ve entegrasyonları da geliştirebilirim. Anahtar kelime araştırmasından rakip analizine, teknik SEO denetimlerinden performans izlemeye kadar çeşitli ihtiyaçlara yönelik çözümler sunarak, dijital varlığınızın arama motorlarındaki performansını sürekli olarak iyileştirmenize yardımcı oluyorum. Bu bütünsel yaklaşımla, yazılımınızın sadece işlevsel değil, aynı zamanda dijital büyümenizin bir motoru olmasını sağlıyorum."
+        ],
+      },
+      {
+        heading: "Performans ve Mimari: Temelden Güçlü Yapılar",
+        paragraphs: [
+          "Her başarılı yazılım projesinin temelinde sağlam bir mimari ve yüksek performans yatar. Geliştirdiğim tüm yazılım çözümlerinde, projenin en başından itibaren ölçeklenebilirlik, güvenlik ve sürdürülebilirlik prensiplerini göz önünde bulunduruyorum. Bu sayede, yazılımınız sadece bugünün ihtiyaçlarını karşılamakla kalmaz, aynı zamanda gelecekteki büyüme ve değişimlere de kolayca adapte olabilir.",
+          "Performans, kullanıcı deneyimi ve arama motoru sıralamaları için vazgeçilmez bir faktördür. Yazılımın hızlı yüklenmesi, sorunsuz çalışması ve yoğun trafik altında bile stabil kalması, kullanıcı memnuniyetini doğrudan etkiler. Bu nedenle, kod kalitesinden sunucu optimizasyonuna kadar her detayda performansı ön planda tutarak, kullanıcılarınıza kesintisiz ve akıcı bir deneyim sunmayı hedefliyorum. Sağlam mimari ve üstün performans ile dijital varlığınızı güçlendiriyorum."
         ],
       }
     ],
-    highlights: ["Performans Odaklı Yazılım Geliştirme","Yapay Zekâ Entegrasyon Yeteneği","Modern Web ve Mobil Teknolojileri","SEO Uyumlu Mimari ve Kod Yapısı"],
+    highlights: ["Modern Web Teknolojileri (WordPress, Astro, Next.js)","Yapay Zekâ Destekli Akıllı Çözümler","Kullanıcı Odaklı Mobil Uygulama Geliştirme","SEO Uyumlu ve Yüksek Performanslı Yazılım Mimarisi"],
     faq: [
       {
         "question": "Web sitesi geliştirme süreciniz nasıl işliyor?",
-        "answer": "Süreç, ihtiyaç analizi ile başlar, ardından tasarım ve prototipleme aşamasına geçilir. Onayınızın ardından kodlama, testler ve son olarak yayına alma adımları takip eder. Proje boyunca düzenli iletişim ve geri bildirimleriniz esastır."
+        "answer": "Proje süreci genellikle ihtiyaç analizi ile başlar. İşletmenizin hedeflerini, hedef kitlenizi ve beklentilerinizi detaylı olarak anladıktan sonra, bir yol haritası ve teknik spesifikasyonlar oluşturulur. Tasarım ve geliştirme aşamalarının ardından testler yapılır ve son onayınızla birlikte web siteniz yayına alınır. Süreç boyunca şeffaf iletişim ve düzenli güncellemelerle sizi bilgilendiririm."
       },
       {
-        "question": "Yapay zekâ destekli yazılımlar işletmeme nasıl fayda sağlayabilir?",
-        "answer": "Yapay zekâ, iş süreçlerinizi otomatikleştirmenize, veri analizinden değerli içgörüler elde etmenize, müşteri deneyimini kişiselleştirmenize ve operasyonel verimliliği artırmanıza yardımcı olabilir. Bu sayede maliyetleri düşürüp geliri artırma potansiyeli sunar."
+        "question": "Yapay zekâ entegrasyonu ne gibi faydalar sağlar?",
+        "answer": "Yapay zekâ entegrasyonu, iş süreçlerinizde otomasyon, veri analiziyle daha bilinçli karar alma, müşteri deneyimini kişiselleştirme ve operasyonel verimliliği artırma gibi birçok fayda sağlar. Örneğin, sıkça sorulan soruları yanıtlayan bir chatbot ile müşteri hizmetleri yükünüzü azaltabilir veya büyük veri kümelerinden anlamlı içgörüler elde edebilirsiniz."
       },
       {
-        "question": "Mevcut web sitemi güncelleyebilir veya optimize edebilir misiniz?",
-        "answer": "Evet, mevcut web sitenizin performansını artırmak, güncel teknolojilere taşımak veya yeni özellikler eklemek için destek sağlayabilirim. Özellikle hız, güvenlik, mobil uyumluluk ve SEO performansı gibi alanlarda optimizasyon çalışmaları yapıyorum."
+        "question": "Mevcut bir web sitemi modernize edebilir misiniz?",
+        "answer": "Evet, mevcut web sitenizin performansını artırmak, kullanıcı deneyimini iyileştirmek, güvenlik açıklarını kapatmak veya modern teknolojilere geçiş yapmak için modernizasyon hizmetleri sunuyorum. Mevcut yapınızı analiz ederek, ihtiyaçlarınıza uygun güncellemeler ve iyileştirmelerle sitenizi güncel ve rekabetçi hale getirebiliriz."
       },
       {
-        "question": "Mobil uygulama geliştirme hizmetleriniz nelerdir?",
-        "answer": "iOS ve Android platformları için hem native hem de hibrit mobil uygulama geliştirme hizmetleri sunuyorum. Uygulama fikrinizin konseptinden başlayarak, tasarım, geliştirme, test ve yayınlama süreçlerinde size destek oluyorum. Kullanıcı deneyimi ve performans odaklı çözümler üretiyorum."
+        "question": "Proje teslim süreleri ve maliyetler hakkında bilgi alabilir miyim?",
+        "answer": "Her proje kendi özel gereksinimleri ve kapsamı olduğu için teslim süreleri ve maliyetler projeden projeye değişiklik gösterir. Detaylı bir teklif sunabilmem için öncelikle projenizin kapsamını ve beklentilerinizi anlamam gerekir. Bu nedenle, ilk görüşme ve ihtiyaç analizi genellikle ücretsizdir. [İletişim](/iletisim/) sayfamdan bana ulaşarak projeniz hakkında konuşabiliriz."
       }
     ],
     relatedLinks: [
@@ -127,15 +134,15 @@ export const pages: Record<string, PageContent> = {
   aplikasyonlar: {
     slug: "aplikasyonlar",
     seo: {
-      title: "Yapay Zekâ Destekli Mobil Uygulasyon Geliştirme ve CalmerNow AI | Yiğit Cilli",
-      description: "CalmerNow AI ve diğer mobil uygulamalarla yapay zekâ destekli wellness ve odak ürünleri geliştiriyorum. Android, ürün dili ve UX odaklı çözümler için Yiğit…",
-      ogDescription: "Yapay zekâ destekli mobil uygulamalar ve CalmerNow AI projesi üzerine uzmanlaşmış bir geliştirici olarak, kullanıcı odaklı ve yenilikçi çözümler sunuyorum.",
+      title: "CalmerNow AI, Mobil Uygulama ve Yapay Zekâ Çözümleri | Yiğit Cilli",
+      description: "Yapay zekâ destekli CalmerNow AI ve mobil uygulama geliştirme süreçlerinde Android odaklı çözümler. Ürün dili ve kullanıcı deneyimi ile yenilikçi yaklaşımlar.",
+      ogDescription: "Yapay zekâ destekli mobil uygulamalar ve CalmerNow AI ile dijital ürün geliştirme konusunda uzmanlık. Android platformunda kullanıcı odaklı çözümler sunuyorum.",
       ogImage: "/images/apps.webp",
     },
     hero: {
       eyebrow: "Uygulama Geliştirme",
-      title: "Yapay Zekâ Destekli Mobil Uygulama Geliştirme ve CalmerNow AI",
-      description: "Dijital dünyada kullanıcılarla buluşan, yapay zekâ entegrasyonu ile zenginleşen mobil uygulamalar geliştiriyorum. Odak noktası, kullanıcı deneyimi ve işlevselliği bir araya getirmek.",
+      title: "Yapay Zekâ Destekli Uygulama Geliştirme ve CalmerNow AI",
+      description: "Dijital dünyada kullanıcıların ihtiyaçlarına cevap veren mobil uygulamalar geliştirmek, sürekli değişen teknolojiyle birlikte yeni yaklaşımlar gerektiriyor. Yapay zekâ entegrasyonu ve kullanıcı deneyimi odaklı tasarım, bu sürecin temel taşlarını oluşturur. CalmerNow AI gibi projelerle, yenilikçi ve verimli çözümler sunuyorum.",
       image: {
         src: "/images/apps.webp",
         alt: "Yiğit Cilli yazılım ve dijital ürünler",
@@ -143,51 +150,51 @@ export const pages: Record<string, PageContent> = {
     },
     blocks: [
       {
-        heading: "Yapay Zekâ ile Kullanıcı Odaklı Uygulama Geliştirme",
+        heading: "Yapay Zekâ Destekli Uygulama Geliştirme Yaklaşımı",
         paragraphs: [
-          "CalmerNow AI projesinde edindiğim değerli deneyimlerle, yapay zekânın mobil uygulamalara entegrasyonu konusunda kapsamlı bir bilgi birikimi sunuyorum. Bu projede, yapay zekânın kullanıcıların bireysel ihtiyaçlarına özel, kişiselleştirilmiş çözümler sunma potansiyelini yakından gözlemleme fırsatım oldu. Geliştirdiğim uygulamalarda, teknolojinin bu gücünü kullanıcı faydasına dönüştürmeyi hedefliyorum.",
-          "Yapay zekâ destekli wellness ve odak ürünleri, günümüzün hızla değişen dijital yaşamında kullanıcıların yaşam kalitesini artırmayı hedefleyen önemli bir alandır. CalmerNow AI gibi uygulamalar, stres yönetimi, odaklanma becerileri ve genel zihinsel iyilik hali gibi konularda kişiselleştirilmiş deneyimler sunarak kullanıcıların daha bilinçli ve odaklanmış bir yaşam sürmelerine yardımcı oluyor. Bu alandaki yenilikçi yaklaşımları projelerime entegre ediyorum."
+          "Günümüzde mobil uygulamalar, sadece birer araç olmaktan öteye geçerek kullanıcıların günlük yaşamının ayrılmaz bir parçası haline gelmiştir. Bu dönüşümde yapay zekâ (YZ) teknolojileri, uygulamaların kişiselleştirme yeteneklerini, veri işleme kapasitelerini ve kullanıcı etkileşimini önemli ölçüde artırmaktadır. Benim yaklaşımım, YZ'nin sunduğu bu potansiyeli en verimli şekilde kullanarak, kullanıcı odaklı ve yenilikçi mobil çözümler geliştirmektir.",
+          "Yapay zekâ entegrasyonu, uygulamaların kullanıcı davranışlarını anlamasına, öngörülerde bulunmasına ve buna göre dinamik içerik sunmasına olanak tanır. Bu sayede, CalmerNow AI gibi projelerde olduğu gibi, her kullanıcının özel ihtiyaçlarına uygun, kişiselleştirilmiş bir deneyim sunulabilir. Bu süreçte, teknolojinin sunduğu imkanları etik ve kullanıcı mahremiyetine saygılı bir şekilde kullanmaya özen gösteriyorum."
         ],
       },
       {
-        heading: "Android Platformunda Kullanıcı Dostu ve İşlevsel Uygulamalar",
+        heading: "CalmerNow AI: Odak ve Wellness İçin Yapay Zekâ Çözümleri",
         paragraphs: [
-          "Mobil uygulama geliştirme sürecimde, özellikle Android platformunda, kullanıcı deneyimini (UX) en ön planda tutuyorum. Bir uygulamanın başarısı, sadece sağlam bir teknik altyapıya sahip olmasıyla değil, aynı zamanda kullanıcıların onu ne kadar kolay, akıcı ve keyifli bir şekilde kullandığıyla da doğrudan ilişkilidir. Bu nedenle, her detayı kullanıcı odaklı bir bakış açısıyla ele alıyorum.",
-          "Her projenin kendine özgü hedefleri ve kullanıcı kitlesi olduğunu bilerek, geliştirme aşamasında esnek ve adaptif bir yaklaşım sergiliyorum. Uygulamanın ilk fikir aşamasından itibaren, tasarım, kodlama, test ve lansman süreçlerinin her adımında, işlevselliği, performans optimizasyonunu ve kullanıcı memnuniyetini bir arada tutmayı hedefliyorum. Güvenilir ve sürdürülebilir mobil çözümler sunmak temel önceliğimdir."
+          "CalmerNow AI, yapay zekâ destekli wellness ve odak ürünleri geliştirme vizyonumun önemli bir parçasıdır. Bu proje, kullanıcıların zihinsel iyi oluşlarını desteklemek ve odaklanma yeteneklerini artırmak amacıyla tasarlanmıştır. Uygulama, kişiselleştirilmiş rehberlik, meditasyon egzersizleri ve uyku takibi gibi özelliklerle, modern yaşamın getirdiği stresi yönetmeye yardımcı olurken, aynı zamanda kullanıcıların daha bilinçli bir yaşam sürmelerine katkıda bulunur.",
+          "CalmerNow AI'ın geliştirme sürecinde, ürünün kullanıcılarla kurduğu bağı güçlendiren bir 'ürün dili' oluşturmaya özel önem verdim. Bu dil, uygulamanın amacını, değerlerini ve kullanıcıya sunduğu faydaları net bir şekilde ifade ederken, aynı zamanda samimi ve güven veren bir ton taşır. Yapay zekâ algoritmaları, kullanıcı geri bildirimlerini sürekli analiz ederek uygulamanın adaptasyonunu ve gelişimini sağlar, böylece her zaman güncel ve etkili kalır."
         ],
       },
       {
-        heading: "Etkili Ürün Dili ve Kullanıcı Deneyimi (UX) Tasarımı",
+        heading: "Android Odaklı Mobil Uygulama Geliştirme ve Ürün Dili",
         paragraphs: [
-          "Bir mobil uygulamanın sadece kod satırlarından ibaret olmadığını, aynı zamanda kullanıcıyla kurduğu güçlü bir iletişim aracı olduğunu biliyorum. Bu bağlamda, ürün dili ve kullanıcı deneyimi (UX), uygulamanın başarısında kritik bir rol oynar. Açık, tutarlı ve kullanıcı dostu bir ürün dili, kullanıcıların uygulamayı kolayca anlamasına, benimsemesine ve uzun vadede kullanmaya devam etmesine yardımcı olur.",
-          "Kullanıcı arayüzü (UI) tasarımı ve kullanıcı deneyimi (UX) mühendisliği, geliştirme sürecimin ayrılmaz bir parçasıdır. Uygulamanın görsel çekiciliğini ve kullanım kolaylığını sağlamak için modern tasarım prensiplerini uyguluyorum. Gerçek kullanıcı testleri ve sürekli geri bildirimlerle, uygulamanın hedef kitlenin beklentilerini tam olarak karşılamasını ve hatta aşmasını sağlıyorum. Bu konudaki teknik altyapı ve kodlama yaklaşımları hakkında daha fazla bilgiye \"Kod ve mimari\" sayfasından ulaşabilirsiniz."
+          "Mobil uygulama pazarında Android platformu, geniş kullanıcı kitlesi ve esnek geliştirme ortamı ile öne çıkmaktadır. Android mobil uygulama geliştirme süreçlerinde, performans, güvenlik ve ölçeklenebilirlik temel önceliklerimdir. Her projenin kendine özgü ihtiyaçlarını analiz ederek, en uygun teknolojik çözümleri ve mimari yaklaşımları belirlerim. Bu konuda daha fazla bilgi için yazılım hizmetleri sayfamı ziyaret edebilirsiniz.",
+          "Bir uygulamanın başarısında sadece teknik altyapısı değil, aynı zamanda kullanıcıyla kurduğu iletişim de büyük rol oynar. Bu nedenle, 'ürün dili' kavramına özel bir önem atfederim. Uygulamanın metinleri, bildirimleri ve hatta hata mesajları bile markanın kimliğini yansıtmalı, kullanıcıya rehberlik etmeli ve güven vermelidir. Bu bütünsel yaklaşım, kullanıcıların uygulamayla daha derin bir bağ kurmasını sağlar."
         ],
       },
       {
-        heading: "Türkiye Pazarına Özel Uygulama Geliştirme Yaklaşımları",
+        heading: "Kullanıcı Deneyimi (UX) Odaklı Tasarım ve Geliştirme",
         paragraphs: [
-          "Türkiye pazarının kendine özgü dinamiklerini, kullanıcı beklentilerini ve kültürel hassasiyetlerini göz önünde bulundurarak mobil uygulama geliştirme hizmetleri sunuyorum. Yerel kültürel unsurlara ve dil özelliklerine uygun çözümler sunmak, uygulamanın hedef kitlesiyle daha güçlü ve anlamlı bir bağ kurmasını sağlar, bu da uygulamanın benimsenme oranını artırır.",
-          "Geliştirdiğim uygulamalarla, Türkiye'deki işletmelerin ve bireylerin dijital dünyadaki varlıklarını güçlendirmelerine ve dijital dönüşüm süreçlerine etkin bir şekilde katkıda bulunmayı amaçlıyorum. Bu süreçte, uygulamanın keşfedilebilirliğini artırmak amacıyla yerel SEO ve uygulama mağazası optimizasyonu (ASO) stratejilerini de geliştirme sürecine entegre ediyorum."
+          "Bir mobil uygulamanın yalnızca işlevsel olması yeterli değildir; aynı zamanda sezgisel, keyifli ve verimli bir kullanıcı deneyimi (UX) sunması gerekir. Kullanıcı odaklı tasarım prensiplerini benimseyerek, her projenin başlangıcından itibaren kullanıcı ihtiyaçlarını ve beklentilerini merkeze alırım. Araştırma, prototipleme, test ve yineleme süreçleriyle, kullanıcıların uygulamayla olan etkileşimini sürekli iyileştirmeyi hedeflerim.",
+          "CalmerNow AI gibi yapay zekâ destekli uygulamalarda UX tasarımı, özellikle kişiselleştirme ve adaptasyon yeteneklerinin doğru bir şekilde sunulabilmesi açısından kritik öneme sahiptir. Kullanıcıların karmaşık teknolojiyi kolayca anlaması ve kullanması için sade ve anlaşılır arayüzler tasarlarım. Bu sayede, uygulamanın sunduğu değer, kullanıcıya en etkili ve doğal yolla ulaşır."
         ],
       }
     ],
-    highlights: ["Yapay zekâ entegrasyonuyla yenilikçi mobil uygulamalar","Kullanıcı deneyimi (UX) odaklı Android geliştirme","Etkili ürün dili ve kullanıcı arayüzü tasarımı","CalmerNow AI projesiyle edinilen derin deneyim"],
+    highlights: ["Yapay zekâ entegrasyonu ile akıllı çözümler","Android odaklı mobil uygulama geliştirme","Etkili ürün dili ve kullanıcı deneyimi (UX) tasarımı","Wellness ve odak ürünleri konusunda uzmanlık"],
     faq: [
       {
-        "question": "CalmerNow AI projesi neyi hedefliyor?",
-        "answer": "CalmerNow AI, yapay zekâ destekli bir wellness ve odak uygulamasıdır. Kullanıcılara kişiselleştirilmiş rahatlama ve odaklanma deneyimleri sunarak zihinsel iyilik hallerini desteklemeyi amaçlar."
+        "question": "CalmerNow AI projesi neyi amaçlar?",
+        "answer": "CalmerNow AI, yapay zekâ teknolojilerini kullanarak kullanıcıların zihinsel iyi oluşlarını ve odaklanma yeteneklerini geliştirmeye yönelik bir wellness ve odak uygulamasıdır. Kişiselleştirilmiş içerik ve rehberlik sunarak, kullanıcıların stres yönetimi ve bilinçli yaşam becerilerini desteklemeyi hedefler."
       },
       {
-        "question": "Mobil uygulama geliştirme süreciniz nasıl işliyor?",
-        "answer": "Fikir aşamasından başlayarak, detaylı tasarım, titiz geliştirme, kapsamlı test ve başarılı yayınlama süreçlerini kapsayan adımlar izliyorum. Kullanıcı geri bildirimleri ve sürekli iyileştirme, sürecin önemli bir parçasıdır."
+        "question": "Mobil uygulama geliştirme sürecinizde hangi adımları izliyorsunuz?",
+        "answer": "Mobil uygulama geliştirme sürecim, fikir analizi, detaylı planlama, kullanıcı deneyimi (UX) ve arayüz (UI) tasarımı, Android platformuna özel geliştirme, test ve yayınlama aşamalarını içerir. Süreç boyunca şeffaf iletişim ve müşteri geri bildirimlerini entegre etmeye özen gösteririm."
       },
       {
-        "question": "Sadece Android uygulamaları mı geliştiriyorsunuz?",
-        "answer": "Odak noktam Android platformu olsa da, projenin ihtiyaçlarına ve stratejik hedeflerine göre diğer mobil platformlar için de çözüm geliştirme konusunda destek sağlayabilirim."
+        "question": "Yapay zekâ mobil uygulamalara nasıl entegre ediliyor?",
+        "answer": "Yapay zekâ, mobil uygulamalara kişiselleştirilmiş içerik sunumu, kullanıcı davranış analizi, veri tabanlı öneriler, otomasyon ve akıllı etkileşimler gibi çeşitli yollarla entegre edilebilir. Bu entegrasyon, uygulamanın daha akıllı, adaptif ve kullanıcı dostu olmasını sağlar."
       },
       {
-        "question": "Uygulama geliştirirken SEO'ya nasıl yaklaşıyorsunuz?",
-        "answer": "Uygulama mağazası optimizasyonu (ASO) stratejilerini ve uygulamanın keşfedilebilirliğini artıracak yerel SEO prensiplerini geliştirme sürecine entegre ederek uygulamanızın daha geniş kitlelere ulaşmasını hedefliyorum."
+        "question": "Uygulama geliştirirken ürün dilinin önemi nedir?",
+        "answer": "Ürün dili, bir mobil uygulamanın kullanıcıyla kurduğu tüm yazılı ve sözlü iletişimi kapsar. Uygulamanın kişiliğini, değerlerini ve markanın sesini yansıtır. İyi tasarlanmış bir ürün dili, kullanıcıya güven verir, uygulamanın kullanımını kolaylaştırır ve genel kullanıcı deneyimini zenginleştirir."
       }
     ],
     relatedLinks: [
@@ -207,15 +214,15 @@ export const pages: Record<string, PageContent> = {
   tercume: {
     slug: "tercume",
     seo: {
-      title: "Adana Yeminli Tercüman | Noter Onaylı Çeviri Hizmetleri | Yiğit Cilli",
-      description: "Adana'da yeminli tercüman arayışınızda Yiğit Cilli olarak hukuki, akademik ve resmi belge çevirilerinde güvenilir noter onaylı İngilizce tercüme hizmetleri…",
-      ogDescription: "Yiğit Cilli, Adana'da yeminli tercüman olarak hukuki, akademik ve resmi metinleriniz için profesyonel çeviri çözümleri sunar. Noter onaylı tercüme ihtiyaçlarınızda yanınızdayım.",
+      title: "Adana Yeminli Tercüme | İngilizce, Hukuki, Akademik Çeviri – Yiğit Cilli",
+      description: "Adana'da yeminli tercüme, noter onaylı çeviri, İngilizce, hukuki ve akademik tercüme ihtiyaçlarınız için güvenilir çözümler. Yiğit Cilli ile profesyonel hizmet.",
+      ogDescription: "Adana merkezli yeminli tercüman Yiğit Cilli, İngilizce hukuki, akademik ve resmi belge çevirilerinde profesyonel destek sunar.",
       ogImage: "/images/translation.webp",
     },
     hero: {
-      eyebrow: "Yeminli Tercüme",
-      title: "Adana Yeminli Tercüman: Güvenilir ve Noter Onaylı Çeviri Hizmetleri",
-      description: "Adana'da yeminli tercüman olarak, çeşitli dillerdeki metinlerinizin hukuki geçerliliğini sağlamak adına profesyonel hizmetler sunuyorum. Resmi kurumlar, akademik çalışmalar veya kişisel belgeleriniz için noter onaylı tercüme süreçlerinizde yanınızdayım. İhtiyaçlarınıza özel, titiz ve zamanında çeviri çözümleri için benimle iletişime geçebilirsiniz.",
+      eyebrow: "Yeminli Tercüme Hizmetleri",
+      title: "Güvenilir ve Profesyonel Tercüme Çözümleri",
+      description: "Çeviri, kültürel ve dilsel köprüler kurmanın yanı sıra, resmi süreçlerde de kritik bir öneme sahiptir. Yiğit Cilli olarak, Adana'da yeminli tercümanlık yetkinliğimizle, dil bariyerlerini aşarak belgelerinizin doğru ve eksiksiz bir şekilde anlaşılmasını sağlıyoruz. İhtiyaçlarınıza özel, titiz ve güvenilir tercüme hizmetleri sunuyoruz.",
       image: {
         src: "/images/translation.webp",
         alt: "Yiğit Cilli profesyonel tercüme hizmetleri",
@@ -223,51 +230,51 @@ export const pages: Record<string, PageContent> = {
     },
     blocks: [
       {
-        heading: "Yeminli Tercüme Nedir ve Neden Önemlidir?",
+        heading: "Yeminli Tercümenin Önemi ve Kapsamı",
         paragraphs: [
-          "Yeminli tercüme, yeminli tercüman yetkisine sahip bir profesyonel tarafından yapılan ve tercümanın kaşesi ile imzasıyla belgenin orijinaline uygunluğunu tasdik ettiği çeviri türüdür. Bu süreç, özellikle hukuki ve resmi geçerlilik gerektiren belgeler için büyük önem taşır. Bir yeminli tercüman olarak, çevirisi yapılan metnin anlam bütünlüğünü, terminolojisini ve biçimini orijinaline sadık kalarak aktarma sorumluluğunu üstlenirim.",
-          "Resmi kurumlar, mahkemeler veya uluslararası kuruluşlar tarafından talep edilen belgelerde, yeminli tercümanın onayı, çevirinin güvenilirliğini ve doğruluğunu kanıtlar. Bu sayede, belgelerinizin Türkiye içinde veya yurt dışında sorunsuz bir şekilde kabul edilmesi sağlanır. Her bir çeviri projesinde, belgenin niteliğine uygun titiz bir çalışma prensibiyle hareket ederim."
+          "Resmi kurumlar, eğitim ve hukuk alanında sunulan belgelerin geçerliliği için yeminli tercümeye sıklıkla ihtiyaç duyulur. Bu süreç, sadece kelimelerin bir dilden diğerine aktarılması değil, aynı zamanda belgenin hukuki ve kültürel bağlamının korunması anlamına gelir. <a href=\"/adana-yeminli-tercumanin-gorevleri/\">Yeminli tercümanın görevleri</a> arasında, çevirinin doğruluğunu ve resmiyetini temin etmek, kaynak metindeki her detayı hedef dile eksiksiz taşımak yer alır. Bu sayede, uluslararası platformlarda belgelerinizin geçerliliği sağlanır ve yanlış anlaşılmaların önüne geçilir.",
+          "Bir yeminli tercüman olarak, çeviriye konu olan belgenin orijinal anlamını, tonunu ve amacını koruyarak hedef dile aktarılmasını sağlıyorum. Bu, özellikle hassas konularda büyük önem taşır. Uluslararası başvurulardan akademik yayınlara, hukuki metinlerden ticari anlaşmalara kadar geniş bir yelpazedeki belgeleriniz, ilgili kurumlar tarafından sorunsuz bir şekilde kabul edilebilir nitelikte hazırlanır."
         ],
       },
       {
-        heading: "Noter Onaylı Tercüme Süreci",
+        heading: "Adana'da Yeminli ve Noter Onaylı Tercüme Hizmetleri",
         paragraphs: [
-          "Noter onaylı tercüme, yeminli tercüman tarafından çevrilen bir belgenin, noter tarafından tasdik edilmesi işlemidir. Bu onay, çevirinin yeminli tercüman tarafından yapıldığını ve tercümanın imzasının noterde kayıtlı olduğunu doğrular. Adana'da noter onaylı İngilizce tercüme hizmeti arayanlar için, bu süreç, özellikle diploma, transkript, vekaletname, evlilik cüzdanı gibi kritik belgelerin resmiyet kazanması açısından vazgeçilmezdir. Detaylı bilgi için <a href=\"/adanada-noter-onayli-ingilizce-tercume-hizmeti/\">Adana'da Noter Onaylı İngilizce Tercüme Hizmeti</a> sayfamı ziyaret edebilirsiniz.",
-          "Çevirisi yapılan belgenin niteliğine göre noter onayı gerekip gerekmediği değişiklik gösterebilir. Genellikle yurt dışı başvuruları, hukuki süreçler veya resmi kurumlara sunulacak evraklar için noter onayı talep edilir. Sürecin her aşamasında, belgenizin doğru ve eksiksiz bir şekilde hazırlanarak noter onayına sunulması için gerekli desteği sağlarım."
+          "Adana ve çevresinde ikamet eden birey ve kurumların tercüme ihtiyaçlarına yönelik olarak kapsamlı hizmetler sunmaktayım. Özellikle <a href=\"/adana-yeminli-tercuman-yigit-cilli/\">Adana yeminli tercüman</a> arayışında olanlar için, resmiyet gerektiren her türlü belgenin çevirisini titizlikle gerçekleştiriyorum. Doğum belgesi, evlilik cüzdanı, pasaport, diploma gibi kişisel belgelerden ticari sözleşmelere, vekaletnamelere kadar birçok alanda profesyonel destek sağlıyorum. Yerel ihtiyaçlara hakimiyetimle, süreçlerinizi daha verimli yönetmenize yardımcı oluyorum.",
+          "Belgelerinizin resmiyet kazanması için noter onayı da gerekebilir. <a href=\"/adanada-noter-onayli-ingilizce-tercume-hizmeti/\">Noter onaylı İngilizce tercüme</a> başta olmak üzere, farklı dillerdeki belgelerinizin çevirileri tamamlandıktan sonra noter tasdik işlemlerini de sizin adınıza takip ederek süreci kolaylaştırıyorum. Bu sayede, hem zaman tasarrufu sağlıyor hem de belgelerinizin hukuki geçerliliğini güvence altına alıyoruz. Noter onayı gerektiren her adımda yanınızdayım."
         ],
       },
       {
-        heading: "Uzmanlık Alanlarım: Hukuki ve Akademik Tercüme",
+        heading: "İngilizce, Hukuki ve Akademik Tercüme Uzmanlığı",
         paragraphs: [
-          "Hukuki tercüme, özel bir uzmanlık ve terminoloji bilgisi gerektiren hassas bir alandır. Sözleşmeler, mahkeme kararları, kanun metinleri, vekaletnameler ve diğer hukuki belgeler, en küçük bir hata veya yanlış yorumlamaya mahal vermeden çevrilmelidir. Bu alandaki deneyimimle, hukuki metinlerinizin yasal bağlamına uygun, doğru ve anlaşılır bir şekilde çevrilmesini temin ederim.",
-          "Akademik tercüme ise tezler, makaleler, araştırma raporları ve bilimsel yayınlar gibi metinleri kapsar. Bilimsel terminolojinin ve akademik dilin doğru kullanımı, çevirinin kalitesi ve kabul edilebilirliği için hayati öneme sahiptir. İngilizce tercüme konusunda özellikle akademik alanda birçok çalışmaya imza atmış biri olarak, akademik metinlerinizin uluslararası standartlara uygun bir şekilde çevrilmesine özen gösteririm."
+          "Özellikle İngilizce tercüme alanında yoğunlaşan hizmetlerim, geniş bir yelpazeyi kapsar. Hukuki tercüme gerektiren mahkeme kararları, vekaletnameler, sözleşmeler veya akademik tercüme ihtiyacı olan tezler, makaleler, transkriptler ve bilimsel yayınlar gibi özel alanlarda terminolojiye hakimiyet ve sektörel bilgi birikimiyle hareket ediyorum. Bu alanlardaki çeviriler, sadece dil bilgisi değil, aynı zamanda konuya özel derinlemesine uzmanlık ve kültürel bağlam bilgisi gerektirir.",
+          "Resmi belge çevirisi süreçlerinde, belgenin niteliğine uygun formatta ve doğru terminoloji ile çevrilmesi esastır. Gerek vize başvuruları gerekse yurt dışı eğitim veya iş süreçleri için hazırlanan tüm belgelerinizde, uluslararası standartlara uygun, hatasız bir çeviri sunmaktayım. Her bir çeviride, belgenin amacı ve hitap ettiği kurum göz önünde bulundurularak maksimum doğruluk ve uygunluk hedeflenir, böylece belgeleriniz sorunsuz bir şekilde işleme alınır."
         ],
       },
       {
-        heading: "Adana'da Yeminli Tercüman İhtiyaçlarınız İçin",
+        heading: "Kalite Odaklı Yaklaşım ve Süreç Yönetimi",
         paragraphs: [
-          "Adana'da yeminli tercüman arayışınızda, yerel dinamikleri bilen ve ihtiyaçlarınıza hızlı çözümler sunabilen bir profesyonel olarak hizmet veriyorum. Pasaport, kimlik, doğum belgesi gibi kişisel evraklardan şirket ana sözleşmeleri veya ticari anlaşmalara kadar geniş bir yelpazede resmi belge çevirisi yapmaktayım. <a href=\"/adana-yeminli-tercuman-yigit-cilli/\">Adana Yeminli Tercüman Yiğit Cilli</a> olarak, çeviri süreçlerinizi daha etkin ve kişisel bir yaklaşımla yönetme imkanı bulursunuz.",
-          "Yeminli tercümanın görevleri, sadece çeviriyi yapmakla sınırlı değildir; aynı zamanda çevirinin doğruluğunu ve eksiksizliğini garanti altına almaktır. Bu sorumluluk bilinciyle, her projeye özenle yaklaşır ve çevirilerinizi zamanında teslim ederim. <a href=\"/adana-yeminli-tercumanin-gorevleri/\">Yeminli Tercümanın Görevleri</a> hakkında daha fazla bilgi edinebilirsiniz. Çeviri ihtiyaçlarınız için güvenilir bir çözüm ortağı arıyorsanız, benimle iletişime geçmekten çekinmeyin."
+          "Tercüme hizmetlerimizde kalite, her şeyin önündedir. Her proje, detaylı bir ön analiz ile başlar ve belgenin içeriğine, diline ve kullanım amacına göre özelleştirilmiş bir çeviri süreci izlenir. Çeviri tamamlandıktan sonra, dilbilgisi, terminoloji ve biçimsel tutarlılık açısından kapsamlı bir kontrol sürecinden geçirilir. Bu çok aşamalı yaklaşım, teslim edilen her çevirinin beklentileri karşılamasını ve orijinal metnin anlamını tam olarak yansıtmasını sağlar.",
+          "Müşteri memnuniyetini esas alarak, çeviri süreçlerinde şeffaflık ve zamanında teslimat prensibiyle çalışıyorum. İhtiyaçlarınızı anlamak ve size özel çözümler sunmak için her zaman iletişime açığım. Projelerinizde gösterdiğim özen ve profesyonelliği <a href=\"/referanslar/\">Referanslar</a> sayfamızdan önceki çalışmalarımıza göz atarak daha yakından inceleyebilir, hizmet kalitemiz hakkında daha fazla bilgi edinebilirsiniz."
         ],
       }
     ],
-    highlights: ["Profesyonel ve güvenilir yeminli tercüme hizmetleri","Noter onaylı resmi belge çevirileri","Hukuki ve akademik metinlerde uzmanlık","Adana merkezli yerel çeviri çözümleri"],
+    highlights: ["Adana merkezli yeminli tercümanlık hizmetleri","Noter onaylı ve resmi belge çevirisi desteği","İngilizce hukuki ve akademik metin çevirileri","Hızlı, güvenilir ve gizlilik odaklı çözümler"],
     faq: [
       {
-        "question": "Yeminli tercümanlık nedir?",
-        "answer": "Yeminli tercümanlık, noter huzurunda yemin ederek, çevirisi yapılan belgelerin orijinaline sadık ve doğru olduğunu beyan etme yetkisine sahip profesyoneller tarafından sunulan bir hizmettir. Bu yetki, çevirilerin resmi kurumlarda geçerli olmasını sağlar."
+        "question": "Yeminli tercüme nedir ve neden gereklidir?",
+        "answer": "Yeminli tercüme, yeminli tercüman tarafından yapılan ve tercümanın imzası ve mührü ile resmileştirilen çeviridir. Resmi kurumlar, mahkemeler, eğitim kurumları veya vize başvuruları gibi durumlarda, belgenin doğruluğunu ve hukuki geçerliliğini sağlamak amacıyla yeminli tercüme talep edilir."
       },
       {
-        "question": "Noter onaylı tercüme her belge için gerekli midir?",
-        "answer": "Noter onaylı tercüme her zaman zorunlu değildir. Genellikle resmi kurumlar, mahkemeler, eğitim kurumları veya yurt dışı başvurular gibi hukuki geçerlilik gerektiren durumlarda talep edilir. Belgenizin kullanım amacına göre noter onayı gerekip gerekmediği belirlenir."
+        "question": "Noter onayı her çeviri için zorunlu mudur?",
+        "answer": "Her çeviri için noter onayı zorunlu değildir. Noter onayı, belgenin kullanılacağı kurum veya ülkenin talebine göre değişir. Genellikle resmiyetin en üst düzeyde arandığı durumlarda (örneğin yurt dışı eğitim veya iş başvuruları, mahkeme evrakları) noter onayı talep edilebilir. İhtiyaçlarınız doğrultusunda size bilgi verebilirim."
       },
       {
-        "question": "Hangi dillerde yeminli tercüme hizmeti sunuyorsunuz?",
-        "answer": "Başta İngilizce olmak üzere, belirli dillerde yeminli tercüme hizmeti sunmaktayım. Özellikle İngilizce tercüme konusunda hukuki, akademik ve ticari alanlarda yoğun olarak çalışmaktayım. Diğer diller için lütfen iletişime geçerek bilgi alınız."
+        "question": "Tercüme ücretleri neye göre belirlenir?",
+        "answer": "Tercüme ücretleri, çevrilecek metnin karakter sayısı veya kelime sayısı, dil kombinasyonu, konunun uzmanlık seviyesi (hukuki, teknik, akademik vb.) ve teslim süresi gibi faktörlere göre belirlenir. Net bir fiyat teklifi için çevrilecek belgenizi iletmeniz gerekmektedir."
       },
       {
-        "question": "Tercüme ücretleri nasıl belirlenir?",
-        "answer": "Tercüme ücretleri, belgenin dili, karakter veya kelime sayısı, içeriğin uzmanlık düzeyi ve teslim süresi gibi faktörlere göre belirlenir. Detaylı bir fiyat teklifi almak için belgenizi benimle paylaşmanız yeterlidir."
+        "question": "Çeviri süreci ne kadar sürer?",
+        "answer": "Çeviri süresi, belgenin uzunluğuna, karmaşıklığına ve mevcut iş yoğunluğuna bağlı olarak değişir. Acil tercüme ihtiyaçlarınız için de elimden gelen desteği sağlamaktayım. Projenizin detaylarını paylaştığınızda, size tahmini bir teslim süresi bilgisi verebilirim."
       }
     ],
     relatedLinks: [
@@ -363,15 +370,15 @@ export const pages: Record<string, PageContent> = {
   hakkimda: {
     slug: "hakkimda",
     seo: {
-      title: "Yiğit Cilli Kimdir? Yazılım, Yapay Zekâ ve Tercüme Hizmetleri | Yiğit Cilli",
-      description: "Yiğit Cilli'nin yazılım, yapay zekâ, SEO ve yeminli tercüme alanlarındaki deneyimlerini keşfedin. Bilfen, Toronto ve Londra eğitimleriyle profesyonel çözümler.",
-      ogDescription: "Yiğit Cilli, yazılım geliştirme, yapay zekâ çözümleri, SEO stratejileri ve yeminli tercüme alanlarında kişisel marka hizmetleri sunmaktadır. Uluslararası eğitim ve profesyonel geçmişiyle projelerinize değer katıyor.",
+      title: "Yiğit Cilli Kimdir? Yazılım, Yapay Zekâ, SEO ve Yeminli Tercüme | Yiğit Cilli",
+      description: "Yiğit Cilli'nin yazılım geliştirme, yapay zekâ çözümleri, SEO danışmanlığı ve yeminli tercüme alanlarındaki deneyimini keşfedin. Bilfen'den Londra'ya uzanan…",
+      ogDescription: "Yiğit Cilli'nin kişisel ve profesyonel yolculuğunu, yazılım, yapay zekâ, SEO ve yeminli tercüme alanlarındaki tecrübelerini yakından tanıyın.",
       ogImage: "/images/about.webp",
     },
     hero: {
       eyebrow: "Kişisel marka",
-      title: "Yiğit Cilli: Yazılım, Yapay Zekâ ve Yeminli Tercüme Deneyimi",
-      description: "Yiğit Cilli olarak, yazılım geliştirme, yapay zekâ uygulamaları, SEO danışmanlığı ve yeminli tercüme alanlarında kapsamlı hizmetler sunmaktayım. Uluslararası eğitim ve profesyonel kariyerimde edindiğim bilgi birikimiyle projelerinize değer katmayı hedefliyorum.",
+      title: "Yiğit Cilli: Yazılım, Yapay Zekâ ve Yeminli Tercüme Alanlarında Profesyonel Yaklaşım",
+      description: "Yiğit Cilli olarak, teknoloji ve dil hizmetleri alanındaki geniş bilgi birikimimi projelerinize değer katmak üzere sunuyorum. Bilfen'den başlayarak uluslararası eğitim ve iş deneyimlerimle, yazılım, yapay zekâ, SEO ve yeminli tercüme konularında çözümler geliştiriyorum. Amacım, güvenilir ve özgün yaklaşımlarla hedeflerinize ulaşmanıza destek olmaktır.",
       image: {
         src: "/images/about.webp",
         alt: "Yiğit Cilli kişisel marka ve dijital çalışmalar",
@@ -379,58 +386,51 @@ export const pages: Record<string, PageContent> = {
     },
     blocks: [
       {
-        heading: "Eğitimden Profesyonel Hayata: Küresel Bir Bakış",
+        heading: "Eğitim ve Uluslararası Deneyimler",
         paragraphs: [
-          "Eğitim hayatıma Bilfen Koleji'nde başlayan yolculuğum, Toronto ve Londra gibi şehirlerde devam etti. Bu uluslararası deneyimler, farklı kültürleri anlama ve küresel standartlarda düşünme yeteneğimi pekiştirdi. Özellikle Roehampton Üniversitesi'ndeki eğitimim, akademik ve profesyonel gelişimimde önemli bir dönüm noktası oldu.",
-          "Çeşitli sektörlerde edindiğim tecrübeler, bana geniş bir perspektif kazandırdı. Toryum Group gibi önemli kurumlardaki çalışmalarım, yazılım geliştirme ve proje yönetimi konularında pratik bilgi birikimi sağlamanın yanı sıra, karmaşık sorunlara çözüm odaklı yaklaşımlar geliştirmemde etkili oldu."
+          "Eğitim hayatıma Bilfen'de başladım ve burada edindiğim sağlam temel, ileriki akademik ve profesyonel yolculuğumda önemli bir rol oynadı. Bu dönemdeki analitik düşünme becerileri, teknoloji ve dil alanındaki merakımı şekillendirdi.",
+          "Uluslararası arenadaki deneyimlerim, Kanada'da Toronto Üniversitesi'nde ve İngiltere'de Londra'da Roehampton Üniversitesi'nde devam etti. Bu süreçler, farklı kültürlerden insanlarla çalışma ve küresel perspektif kazanma fırsatı sundu. Edindiğim bilgi ve becerileri, Türkiye'deki projelerde uygulamaktan memnuniyet duyuyorum."
         ],
       },
       {
-        heading: "Yazılım ve Yapay Zekâ: Geleceğe Yönelik Çözümler",
+        heading: "Yazılım ve Yapay Zekâ Çözümleri",
         paragraphs: [
-          "Dijital dönüşümün hız kazandığı günümüzde, yazılım geliştirme ve yapay zekâ uygulamaları iş süreçlerinin vazgeçilmez bir parçası haline gelmiştir. Frontend ve backend geliştirme, mobil uygulama geliştirme gibi alanlarda bilgi ve tecrübe sahibiyim. Veri analizi, makine öğrenimi ve doğal dil işleme gibi yapay zekâ konularında da projelerinize değer katacak çözümler sunmaktayım.",
-          "Her projenin kendine özgü ihtiyaçları olduğunu bilerek, esnek ve ölçeklenebilir yazılım çözümleri tasarlıyorum. Yapay zekâ destekli sistemlerle verimliliği artırmak, iş akışlarını optimize etmek ve kullanıcı deneyimini zenginleştirmek için çalışıyorum. Bu alandaki çalışmalarım hakkında daha fazla bilgi almak için Yazılım sayfasını ziyaret edebilirsiniz."
+          "Yazılım geliştirme, profesyonel kariyerimin merkezinde yer alıyor. Web uygulamalarından mobil uygulama geliştirme süreçlerine kadar geniş bir yelpazede projeler üzerinde çalıştım. Kullanıcı odaklı ve performanslı yazılımlar oluşturarak dijital dünyada fark yaratmayı hedefliyorum. Yazılım hizmetlerim hakkında detaylı bilgi için Yazılım sayfasını ziyaret edebilirsiniz.",
+          "Yapay zekâ teknolojileri, günümüzün ve geleceğin en önemli alanlarından biri. Veri analizi, makine öğrenimi ve doğal dil işleme gibi konularda projeler geliştirerek iş süreçlerini optimize etmeye ve yenilikçi çözümler sunmaya odaklanıyorum. Toryum Group bünyesindeki deneyimlerim, bu alandaki yetkinliğimi pekiştirdi."
         ],
       },
       {
-        heading: "SEO ve Dijital Pazarlama Stratejileri",
+        heading: "SEO ve Dijital Görünürlük Stratejileri",
         paragraphs: [
-          "Online dünyada var olmak, doğru stratejilerle görünür olmak anlamına gelir. Arama motoru optimizasyonu (SEO), web sitenizin arama sonuçlarında üst sıralarda yer almasını sağlayarak potansiyel müşterilere ulaşmanızda kritik rol oynar. Anahtar kelime araştırmasından teknik SEO iyileştirmelerine, içerik stratejisinden yerel SEO çalışmalarına kadar geniş bir yelpazede danışmanlık hizmeti sunmaktayım.",
-          "Markanızın dijital ayak izini güçlendirmek ve hedef kitlenize daha etkili bir şekilde ulaşmak için özelleştirilmiş SEO stratejileri geliştiriyorum. Kullanıcı deneyimini merkeze alan ve arama motoru algoritmalarına uyumlu çalışmalarla dijital varlığınızı destekliyorum."
+          "Dijital dünyada var olmanın ilk adımı, doğru kitleye ulaşmaktır. Arama motoru optimizasyonu (SEO), web sitelerinin organik görünürlüğünü artırmak için kritik öneme sahiptir. Yerel SEO stratejileriyle, işletmelerin hedefledikleri coğrafyalarda daha fazla potansiyel müşteriye ulaşmalarına yardımcı oluyorum.",
+          "Kapsamlı anahtar kelime araştırması, teknik SEO uygulamaları ve içerik optimizasyonu gibi adımlarla web sitelerinin arama motoru sıralamalarını iyileştiriyorum. Bu sayede, dijital platformlarda sürdürülebilir bir büyüme ve bilinirlik elde etmenizi destekliyorum."
         ],
       },
       {
-        heading: "Yeminli Tercüme: Doğru ve Güvenilir İletişim",
+        heading: "Yeminli Tercüme Hizmetlerinde Güvenilirlik",
         paragraphs: [
-          "Resmi ve hukuki belgelerde doğru ve eksiksiz çeviri büyük önem taşır. Yeminli tercüme hizmetlerimle, noter onaylı ve resmi geçerliliği olan çeviriler sunarak uluslararası iletişim süreçlerinizi kolaylaştırıyorum. İngilizce-Türkçe ve Türkçe-İngilizce dillerinde akademik, teknik, hukuki ve ticari metinlerin yeminli çevirilerini titizlikle gerçekleştiriyorum.",
-          "Belgelerinizin gizliliğine ve doğruluğuna azami özen göstererek, ihtiyaçlarınıza uygun çözümler üretiyorum. Pasaport, diploma, vekaletname, sözleşme gibi çeşitli evrakların yeminli tercümesi için güvenilir bir adres olarak hizmet vermekteyim. Tercüme ihtiyaçlarınız için Tercüme sayfasını inceleyebilirsiniz."
-        ],
-      },
-      {
-        heading: "Profesyonel Yaklaşım ve Değerler",
-        paragraphs: [
-          "Her projeye özgün bir bakış açısıyla yaklaşıyor, şeffaflık ve dürüstlük ilkeleriyle hareket ediyorum. Müşteri memnuniyetini ön planda tutarak, karşılıklı güvene dayalı uzun vadeli iş ilişkileri kurmayı amaçlıyorum. Yenilikçi çözümler sunarken, etik değerlerden ve profesyonel standartlardan ödün vermemeye özen gösteriyorum.",
-          "Sürekli öğrenme ve gelişme felsefesiyle, teknolojideki ve sektördeki yenilikleri yakından takip ediyorum. Bu sayede, hizmet verdiğim alanlarda güncel ve etkili çözümler sunmaya devam ediyorum. Benimle çalışmak ve projelerinizi konuşmak için İletişim sayfasından bana ulaşabilirsiniz."
+          "Dil bariyerlerini aşmak, uluslararası iletişimde temel bir gerekliliktir. Yeminli tercüme hizmetleri, hukuki ve resmi belgelerin doğru ve güvenilir bir şekilde çevrilmesini sağlar. Bu alandaki yetkinliğimle, noter onaylı ve resmi geçerliliği olan çeviriler sunuyorum. Tercüme hizmetlerim hakkında bilgi almak için Tercüme sayfamı inceleyebilirsiniz.",
+          "Akademik metinlerden hukuki belgelere, ticari sözleşmelerden teknik kılavuzlara kadar farklı alanlarda yeminli tercüme hizmeti sağlıyorum. Her çeviride dilin inceliklerine dikkat ederek, metnin orijinal anlamını ve tonunu korumaya özen gösteriyorum."
         ],
       }
     ],
-    highlights: ["Yazılım Geliştirme ve Yapay Zekâ Çözümleri","SEO ile Dijital Görünürlük Stratejileri","Yeminli Tercüme ve Dil Hizmetleri","Uluslararası Eğitim ve Profesyonel Deneyim"],
+    highlights: ["Yazılım geliştirme ve mobil uygulama uzmanlığı","Yapay zekâ ve veri analizi çözümleri","Yerel SEO odaklı dijital görünürlük stratejileri","Noter onaylı yeminli tercüme hizmetleri"],
     faq: [
       {
         "question": "Yiğit Cilli hangi alanlarda hizmet vermektedir?",
-        "answer": "Yiğit Cilli olarak yazılım geliştirme, yapay zekâ uygulamaları, SEO danışmanlığı ve yeminli tercüme alanlarında hizmet sunmaktayım."
+        "answer": "Yiğit Cilli olarak yazılım geliştirme, yapay zekâ çözümleri, SEO danışmanlığı ve yeminli tercüme alanlarında hizmet sunmaktayım. Bu çeşitli alanlardaki birikimimi projelerinize değer katmak için kullanıyorum."
       },
       {
-        "question": "Tercüme hizmetleri hangi dillerde verilmektedir?",
-        "answer": "Başta İngilizce-Türkçe ve Türkçe-İngilizce olmak üzere, resmi ve hukuki belgeleriniz için yeminli tercüme hizmeti sunulmaktadır."
+        "question": "Uluslararası eğitim ve iş deneyiminiz var mı?",
+        "answer": "Evet, eğitim hayatımın önemli bir bölümünü Kanada'da Toronto Üniversitesi'nde ve İngiltere'de Londra'da Roehampton Üniversitesi'nde tamamladım. Bu uluslararası deneyimler, farklı bakış açıları kazanmamı ve küresel standartlarda hizmet sunmamı sağladı."
       },
       {
-        "question": "Yazılım projelerinde hangi teknolojiler kullanılıyor?",
-        "answer": "Frontend ve backend geliştirme, mobil uygulama geliştirme gibi çeşitli alanlarda güncel teknolojilerle esnek ve ölçeklenebilir çözümler üretilmektedir."
+        "question": "Mobil uygulama geliştirme süreçleriniz nasıl işler?",
+        "answer": "Mobil uygulama geliştirme süreçlerinde, projenin başlangıcından itibaren müşteri ihtiyaçlarını analiz ederek, kullanıcı dostu arayüzler ve performanslı kod yapıları oluşturmaya odaklanıyorum. Detaylı bilgi için Yazılım hizmetleri sayfamı ziyaret edebilirsiniz."
       },
       {
-        "question": "SEO danışmanlığı neleri kapsar?",
-        "answer": "SEO danışmanlığı, anahtar kelime araştırması, teknik SEO, içerik stratejisi ve yerel SEO gibi web sitenizin arama motoru görünürlüğünü artırmaya yönelik çalışmaları içerir."
+        "question": "Yeminli tercüme neden önemlidir?",
+        "answer": "Yeminli tercüme, özellikle hukuki ve resmi belgelerin çevirilerinde doğruluk ve güvenilirlik sağlamak adına büyük önem taşır. Noter yeminli tercüman olarak, belgelerinizin resmi geçerliliğini koruyarak hatasız çeviriler sunuyorum."
       }
     ],
     relatedLinks: [
@@ -464,13 +464,19 @@ export const pages: Record<string, PageContent> = {
       eyebrow: 'İletişim',
       title: 'Birlikte çalışalım',
       description:
-        'Yazılım projesi, metin çevirisi veya iş birliği için kısa bir mesaj yeterli.',
+        'Yazılım projesi, metin çevirisi veya iş birliği için info@yigitcilli.com adresine yazabilirsiniz.',
     },
     blocks: [
       {
         paragraphs: [
           'Yeni bir ürün fikri, mevcut bir kod tabanı, çevrilecek bir metin veya düşünce üzerine bir yazı — konuyu birkaç cümleyle özetlemeniz yeterli.',
           'Uygun olduğunda kısa bir dönüş yaparım; net olmayan taleplerde önce konuyu birlikte çerçeveleriz.',
+        ],
+      },
+      {
+        heading: 'E-posta',
+        paragraphs: [
+          'Doğrudan yazmak için info@yigitcilli.com adresini kullanabilirsiniz. Konu satırında proje veya talep türünü kısaca belirtmeniz yeterlidir.',
         ],
       },
     ],
@@ -484,15 +490,15 @@ export const pages: Record<string, PageContent> = {
   'adana-yeminli-tercuman-yigit-cilli': {
     slug: "adana-yeminli-tercuman-yigit-cilli",
     seo: {
-      title: "Adana Yeminli Tercüman Hizmetleri | Resmi Belge Çevirisi | Yiğit Cilli",
-      description: "Adana'da yeminli tercüman arayışınızda resmi belge çevirisi ve noter onaylı tercüme hizmetleri sunuyorum. Hukuki, teknik, ticari metinleriniz için güvenilir…",
-      ogDescription: "Adana ve çevresinde yeminli tercümanlık hizmetleri sunan Yiğit Cilli, resmi belgeleriniz için doğru ve zamanında çeviri çözümleri sağlar. Noter onaylı tercüme ihtiyaçlarınızda yanınızdayım.",
+      title: "Adana Yeminli Tercüman Hizmeti | Yiğit Cilli",
+      description: "Adana'da yeminli tercüman Yiğit Cilli olarak resmi ve noter onaylı belge çevirisi hizmetleri sunuyorum. Hukuki, ticari ve teknik metinleriniz için güvenilir…",
+      ogDescription: "Adana'da yeminli tercüme ihtiyaçlarınızda Yiğit Cilli olarak yanınızdayım. Resmi belgeleriniz için hızlı ve doğru çeviri hizmeti alın.",
       ogImage: "/images/translation.webp",
     },
     hero: {
       eyebrow: "Tercüme · Adana",
-      title: "Adana Yeminli Tercüman Hizmetleri: Resmi Belgeleriniz İçin Güvenilir Çözümler",
-      description: "Adana'da yeminli tercüman olarak, resmi belge çevirisi ihtiyaçlarınıza profesyonel ve titiz çözümler sunuyorum. Hukuki metinlerden ticari evraklara, akademik çalışmalardan teknik dokümanlara kadar geniş bir yelpazede noter onaylı tercüme hizmetleri sağlıyorum. Belgelerinizin doğru ve eksiksiz bir şekilde çevrilmesi, benim önceliğimdir.",
+      title: "Adana Yeminli Tercüman İhtiyaçlarınıza Profesyonel Çözümler",
+      description: "Adana'da resmi belge çevirisi ihtiyaçlarınız için güvenilir bir yeminli tercüman arıyorsanız doğru yerdesiniz. Yiğit Cilli olarak, hukuki metinlerden ticari evraklara kadar geniş bir yelpazede noter onaylı tercüme hizmetleri sunuyorum. Belgelerinizin doğru ve eksiksiz bir şekilde çevrilmesi için titizlikle çalışıyorum.",
       image: {
         src: "/images/translation.webp",
         alt: "Adana yeminli tercüman Yiğit Cilli",
@@ -502,49 +508,51 @@ export const pages: Record<string, PageContent> = {
       {
         heading: "Yeminli Tercüme Nedir ve Neden Önemlidir?",
         paragraphs: [
-          "Yeminli tercüme, yeminli tercümanlar tarafından yapılan ve yasal geçerliliği olan çeviri türüdür. Bu süreçte, tercüman çevirinin aslına uygunluğunu ve doğruluğunu kendi imzası ve mührü ile tasdik eder. Bu sayede, çevirisi yapılan belge resmi kurumlar, noterler veya mahkemeler nezdinde kabul görür ve hukuki bir nitelik kazanır.",
-          "Resmi belge çevirisi, özellikle uluslararası işlemler, vize başvuruları, şirket kuruluşları, eğitim ve sağlık süreçleri gibi pek çok alanda zorunluluktur. Adana'da sunduğum yeminli tercümanlık hizmetiyle, belgelerinizin yasal süreçlerde sorunsuz bir şekilde kullanılmasını sağlıyorum. Doğru ve güvenilir çeviriler, olası hukuki sorunların önüne geçmek için kritik öneme sahiptir."
+          "Yeminli tercüme, bir tercümanın çevirdiği metnin doğruluğunu ve aslına uygunluğunu yeminli tercüman sıfatıyla tasdik etmesi işlemidir. Bu tür çeviriler, resmi kurumlar, mahkemeler, üniversiteler ve diğer idari merciler tarafından talep edilen belgeler için zorunludur. Çevirinin yeminli tercüman kaşesi ve imzası taşıması, belgenin hukuki geçerliliğini sağlar.",
+          "Özellikle uluslararası işlemler, vize başvuruları, şirket kuruluşları veya akademik denklik süreçlerinde yeminli tercüme büyük önem taşır. Adana'da yeminli tercüman olarak, çevirisi yapılan belgelerin orijinal metinle birebir uyumlu, dilbilgisi ve terminoloji açısından kusursuz olmasını sağlamak temel prensibimdir. Bu sayede, çevrilen belgenizin resmiyetini ve güvenilirliğini korumuş oluruz."
         ],
       },
       {
-        heading: "Adana'da Sunulan Tercüme Alanları",
+        heading: "Adana'da Resmi Belge Çevirisi Hizmetleri",
         paragraphs: [
-          "Adana ve çevresindeki müşterilerimize geniş bir yelpazede yeminli tercüme hizmetleri sunuyorum. Hukuki metinlerden (sözleşmeler, vekaletnameler, mahkeme kararları) teknik dokümanlara (kullanım kılavuzları, patentler), ticari evraklardan (fatura, bilanço, ticaret sicil gazetesi) akademik çalışmalara (diploma, transkript, tez) kadar birçok alanda resmi belge çevirisi yapmaktayım.",
-          "İhtiyaç duyduğunuz tüm çeviri alanları hakkında daha fazla bilgi almak için genel tercüme hizmetleri sayfamızı ziyaret edebilirsiniz. Adana'da yeminli tercüman arayışınızda, her bir belgenin kendine özgü terminolojisine ve formatına uygun, titiz bir çalışma prensibiyle hizmet veriyorum."
+          "Adana'da resmi belge çevirisi ihtiyaçlarınızda geniş bir yelpazede hizmet sunuyorum. Nüfus kayıt örnekleri, pasaportlar, kimlik belgeleri, evlilik cüzdanları, boşanma kararları gibi kişisel belgelerden; diploma, transkript, denklik belgesi gibi akademik evraklara kadar birçok farklı belgenin çevirisini yapmaktayım.",
+          "Ticari alanda ise vekaletnameler, sözleşmeler, şirket ana sözleşmeleri, faaliyet raporları gibi kurumsal belgeler için de profesyonel çeviri desteği sağlıyorum. Hukuki metinlerin hassasiyetinin farkında olarak, kanunlar, mahkeme kararları ve dava dilekçeleri gibi özel dokümanların çevirisinde de titizlikle çalışıyorum. Adana yeminli tercüman olarak, her belgenin kendine özgü gerekliliklerini dikkate alarak çeviri yapmaktayım.",
+          "Yiğit Cilli Tercüme Bürosu olarak Adana ve çevresindeki kurum ve bireylerin resmi çeviri taleplerini karşılamak üzere buradayım. Belgelerinizin türü ve kullanım amacı ne olursa olsun, doğru ve zamanında bir çeviri için bana ulaşabilirsiniz."
         ],
       },
       {
         heading: "Noter Onaylı Tercüme Süreci",
         paragraphs: [
-          "Noter onaylı tercüme, yeminli tercümanın çevirisini yaptığı belgenin noter tarafından tasdik edilmesi işlemidir. Bu süreç, belgenin ulusal ve uluslararası alanda daha yüksek bir resmiyete sahip olmasını sağlar. Adana'da noter onaylı tercüme hizmeti almak isteyenler için tüm süreci kolaylaştırıyorum; belgenizi teslim alıyor, çeviriyi yapıyor ve noter onayını tamamlayarak size teslim ediyorum.",
-          "Özellikle İngilizce belgeleriniz için noter onaylı İngilizce tercüme hizmetimiz bulunmaktadır. Bu süreçte, çevirinin doğruluğu ve yeminli tercümanın imzası noter huzurunda teyit edilir. Amacım, belgelerinizin ilgili kurumlarda kabul görmesini sağlayacak, yasalara uygun ve hatasız çeviriler sunmaktır. Sürecin her aşamasında şeffaflık ve zamanında teslimat önceliğimdir."
+          "Resmiyet gerektiren birçok belge için yeminli tercüme sonrası noter onayı da talep edilmektedir. Bu süreç, yeminli tercüman tarafından çevrilen ve imzalanan belgenin, bir noter tarafından tercümanın imzası ve yetkisinin tasdik edilmesiyle tamamlanır. Noter onayı, belgenin ulusal ve uluslararası platformlarda tam hukuki geçerlilik kazanmasını sağlar.",
+          "Adana'da noter onaylı tercüme hizmeti kapsamında, belgenizin çevirisini tamamladıktan sonra, sizin adınıza noter tasdik işlemlerini de takip edebilirim. Özellikle yurt dışında kullanılacak belgeler için noter onayı vazgeçilmezdir. Detaylı bilgi almak için veya \"Noter onaylı İngilizce tercüme\" gibi özel talepleriniz için benimle iletişime geçebilirsiniz."
         ],
       },
       {
-        heading: "Yiğit Cilli Farkı: Güven ve Titizlik",
+        heading: "Yiğit Cilli Farkıyla Adana'da Tercüme",
         paragraphs: [
-          "Yiğit Cilli Tercüme Bürosu olarak, Adana'da yeminli tercümanlık hizmetlerimde güvenilirlik ve titizliği ön planda tutuyorum. Her bir çeviri projesine özenle yaklaşıyor, belgelerinizin gizliliğini ve veri güvenliğini en üst düzeyde sağlıyorum. Müşteri memnuniyeti odaklı çalışarak, beklentilerinizi karşılayacak kalitede hizmet sunmayı hedefliyorum.",
-          "Deneyimim ve Adana'daki yerel bilgi birikimimle, resmi belge çevirisi ihtiyaçlarınızda size özel çözümler üretiyorum. Hızlı geri dönüşler, ulaşılabilir iletişim ve profesyonel yaklaşımım sayesinde, çeviri süreçlerinizi sorunsuz bir şekilde yönetmenize yardımcı oluyorum. İletişim sayfamızdan bana ulaşarak tercüme taleplerinizi iletebilirsiniz."
+          "Yiğit Cilli olarak Adana'da yeminli tercüman hizmeti sunarken, her projeye özel bir yaklaşım benimsemekteyim. Yılların verdiği deneyim ve alan bilgisiyle, çevirisi yapılan metinlerin sadece dilsel olarak değil, kültürel ve hukuki bağlamda da doğru aktarılmasını sağlamaktayım.",
+          "Müşteri memnuniyeti ve gizlilik, çalışma prensiplerimin başında gelmektedir. Belgelerinizin hassasiyetinin farkında olarak, tüm çeviri süreçlerinde kişisel verilerin korunmasına azami özen gösteriyorum. Zamanında teslimat ve erişilebilir iletişim ile Adana'daki tercüme ihtiyaçlarınızda yanınızdayım.",
+          "Adana'da güvenilir bir resmi belge çevirisi ve noter onaylı tercüme ortağı arıyorsanız, Yiğit Cilli Tercüme Bürosu olarak size destek olmaktan memnuniyet duyarım. İhtiyaçlarınız için lütfen benimle iletişime geçin."
         ],
       }
     ],
-    highlights: ["Resmi Belge Çevirisinde Uzmanlık","Noter Onaylı Tercüme Desteği","Adana Merkezli Hızlı Çözümler","Gizlilik ve Veri Güvenliği"],
+    highlights: ["Resmi ve noter onaylı belge çevirisi","Hukuki, ticari ve akademik metinlerde uzmanlık","Adana'da yerel ve hızlı hizmet","Gizlilik ve doğruluk ilkesi"],
     faq: [
       {
-        "question": "Yeminli tercüme nedir?",
-        "answer": "Yeminli tercüme, yeminli tercümanlar tarafından yapılan ve resmiyet kazanan çevirilerdir. Tercüman, çevirinin aslına uygunluğunu ve doğruluğunu kendi imzası ve mührü ile tasdik eder. Bu tür çeviriler, resmi kurumlar ve noterlikler nezdinde hukuki geçerliliğe sahiptir."
+        "question": "Yeminli tercüme her belge için gerekli midir?",
+        "answer": "Hayır, her belge için yeminli tercüme zorunlu değildir. Genellikle resmi kurumlar, konsolosluklar, mahkemeler veya üniversiteler tarafından talep edilen hukuki, akademik veya idari nitelikteki belgeler için gereklidir. Belgenizin kullanım amacına göre bu gereklilik değişebilir."
       },
       {
-        "question": "Adana'da hangi dillerde yeminli tercüme hizmeti veriyorsunuz?",
-        "answer": "Adana'da başta İngilizce olmak üzere, Almanca, Fransızca ve diğer yaygın dillerde yeminli tercüme hizmeti sunmaktayım. İhtiyaç duyduğunuz dil için benimle iletişime geçerek detaylı bilgi alabilirsiniz."
+        "question": "Noter onayı süreci nasıl işler?",
+        "answer": "Noter onayı süreci, yeminli tercüman tarafından çevrilmiş ve imzalanmış belgenin, noterin yeminli tercümanın imzasını ve yetkisini tasdik etmesiyle gerçekleşir. Bu işlem, belgenin resmiyetini ve hukuki geçerliliğini ulusal ve uluslararası alanda sağlamlaştırır."
       },
       {
-        "question": "Noter onaylı tercüme süreci nasıl işler?",
-        "answer": "Belgenizi bana ulaştırdıktan sonra, yeminli tercümesi yapılır. Ardından, çeviri ile orijinal belge veya kopyası birlikte notere sunularak yeminli tercümanın imzasının ve mührünün noter tarafından onaylanması sağlanır. Bu işlem, belgenin resmiyetini tamamlar."
+        "question": "Hangi dillerde tercüme hizmeti veriyorsunuz?",
+        "answer": "Başta İngilizce olmak üzere, belirli dillerde yeminli tercüme hizmeti sunmaktayım. İhtiyaç duyduğunuz dil ve belge türü için benimle iletişime geçerek detaylı bilgi alabilirsiniz."
       },
       {
-        "question": "Tercüme fiyatları neye göre belirlenir?",
-        "answer": "Tercüme fiyatları, belgenin dili, karakter veya kelime sayısı, konusu (hukuki, teknik vb.), teslim süresi ve noter onayı gerekip gerekmediği gibi faktörlere göre değişkenlik gösterir. Net bir fiyat teklifi için belgenizi incelemem gerekmektedir."
+        "question": "Tercüme ücretleri nasıl belirlenir?",
+        "answer": "Tercüme ücretleri, belgenin dili, karakter veya kelime sayısı, içeriğin uzmanlık düzeyi ve teslimat süresi gibi faktörlere göre belirlenir. Noter onayı gibi ek hizmetler de ücrete dahil edilebilir. Net bir fiyat teklifi almak için belgenizi paylaşmanız yeterlidir."
       }
     ],
     relatedLinks: [
@@ -569,14 +577,14 @@ export const pages: Record<string, PageContent> = {
     slug: "adanada-noter-onayli-ingilizce-tercume-hizmeti",
     seo: {
       title: "Adana Noter Onaylı İngilizce Tercüme Hizmeti | Yiğit Cilli",
-      description: "Adana'da noter onaylı İngilizce tercüme ihtiyaçlarınız için güvenilir hizmet. Diploma, pasaport, vize evrakları ve resmi belgelerinizde yeminli çeviri…",
-      ogDescription: "Adana'da resmi evraklarınız için noter onaylı İngilizce tercüme hizmeti sunuyoruz. Diploma, transkript, pasaport gibi belgelerinizde profesyonel ve yerel çözümler.",
+      description: "Adana'da yeminli tercüman Yiğit Cilli'den noter onaylı İngilizce çeviri hizmeti. Diploma, pasaport, vize evrakları gibi resmi belgeleriniz için güvenilir ve…",
+      ogDescription: "Adana'da resmi belgeleriniz için noter onaylı İngilizce tercüme mi arıyorsunuz? Yiğit Cilli, yeminli çeviri ihtiyaçlarınızda yanınızda.",
       ogImage: "/images/translation.webp",
     },
     hero: {
       eyebrow: "Tercüme · Adana",
-      title: "Adana Noter Onaylı İngilizce Tercüme Hizmetleri",
-      description: "Adana'da İngilizce belgelerinizin yasal geçerliliğini sağlamak için noter onaylı tercüme hizmeti sunmaktayız. Resmi kurumlar ve uluslararası başvurularınız için gerekli olan çevirilerde yanınızdayız.",
+      title: "Adana'da Noter Onaylı İngilizce Tercüme ve Yeminli Çeviri Hizmetleri",
+      description: "Adana'da uluslararası geçerliliği olan belgeleriniz için güvenilir ve doğru İngilizce tercümeye mi ihtiyacınız var? Yiğit Cilli olarak, noter onaylı yeminli çeviri hizmetlerimizle yanınızdayız. Resmi evraklarınızın hatasız ve hızlı bir şekilde çevrilmesini sağlıyoruz.",
       image: {
         src: "/images/translation.webp",
         alt: "Adana noter onaylı İngilizce tercüme",
@@ -584,51 +592,47 @@ export const pages: Record<string, PageContent> = {
     },
     blocks: [
       {
-        heading: "Resmi Belgelerde Güvenilir İngilizce Tercüme",
+        heading: "Noter Onaylı İngilizce Tercüme Nedir ve Neden Önemlidir?",
         paragraphs: [
-          "Günümüzde resmi evrakların uluslararası alanda geçerlilik kazanması, doğru ve onaylı tercümeyi zorunlu kılmaktadır. Adana'da ikamet eden veya faaliyet gösteren birey ve kurumların İngilizce belgeleri için noter onayı gerektiren durumlarda profesyonel destek sağlamaktayız. Bu süreç, belgelerinizin yurt içi ve yurt dışı makamlarca sorunsuz kabul edilmesini hedefler.",
-          "Özellikle eğitim, iş veya göçmenlik gibi konularda sunulan diploma, transkript, pasaport ve vize evrakları gibi belgelerin, yeminli tercüman tarafından çevrilip noter tarafından onaylanması büyük önem taşır. Bu hizmet, belgelerinizin orijinaline sadık kalarak, hukuki geçerliliğe sahip olmasını temin eder."
+          "Yurt dışında eğitim, iş veya farklı resmi işlemler için hazırlanan belgelerin uluslararası alanda kabul görmesi genellikle noter onayı gerektirir. Adana'da sunulan noter onaylı İngilizce tercüme hizmeti, yeminli bir tercüman tarafından çevrilen belgelerin noterde tasdik edilerek hukuki geçerlilik kazanması sürecidir. Bu süreç, belgenin orijinaline uygunluğunu ve çevirinin doğruluğunu resmi makamlarca onaylatır.",
+          "Özellikle diploma, transkript, pasaport, nüfus kayıt örnekleri, evlilik cüzdanları ve vize evrakları gibi hayati önem taşıyan belgelerde bu onay büyük bir fark yaratır. Yiğit Cilli olarak, Adana'da bu tür resmi evrak çevirisi ihtiyaçlarınızda profesyonel destek sunarak belgelerinizin sorunsuz bir şekilde işleme alınmasını hedefliyoruz."
         ],
       },
       {
-        heading: "Hangi Belgelerde Noter Onayı Gerekir?",
+        heading: "Hangi Belgeler İçin Yeminli ve Noter Onaylı Çeviri Gerekir?",
         paragraphs: [
-          "Noter onaylı İngilizce tercüme hizmetimiz, geniş bir yelpazedeki resmi belgeleri kapsamaktadır. Bunlar arasında akademik kariyeriniz için önemli olan diploma ve transkriptler, yurt dışı seyahat ve oturum izinleri için pasaport ve vize evrakları bulunur. Ayrıca, evlilik cüzdanı, doğum belgesi, vekaletname, şirket sözleşmeleri ve mahkeme kararları gibi hukuki nitelik taşıyan belgeler de bu hizmet kapsamında değerlendirilmektedir.",
-          "Her bir belgenin kendine özgü terminolojisi ve formatı olduğundan, çeviri sürecinde titizlik ve alan bilgisi esastır. Adana bölgesinde bu tür belgeler için güvenilir bir çözüm arıyorsanız, doğru adrestesiniz. Detaylı bilgi için <a href=\"/tercume/\">tercüme hizmetleri</a> sayfamızı ziyaret edebilirsiniz."
+          "Çok çeşitli resmi belgeler, yurt dışı başvurularında noter onaylı İngilizce tercüme gerektirebilir. Bunlar arasında akademik belgelerden (diploma, transkript, öğrenci belgesi) kişisel kimlik belgelerine (pasaport, nüfus cüzdanı, ehliyet) kadar geniş bir yelpaze bulunur. Ayrıca, evlilik cüzdanı, boşanma kararı, doğum belgesi gibi aile hukuku belgeleri ve vize başvuruları için gerekli olan finansal evraklar veya davetiye mektupları da bu kapsama girer.",
+          "Her bir belgenin kendine özgü terminolojisi ve yasal gereklilikleri olduğundan, çevirinin hatasız ve eksiksiz yapılması kritik öneme sahiptir. Adana'da [yeminli tercüman](/adana-yeminli-tercuman-yigit-cilli/) olarak, bu belgelerinizi uluslararası standartlara uygun bir şekilde İngilizceye çeviriyor ve noter onay süreçlerinde size rehberlik ediyoruz. Böylece belgelerinizin gideceği kurumlar tarafından kabul edilmesini sağlıyoruz."
         ],
       },
       {
-        heading: "Yeminli Çeviri ve Noter Onayı Süreci",
+        heading: "Adana'da Resmi Evrak Çevirisi Süreci Nasıl İşler?",
         paragraphs: [
-          "Noter onaylı tercüme süreci, belgenin yeminli bir tercüman tarafından orijinaline uygun şekilde İngilizceye çevrilmesiyle başlar. Yeminli tercüman, çevirinin doğruluğunu ve eksiksizliğini imzası ve kaşesiyle tasdik eder. Bu aşama, çevirinin resmiyet kazanmasının ilk adımıdır.",
-          "Ardından, çevrilen belge ve yeminli tercümanın imzası, Adana'daki noterlikler tarafından tasdik edilir. Noter, tercümanın yetkisini ve belgenin usulüne uygunluğunu kontrol ederek onay işlemini tamamlar. Bu onay, belgenin hem Türkiye'de hem de genellikle yurt dışında resmiyet kazanmasını sağlar. Süreç hakkında daha fazla bilgi almak veya belgenizi göndermek için <a href=\"/iletisim\">iletişim</a> kurabilirsiniz."
+          "Adana'da noter onaylı İngilizce tercüme süreci, belgenizi bize ulaştırmanızla başlar. İlk adımda, belgeniz deneyimli bir yeminli tercüman tarafından dikkatle incelenir ve aslına uygun bir şekilde İngilizceye çevrilir. Çeviri tamamlandıktan sonra, yeminli tercüman tarafından imzalanır ve mühürlenir. Bu adım, çevirinin doğruluğunu ve yeminli tercüman sorumluluğunu gösterir.",
+          "İkinci aşamada, çevirisi tamamlanmış ve yeminli tercüman tarafından onaylanmış belge, Adana'daki noterliklerde tasdik edilir. Noter, tercümanın yeminli olduğunu ve imzasının geçerliliğini onaylayarak belgeye resmiyet kazandırır. Bu titiz süreç, özellikle vize evrakları ve eğitim başvuruları gibi hassas konularda belgelerinizin uluslararası alanda sorunsuz bir şekilde kabul edilmesini sağlar."
         ],
       },
       {
-        heading: "Adana'da Yerel ve Hızlı Çözümler",
+        heading: "Neden Yiğit Cilli'yi Tercih Etmelisiniz?",
         paragraphs: [
-          "Adana'da noter onaylı İngilizce tercüme hizmeti sunarak, yerel ihtiyaçlara hızlı ve etkin çözümler getirmeyi hedefliyoruz. Belgelerinizin hassasiyetinin farkında olarak, zamanında teslimat ve gizlilik prensiplerine bağlı kalmaktayız. Acil durumlarda bile, noter onayı gerektiren çevirileriniz için esnek ve çözüm odaklı yaklaşımlar sunmaktayız.",
-          "Profesyonel yaklaşımımız ve yerel bilgi birikimimiz sayesinde, Adana'daki bireylerin ve kurumsal müşterilerin resmi belge çeviri süreçlerini kolaylaştırmayı amaçlıyoruz. Güvenilir ve doğru tercüme için <a href=\"/adana-yeminli-tercuman-yigit-cilli/\">yeminli tercüman</a> desteği alabilirsiniz."
+          "Adana'da noter onaylı İngilizce tercüme hizmeti alırken güvenilir, hızlı ve doğru bir çözüm ortağı bulmak önemlidir. Yiğit Cilli olarak, yılların getirdiği deneyim ve uzmanlıkla, belgelerinizin her detayına özen gösteriyoruz. Hukuki ve resmi kesinlik iddiasında bulunmadan, belgelerinizin gerektirdiği hassasiyetle çeviri süreçlerini yönetiyoruz. Yerel mevzuata ve uluslararası standartlara hakimiyetimizle, Adana ve çevresindeki müşterilerimize kaliteli bir hizmet sunuyoruz.",
+          "Resmi evrak çevirisi konusunda karşılaşılabilecek karmaşıklıkların farkındayız. Bu nedenle, diploma, transkript, pasaport veya vize evrakları gibi belgelerinizin çevirisinde sadece dil bilgisi değil, aynı zamanda ilgili alanın terminolojisine ve yasal gerekliliklerine de hakim bir yaklaşım sergiliyoruz. Amacımız, belgelerinizin yurt dışında herhangi bir aksaklık yaşamadan kullanılmasını sağlamaktır."
         ],
       }
     ],
-    highlights: ["Adana'da noter onaylı İngilizce tercüme","Diploma, pasaport, vize evrakları çevirisi","Resmi belgelerde yeminli çeviri","Hızlı ve güvenilir hizmet"],
+    highlights: ["Adana'da noter onaylı İngilizce tercüme çözümleri","Diploma, transkript, pasaport gibi resmi evrak çevirisi","Deneyimli yeminli tercüman ile güvenilir hizmet","Hızlı ve doğru çeviri süreçleri"],
     faq: [
       {
-        "question": "Noter onaylı İngilizce tercüme nedir?",
-        "answer": "Noter onaylı İngilizce tercüme, yeminli bir tercüman tarafından yapılan çevirinin, noterde tasdik edilerek resmiyet kazanması işlemidir. Bu sayede belge, ulusal ve uluslararası kurumlarda geçerlilik kazanır."
+        "question": "Noter onaylı İngilizce tercüme ne kadar sürer?",
+        "answer": "Tercüme süresi, belgenin uzunluğuna ve karmaşıklığına göre değişmekle birlikte, genellikle 1-3 iş günü içinde tamamlanır. Noter onayı süreci de belgenin hazır olmasından sonra ek olarak 1 iş günü alabilir. Acil durumlarda öncelikli hizmet seçenekleri için bizimle iletişime geçebilirsiniz."
       },
       {
-        "question": "Adana'da hangi belgeler için noter onaylı tercüme yapıyorsunuz?",
-        "answer": "Diploma, transkript, pasaport, vize evrakları, evlilik cüzdanı, doğum belgesi, vekaletname, şirket sözleşmeleri ve mahkeme kararları gibi birçok resmi belge için noter onaylı İngilizce tercüme hizmeti sunuyoruz."
+        "question": "Tercüme için belgelerimi size nasıl ulaştırabilirim?",
+        "answer": "Belgelerinizi e-posta yoluyla dijital olarak gönderebilir veya Adana'daki ofisimize şahsen teslim edebilirsiniz. Orijinal belgelerin noter onayı için gerekli olabileceğini lütfen unutmayın; bu konuda size detaylı bilgi verilecektir."
       },
       {
-        "question": "Tercüme süreci ne kadar sürer?",
-        "answer": "Tercüme süresi, belgenin uzunluğuna, karmaşıklığına ve noterlikteki yoğunluğa göre değişiklik gösterebilir. Genellikle kısa belgeler için aynı gün veya ertesi gün içinde tamamlanmaktadır. Detaylı bilgi için belgenizi göndererek süre bilgisi alabilirsiniz."
-      },
-      {
-        "question": "Belgelerimi size nasıl ulaştırabilirim?",
-        "answer": "Belgelerinizi e-posta yoluyla dijital olarak gönderebilir veya Adana'daki ofisimize şahsen teslim edebilirsiniz. Çeviri tamamlandığında, onaylı belgelerinizi yine şahsen teslim alabilir veya kargo ile adresinize gönderilmesini talep edebilirsiniz."
+        "question": "Noter onaylı tercümenin maliyeti nedir?",
+        "answer": "Tercüme ücretleri, çevrilecek belgenin türüne, kelime sayısına ve aciliyetine göre farklılık gösterir. En doğru fiyat teklifi için belgenizi bize iletmeniz yeterlidir. Adana'da rekabetçi ve şeffaf fiyatlandırma politikası uyguluyoruz."
       }
     ],
     relatedLinks: [
@@ -652,15 +656,15 @@ export const pages: Record<string, PageContent> = {
   'adana-yeminli-tercumanin-gorevleri': {
     slug: "adana-yeminli-tercumanin-gorevleri",
     seo: {
-      title: "Adana Yeminli Tercüman Ne İş Yapar? Görevleri ve Süreçler | Yiğit Cilli",
-      description: "Adana'da yeminli tercümanın görevlerini, yeminli çeviri sürecini ve noter onaylı tercümenin önemini keşfedin. Resmi belge çevirileriniz için güvenilir çözümler.",
-      ogDescription: "Adana'da yeminli tercümanların rolünü ve resmi çeviri süreçlerini detaylıca öğrenin. Yeminli çeviri ve noter onaylı tercüme hakkında bilmeniz gerekenler.",
+      title: "Yeminli Tercüman Ne İş Yapar? Adana'da Resmi Çeviri Süreci | Yiğit Cilli",
+      description: "Adana'da yeminli tercüman ne iş yapar? Resmi belge çevirileri, noter onaylı tercüme süreçleri ve yeminli çevirinin önemi hakkında detaylı bilgi alın.…",
+      ogDescription: "Adana'da yeminli tercümanların görevlerini, resmi çeviri süreçlerini ve noter onaylı tercümenin detaylarını keşfedin. Yiğit Cilli ile profesyonel destek.",
       ogImage: "/images/translation.webp",
     },
     hero: {
       eyebrow: "Tercüme",
-      title: "Adana'da Yeminli Tercümanların Görevleri ve Yeminli Çeviri Süreci",
-      description: "Yeminli tercümanlar, hukuki geçerliliği olan belgelerin doğru ve eksiksiz çevirisini yaparak önemli bir köprü görevi görür. Bu metin, Adana'da yeminli tercümanların üstlendiği sorumlulukları ve yeminli çeviri sürecinin nasıl işlediğini açıklamaktadır. Resmi işlemleriniz için bu sürecin detaylarını anlamak faydalı olacaktır.",
+      title: "Adana Yeminli Tercümanın Görevleri ve Resmi Çeviri Süreçleri",
+      description: "Resmi işlemlerinizde yabancı dildeki belgelerin geçerliliği için yeminli tercümeye ihtiyaç duyulur. Yeminli tercümanlar, belgelerinizi hukuki ve kültürel bağlamda doğru bir şekilde çevirerek resmiyet kazanmasını sağlar. Bu süreç, uluslararası ilişkilerde ve yerel bürokraside büyük önem taşır.",
       image: {
         src: "/images/translation.webp",
         alt: "Yeminli tercüman görevleri",
@@ -668,51 +672,51 @@ export const pages: Record<string, PageContent> = {
     },
     blocks: [
       {
-        heading: "Yeminli Tercüman Kimdir ve Ne İş Yapar?",
+        heading: "Yeminli Tercüman Kimdir ve Görevleri Nelerdir?",
         paragraphs: [
-          "Yeminli tercüman, noter huzurunda yemin ederek, çevirilerini resmi ve hukuki geçerlilik taşıyan belgeler haline getirme yetkisine sahip kişidir. Bu yetki, çevirinin doğruluğu ve eksiksizliği konusunda yasal sorumluluk almasını gerektirir. Bir yeminli tercüman, kaynak metnin anlamını ve ruhunu hedef dile en uygun şekilde aktarırken, aynı zamanda terminolojik tutarlılığı ve biçimsel uygunluğu da gözetir. Bu bağlamda, \"yeminli tercüman ne iş yapar\" sorusunun cevabı, sadece dil aktarımı değil, aynı zamanda güven ve sorumluluk temelli bir hizmet sunmaktır.",
-          "Özellikle Adana gibi büyük şehirlerde, çeşitli resmi kurumlar ve bireyler arasında belge alışverişi yoğun olduğundan, yeminli tercümanlara olan ihtiyaç oldukça fazladır. Yeminli tercümanlar, kimlik belgelerinden hukuki sözleşmelere, akademik transkriptlerden ticari anlaşmalara kadar geniş bir yelpazedeki belgelerin çevirisini yapabilir. Bu süreçte, çevirinin her aşamasında azami dikkat ve profesyonellik esastır. Adana yeminli tercüman hizmetleri için daha fazla bilgiye buradan ulaşabilirsiniz."
+          "Yeminli tercüman, noter huzurunda yemin ederek resmî belge çevirisi yapma yetkisi kazanmış kişidir. Bu yeminle birlikte, çevirinin doğruluğu, eksiksizliği ve gizliliği konusunda hukuki sorumluluk üstlenir. Yeminli tercümanlar, kaynak metindeki anlamı, kültürel ve hukuki nüansları hedef dile en doğru şekilde aktarmakla yükümlüdür.",
+          "Başlıca görevleri arasında, yabancı dildeki evrakların Türkiye'deki resmî kurumlarca kabul edilebilir hale getirilmesi veya tam tersi, Türkçe belgelerin yurt dışında kullanılabilirliğini sağlamak bulunur. Bu süreçte belgenin orijinal formatına sadık kalmak, içeriği manipüle etmemek ve tarafsız bir yaklaşım sergilemek temel prensiplerindendir."
         ],
       },
       {
-        heading: "Yeminli Çeviri Nedir ve Neden Gereklidir?",
+        heading: "Yeminli Çeviri ve Noter Onaylı Tercüme Süreci",
         paragraphs: [
-          "\"Yeminli çeviri nedir\" sorusu, genellikle resmi veya hukuki geçerliliği olan belgeler söz konusu olduğunda akla gelir. Yeminli çeviri, yeminli tercüman tarafından yapılan ve tercümanın kaşesi ile imzası bulunan, doğruluğu tasdik edilmiş çeviridir. Bu tür çeviriler, genellikle mahkemeler, konsolosluklar, üniversiteler ve diğer resmi daireler tarafından talep edilir. Amacı, çevrilen belgenin orijinal belge ile aynı hukuki değere ve geçerliliğe sahip olmasını sağlamaktır.",
-          "Birçok uluslararası işlem veya yerel resmi süreç için yeminli çeviri zorunluluktur. Örneğin, yurt dışında eğitim başvuruları, vize işlemleri, evlilik veya boşanma süreçleri, miras davaları gibi durumlarda sunulan belgelerin yeminli tercüme edilmiş olması şart koşulabilir. Bu durum, çevirinin güvenilirliğini ve kabul edilebilirliğini artırır. Genel tercüme hizmetleri hakkında detaylı bilgi için ilgili sayfamızı ziyaret edebilirsiniz."
+          "Yeminli çeviri nedir? Yeminli çeviri, yeminli bir tercüman tarafından yapılan ve tercümanın kaşesi ile imzasını taşıyan çeviridir. Bu çeviri, belgenin yasal geçerlilik kazanması için atılan ilk adımdır. Tercüman, çevirinin aslına uygun olduğunu ve herhangi bir ekleme veya çıkarma yapılmadığını bu imzasıyla taahhüt eder.",
+          "Noter onaylı tercüme süreci ise, yeminli tercümanın yaptığı çevirinin bir noter tarafından tasdik edilmesiyle tamamlanır. Noter, çevirinin içeriğini kontrol etmez; sadece çeviriyi yapan yeminli tercümanın imzasının ve kaşesinin kendisine ait olduğunu teyit eder. Bu onay, belgenin Türkiye'deki veya yurt dışındaki resmî makamlar önünde tam hukuki geçerlilik kazanmasını sağlar. Adana'da bu süreçleri sıkça gerçekleştirmekteyiz."
         ],
       },
       {
-        heading: "Noter Onaylı Tercüme Süreci Nasıl İşler?",
+        heading: "Hangi Belgeler Yeminli Tercüme Gerektirir?",
         paragraphs: [
-          "Yeminli çevirinin bir üst aşaması olan \"noter onaylı tercüme süreci\", çevirinin hukuki geçerliliğini pekiştiren bir adımdır. Bu süreç, yeminli tercüman tarafından tamamlanan çevirinin noter tarafından onaylanmasıyla gerçekleşir. Noter, çevirinin içeriğini değil, yeminli tercümanın imzasının ve kaşesinin geçerliliğini tasdik eder. Bu onay, belgenin yurt içinde ve yurt dışında daha geniş bir kabul görmesini sağlar.",
-          "Süreç genellikle şu adımları içerir: Öncelikle belge, ilgili dilde uzmanlaşmış bir yeminli tercüman tarafından çevrilir. Ardından, tercüman çeviriyi imzalar ve kaşeler. Son olarak, bu çeviri belgesi noter huzuruna götürülerek noter tarafından tasdik edilir. Adana'da noter onaylı İngilizce tercüme hizmetleri hakkında daha fazla bilgi almak için ilgili sayfayı ziyaret edebilirsiniz."
+          "Çok çeşitli resmi çeviri belgeleri yeminli tercüme ve çoğu zaman noter onayı gerektirir. Bunlar arasında; doğum, evlilik, boşanma ve ölüm belgeleri gibi nüfus kayıt örnekleri, diploma, transkript gibi eğitim belgeleri yer alır. Ayrıca, vekaletnameler, muvafakatnameler, pasaportlar, kimlikler ve sabıka kayıtları da yeminli çeviriye ihtiyaç duyar.",
+          "Ticari ve hukuki alanlarda ise; şirket ana sözleşmeleri, ticari sicil belgeleri, mahkeme kararları, sözleşmeler ve patent belgeleri gibi evraklar yeminli tercüme olmadan genellikle kabul edilmez. Bu belgelerin doğru ve eksiksiz çevrilmesi, olası hukuki sorunların önüne geçmek için kritik öneme sahiptir."
         ],
       },
       {
-        heading: "Resmi Çeviri Belgeleri ve Kullanım Alanları",
+        heading: "Adana'da Yeminli Tercüman Seçerken Nelere Dikkat Edilmeli?",
         paragraphs: [
-          "\"Resmi çeviri belgeleri\" terimi, yeminli veya noter onaylı çeviri gerektiren geniş bir belge yelpazesini kapsar. Nüfus kayıt örnekleri, pasaportlar, kimlik kartları, evlilik cüzdanları, boşanma kararları, mahkeme tutanakları, vekaletnameler, muvafakatnameler gibi kişisel ve hukuki belgeler bu kategoriye girer. Ayrıca diploma, transkript, denklik belgesi gibi akademik evraklar da resmi çeviriye ihtiyaç duyar.",
-          "Bu belgelerin kullanım alanları oldukça çeşitlidir. Yurt dışı eğitim başvurularından iş kurma süreçlerine, vize başvurularından uluslararası ticari anlaşmalara kadar pek çok alanda resmi çeviriler hayati öneme sahiptir. Yeminli tercümanların bu alandaki titiz çalışması, belgelerin doğru ve güvenilir bir şekilde çevrilerek ilgili makamlara sunulmasına yardımcı olur."
+          "Adana yeminli tercüman arayışınızda dikkat etmeniz gereken bazı önemli noktalar bulunmaktadır. Öncelikle, tercümanın ilgili dilde ve alanda yeterli tecrübeye sahip olması önemlidir. Özellikle hukuki veya teknik metinlerde uzmanlık, çevirinin kalitesini doğrudan etkiler. Tercümanın noterle olan ilişkisi ve süreçlere hakimiyeti de işlerin hızlı ilerlemesini sağlar.",
+          "Güvenilirlik, gizlilik ve zamanında teslimat da bir yeminli tercümandan beklenen temel özelliklerdir. Belgelerinizin hassasiyeti göz önüne alındığında, şeffaf iletişim kurabilen ve süreç hakkında sizi bilgilendiren bir tercümanla çalışmak önemlidir. Bu konularda detaylı bilgi almak için bizimle iletişime geçebilirsiniz."
         ],
       }
     ],
-    highlights: ["Belgelerin hukuki geçerliliğini sağlama.","Resmi kurumlarca kabul edilen çeviriler sunma.","Gizlilik ve veri güvenliğine özen gösterme.","Doğru terminoloji ve dilbilgisi kullanımı."],
+    highlights: ["Resmi belgelerin yasal geçerliliğini sağlama.","Noter huzurunda edilen yeminle gelen yüksek sorumluluk.","Diller arası kültürel ve hukuki hassasiyetleri doğru aktarma.","Müşteri gizliliği ve çeviri doğruluğu ilkesiyle çalışma."],
     faq: [
       {
-        "question": "Yeminli tercüman her belgeyi çevirebilir mi?",
-        "answer": "Yeminli tercümanlar, yemin ettikleri dillerde ve genellikle uzmanlık alanlarına giren her türlü resmi veya özel belgeyi çevirebilirler. Ancak bazı belgeler özel uzmanlık gerektirebilir ve bu durumda ilgili alanda deneyimli bir tercümanla çalışmak önemlidir."
+        "question": "Yeminli tercümanlık belgesi nasıl alınır?",
+        "answer": "Türkiye'de yeminli tercüman olabilmek için öncelikle noterler tarafından belirlenen şartları (dil yeterliliği, adli sicil kaydı vb.) karşılamak ve noter huzurunda yemin ederek tercümanlık yetkisi almak gerekmektedir."
       },
       {
         "question": "Yeminli çeviri ile normal çeviri arasındaki temel fark nedir?",
-        "answer": "Temel fark, yeminli çevirinin resmi ve hukuki geçerlilik taşımasıdır. Yeminli tercüman tarafından imzalanıp kaşelenen bu çeviriler, resmi makamlarca kabul görürken, normal çeviriler genellikle kişisel kullanım veya bilgi amaçlıdır ve resmi geçerliliği yoktur."
+        "answer": "Normal çeviri genellikle bilgi amaçlıyken, yeminli çeviri yasal geçerlilik taşır. Yeminli tercümanın imzası ve kaşesiyle onaylanan çeviriler, resmi kurumlar tarafından kabul edilir ve hukuki sorumluluk içerir."
       },
       {
-        "question": "Noter onayı neden gereklidir ve her zaman şart mıdır?",
-        "answer": "Noter onayı, yeminli tercümanın imzasının ve kaşesinin doğruluğunu tasdik ederek çevirinin hukuki geçerliliğini uluslararası alanda güçlendirir. Her zaman şart olmamakla birlikte, özellikle yurt dışı işlemleri, vize başvuruları veya bazı resmi kurumlar tarafından talep edilebilir. Belgenin kullanılacağı yere göre gereklilik değişebilir."
+        "question": "Noter onayı her yeminli çeviri için zorunlu mudur?",
+        "answer": "Hayır, noter onayı her yeminli çeviri için zorunlu değildir. Bu durum, çeviriyi talep eden kurumun veya makamın beklentisine göre değişir. Bazı kurumlar sadece yeminli tercüman kaşesi ve imzasıyla yetinirken, bazıları ek olarak noter tasdiki de isteyebilir."
       },
       {
-        "question": "Adana'da yeminli tercüman seçerken nelere dikkat etmeliyim?",
-        "answer": "Adana'da yeminli tercüman seçerken tercümanın yetkinliğini, deneyimini, ilgili dillerdeki uzmanlığını ve özellikle çevrilecek belgenin türüne göre uzmanlık alanını göz önünde bulundurmak önemlidir. Güvenilirlik ve zamanında teslimat da önemli kriterlerdir."
+        "question": "Çevirinin doğruluğundan kim sorumludur?",
+        "answer": "Yeminli çevirinin doğruluğundan ve eksiksizliğinden doğrudan çeviriyi yapan yeminli tercüman sorumludur. Noter ise sadece tercümanın imzasının ve kaşesinin gerçekliğini tasdik eder."
       }
     ],
     relatedLinks: [
@@ -736,15 +740,15 @@ export const pages: Record<string, PageContent> = {
   makaleler: {
     slug: "makaleler",
     seo: {
-      title: "Yazılım, Yapay Zekâ, SEO ve Tercüme Makaleleri | Yiğit Cilli",
-      description: "Yazılım, yapay zekâ, SEO, tercüme ve kişisel gelişim üzerine güncel makaleler ve analizler. Yiğit Cilli'nin bilgi birikimiyle hazırlanan özgün içerikler.",
-      ogDescription: "Yiğit Cilli'nin yazılım, yapay zekâ, SEO, tercüme ve kişisel gelişim alanlarındaki deneyimlerini paylaştığı makaleler merkezine hoş geldiniz.",
+      title: "Yazılım, Yapay Zeka, SEO ve Tercüme Makaleleri | Yiğit Cilli",
+      description: "Yazılım, yapay zekâ, SEO ve yeminli tercüme konularında bilgi ve deneyimlerimi paylaştığım makalelerime göz atın. Kişisel gelişim ve stoacılık üzerine yazılar…",
+      ogDescription: "Yiğit Cilli'nin yazılım, yapay zekâ, SEO, tercüme ve kişisel gelişim alanlarındaki makalelerini keşfedin. Bilgiye dayalı, özgün içerikler.",
       ogImage: "/images/stoicism.webp",
     },
     hero: {
       eyebrow: "Yazılar",
-      title: "Yazılım, Yapay Zekâ, SEO ve Kişisel Gelişim Makaleleri Merkezi",
-      description: "Dijital dünyanın dinamiklerini anlamak ve kişisel gelişiminize katkıda bulunmak için hazırladığım makalelerle bu alanda bir kaynak oluşturmayı hedefliyorum. Yazılım, yapay zekâ, SEO ve tercüme konularındaki güncel gelişmeleri ve kişisel tecrübelerimi burada bulabilirsiniz.",
+      title: "Yazılım, Yapay Zekâ, SEO ve Tercüme Alanında Bilgi Merkezim",
+      description: "Bu bölümde, yazılım geliştirme, yapay zekâ uygulamaları, arama motoru optimizasyonu (SEO) stratejileri ve yeminli tercüme süreçleri üzerine kaleme aldığım makaleleri bulabilirsiniz. Amacım, bu alanlardaki bilgi birikimimi ve deneyimlerimi sade bir dille sizlerle paylaşmaktır. Aynı zamanda, kişisel gelişim ve felsefe konularındaki düşüncelerime de yer veriyorum.",
       image: {
         src: "/images/stoicism.webp",
         alt: "Makaleler ve düşünce yazıları",
@@ -752,51 +756,58 @@ export const pages: Record<string, PageContent> = {
     },
     blocks: [
       {
-        heading: "Yazılım Dünyasından Güncel Bakış Açıları",
+        heading: "Yazılım Dünyasından Güncel Bakışlar",
         paragraphs: [
-          "Yazılım geliştirme süreçleri, yeni teknolojiler ve sektördeki yenilikler üzerine düzenli olarak içerikler sunuyorum. Modern yazılım mimarileri, kodlama pratikleri ve dijital dönüşümün yazılım üzerindeki etkileri gibi konulara detaylıca değiniyorum. Bu bölüm, hem yazılım profesyonellerine hem de bu alana ilgi duyanlara yönelik bilgilendirici ve ufuk açıcı yazıları barındırıyor.",
-          "Yapay zekâ destekli araçların yazılım geliştirmedeki rolü, otomasyonun avantajları ve bulut tabanlı çözümlerin entegrasyonu gibi başlıklar altında derinlemesine analizler sunuyorum. Yazılım projelerinde karşılaşılan yaygın zorluklar ve bu zorluklara yönelik pratik çözüm önerileri de makalelerimin odak noktalarından biridir, böylece okuyucularım kendi projelerinde karşılaştıkları engelleri aşma konusunda ilham bulabilirler."
+          "Yazılım geliştirme, günümüz dünyasının temel taşlarından biri. Bu bölümde, web geliştirme, mobil uygulamalar ve farklı programlama dilleri üzerine yazılarımı bulacaksınız. Teknoloji trendlerini ve pratik uygulamaları ele alıyorum.",
+          "Yazılım projelerinde karşılaşılan zorluklar, çözüm yaklaşımları ve verimli kodlama teknikleri hakkında deneyimlerimi aktarıyorum. Yeni başlayanlar ve tecrübeli geliştiriciler için faydalı içerikler sunuyorum. Daha fazla bilgi için <a href=\"/yazilim/\">Yazılım</a> sayfamı ziyaret edebilirsiniz."
         ],
       },
       {
-        heading: "Yapay Zekâ ve Geleceğin Teknolojileri",
+        heading: "Yapay Zekânın Yükselişi ve Uygulamaları",
         paragraphs: [
-          "Yapay zekâ (YZ), günümüzün en heyecan verici ve dönüştürücü alanlarından biri olarak hayatımızın her köşesine nüfuz etmektedir. Bu bölümde, makine öğrenimi algoritmalarından doğal dil işlemeye, bilgisayar görüşünden robotik süreç otomasyonuna kadar geniş bir yelpazede yapay zekâ uygulamalarını inceliyorum. YZ'nin iş dünyasındaki ve günlük hayattaki potansiyelini, aynı zamanda etik boyutlarını ve toplumsal etkilerini tartışıyorum.",
-          "Geleceğin teknolojileri arasında yapay zekânın konumu ve bu teknolojilerin farklı sektörlere entegrasyonu üzerine düşüncelerimi ve analizlerimi paylaşıyorum. Veri bilimi, büyük veri analizi ve akıllı sistemler gibi kavramların, iş süreçlerini nasıl optimize ettiğini ve yeni iş modelleri ile fırsatlar yarattığını detaylıca ele alıyorum. Bu sayede okuyucular, YZ'nin gelecekteki rolünü daha iyi kavrayabilirler."
+          "Yapay zekâ (YZ), hayatımızın her alanına nüfuz eden bir güç. Makine öğrenimi algoritmalarından doğal dil işlemeye kadar YZ'nin potansiyelini inceliyorum. YZ'nin iş süreçlerine entegrasyonu ve günlük yaşamdaki etkileri üzerine odaklanıyorum.",
+          "Yapay zekâ teknolojilerinin etik boyutları, gelecekteki potansiyelleri ve farklı sektörlerdeki uygulama örnekleri hakkında analizler sunuyorum. YZ'nin karmaşık dünyasını anlaşılır bir dille aktararak, merakınızı gidermeyi hedefliyorum."
         ],
       },
       {
-        heading: "SEO ile Dijital Görünürlük Kazanımı",
+        heading: "Arama Motoru Optimizasyonu (SEO) Stratejileri",
         paragraphs: [
-          "Bir web sitesinin veya kişisel markanın dijital dünyada öne çıkması için arama motoru optimizasyonu (SEO) kritik bir rol oynar ve doğru stratejilerle büyük fark yaratır. Bu bölümde, yerel SEO stratejilerinden teknik SEO uygulamalarına, anahtar kelime araştırmasından içerik optimizasyonuna kadar birçok konuda pratik bilgiler sunuyorum. Amacım, dijital varlığınızı güçlendirmenize ve hedef kitlenize ulaşmanıza yardımcı olmaktır.",
-          "Arama motorlarının çalışma prensipleri, algoritma güncellemeleri ve kullanıcı deneyiminin SEO üzerindeki etkisi gibi konuları detaylı bir şekilde inceliyorum. Doğru SEO yaklaşımlarıyla organik trafik elde etmenin ve hedef kitlenize ulaşmanın yollarını gösteriyorum. Aynı zamanda, yeminli tercüme hizmetleri gibi spesifik alanlar için özelleştirilmiş SEO stratejilerine de değiniyorum, bu sayede niş alanlarda da görünürlük artırılabilir."
+          "Dijital görünürlük, günümüz iş dünyasında kritik. Bu bölümde, web sitenizin arama motorlarında üst sıralarda yer almasını sağlayacak SEO stratejilerini ve tekniklerini ele alıyorum. Anahtar kelime araştırmasından teknik SEO'ya birçok konuyu detaylandırıyorum.",
+          "SEO'nun sürekli değişen algoritmalarına uyum sağlamak ve sürdürülebilir başarı elde etmek için güncel bilgileri paylaşıyorum. Organik trafiği artırmak ve hedef kitlenize ulaşmak için pratik ipuçları sunuyorum."
         ],
       },
       {
-        heading: "Tercüme, Kişisel Gelişim ve Stoacılık Yazıları",
+        heading: "Yeminli Tercüme ve Dil Hizmetleri",
         paragraphs: [
-          "Yeminli tercüme alanındaki uzun yıllara dayanan deneyimlerimden yola çıkarak, bu sektördeki önemli noktaları ve çeviri süreçlerinin inceliklerini paylaşıyorum. Dilin gücü ve kültürel aktarımın önemi üzerine bilgilendirici yazılar kaleme alıyorum. Aynı zamanda, kişisel gelişim yolculuğunda karşılaşılan zorluklar, öğrenme süreçleri ve sürekli gelişim felsefesi üzerine derinlemesine düşüncelerimi aktarıyorum.",
-          "Kişisel markalaşma, zaman yönetimi ve verimli çalışma alışkanlıkları gibi konularda da değerli makaleler bulabilirsiniz. Özellikle Stoacılık felsefesinin günümüz dünyasındaki yeri ve kişisel gelişim üzerindeki etkileri üzerine derinlemesine yazılar sunuyorum. Bu kadim felsefenin modern hayattaki pratik uygulamalarını keşfetmek için 'Stoacılık' sayfamı ziyaret edebilirsiniz."
+          "Resmi ve hukuki belgelerde dil bariyerlerini aşmak, doğru ve güvenilir bir tercüme süreci gerektirir. Bu bölümde, yeminli tercüme hizmetlerinin önemi, çeviri süreçleri ve dikkat edilmesi gereken noktalar hakkında bilgi veriyorum. Hukuki, teknik ve akademik metinlerin inceliklerini açıklıyorum.",
+          "Tercüme sektöründeki deneyimlerimi paylaşarak, doğru tercüman seçimi ve başarılı proje yönetimi konularında rehberlik etmeyi amaçlıyorum. Dilin gücünü ele alan yazılarıma <a href=\"/tercume/\">Tercüme</a> sayfamdan ulaşabilirsiniz."
+        ],
+      },
+      {
+        heading: "Kişisel Gelişim ve Felsefe: Stoacılık",
+        paragraphs: [
+          "Teknolojinin hızla geliştiği bu çağda, kişisel gelişim ve içsel dengeyi korumak büyük önem taşıyor. Bu bölümde, Stoacılık felsefesinin günümüz insanına sunduğu bilgelik ve pratik yaşam rehberliği üzerine yazılarımı bulacaksınız. Dirençli olmak, duyguları yönetmek için Stoacı prensipleri inceliyorum.",
+          "Antik çağlardan günümüze ulaşan bu felsefenin modern yaşamdaki yansımalarını ve bireysel dönüşümdeki rolünü ele alıyorum. Daha derinlemesine okumalar için <a href=\"/stoacilik/\">Stoacılık</a> yazılarıma göz atabilirsiniz. Bu düşünce yolculuğunda bana eşlik etmenizi dilerim."
         ],
       }
     ],
-    highlights: ["Yazılım dünyasındaki güncel gelişmeleri takip edin.","Yapay zekânın iş ve yaşamdaki yerini keşfedin.","SEO ile dijital görünürlüğünüzü artırın.","Tercüme, kişisel gelişim ve Stoacılık üzerine düşünceler edinin."],
+    highlights: ["Yazılım, yapay zekâ ve SEO alanlarında güncel analizler","Yeminli tercüme süreçleri ve dil hizmetlerine dair pratik bilgiler","Kişisel gelişim ve Stoacılık felsefesi üzerine derinlemesine düşünceler","Dijital dünyanın farklı disiplinlerini bir araya getiren özgün bakış açıları"],
     faq: [
       {
-        "question": "Bu makaleler kimlere yöneliktir?",
-        "answer": "Makalelerim, yazılım, yapay zekâ, SEO ve tercüme alanlarında bilgi edinmek isteyen profesyonellere, öğrencilere ve meraklılara yöneliktir. Ayrıca kişisel gelişim ve Stoacılık felsefesine ilgi duyan herkes için de içerikler bulunmaktadır."
+        "question": "Bu makaleler kimler için hazırlanmıştır?",
+        "answer": "Bu makaleler, yazılım, yapay zekâ, SEO ve tercüme alanlarına ilgi duyan profesyoneller, öğrenciler ve meraklı okuyucular için hazırlanmıştır. Aynı zamanda kişisel gelişim ve felsefeye ilgi duyan herkes de faydalı içerikler bulabilir."
       },
       {
-        "question": "Yazılım makalelerinde hangi konular işleniyor?",
-        "answer": "Yazılım makalelerinde modern yazılım mimarileri, kodlama pratikleri, yapay zekâ destekli geliştirme araçları, bulut çözümleri ve sektörel yenilikler gibi konulara odaklanılmaktadır."
+        "question": "Makalelerdeki bilgiler ne kadar günceldir?",
+        "answer": "Makalelerdeki bilgileri güncel tutmaya özen gösteriyorum. Özellikle teknoloji ve SEO gibi hızla değişen alanlarda, en yeni gelişmeleri ve trendleri yansıtmaya çalışıyorum. İçerikler sürekli olarak gözden geçirilip güncellenebilir."
       },
       {
-        "question": "Yapay zekâ ve SEO üzerine pratik bilgiler bulabilir miyim?",
-        "answer": "Evet, yapay zekâ bölümünde algoritmalar ve uygulamalar, SEO bölümünde ise yerel SEO, teknik SEO, anahtar kelime araştırması ve içerik optimizasyonu gibi konularda pratik bilgiler ve stratejiler sunulmaktadır."
+        "question": "Hangi konularda makaleler bulabilirim?",
+        "answer": "Sitemde yazılım geliştirme, yapay zekâ uygulamaları, arama motoru optimizasyonu (SEO), yeminli tercüme hizmetleri ve Stoacılık felsefesi gibi geniş bir yelpazede makaleler bulabilirsiniz."
       },
       {
-        "question": "Stoacılık felsefesi hakkında daha fazla bilgiye nasıl ulaşabilirim?",
-        "answer": "Stoacılık felsefesi üzerine daha detaylı yazılarımı ve analizlerimi '/stoacilik/' sayfamda bulabilirsiniz. Bu sayfadaki içerikler, felsefenin temel prensiplerini ve günümüzdeki uygulanabilirliğini ele almaktadır."
+        "question": "Yiğit Cilli ile nasıl iletişime geçebilirim?",
+        "answer": "Hizmetlerim veya makalelerim hakkında sorularınız varsa, web sitemdeki iletişim formu aracılığıyla bana ulaşabilirsiniz. Ayrıca <a href=\"/hakkimda/\">Hakkımda</a> sayfasından benimle ilgili daha fazla bilgi edinebilirsiniz."
       }
     ],
     relatedLinks: [
@@ -858,7 +869,7 @@ export const pages: Record<string, PageContent> = {
       {
         heading: 'Haklarınız ve iletişim',
         paragraphs: [
-          'KVKK kapsamındaki talepleriniz için hello@yigitcilli.com adresine yazabilirsiniz. Politika gerektiğinde güncellenir; güncel sürüm bu sayfada yayımlanır.',
+          'KVKK kapsamındaki talepleriniz için info@yigitcilli.com adresine yazabilirsiniz. Politika gerektiğinde güncellenir; güncel sürüm bu sayfada yayımlanır.',
         ],
       },
     ],
