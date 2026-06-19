@@ -19,7 +19,8 @@ export const site = {
     subtitle:
       'Dijital ürünler, uygulamalar, çeviri çalışmaları ve stoacı düşünce üzerine sade, disiplinli ve üretim odaklı bir alan.',
     ctaPrimary: 'Çalışma alanları',
-    ctaSecondary: 'İletişim',
+    ctaSecondary: 'Referanslarımız',
+    ctaSecondaryHref: '/referanslar',
   },
   footer: {
     title: 'İletişim',

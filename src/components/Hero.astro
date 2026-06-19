@@ -34,7 +34,10 @@ const heroAlt =
     <p class="hero__slogan hero__seq hero__seq--slogan">{site.slogan}</p>
     <div class="hero__actions hero__seq hero__seq--actions">
       <a href="#alanlar" class="hero__cta hero__cta--primary">{site.hero.ctaPrimary}</a>
-      <a href="/iletisim" class="hero__cta hero__cta--ghost">{site.hero.ctaSecondary}</a>
+      <a href={site.hero.ctaSecondaryHref} class="hero__cta hero__cta--references">
+        <span>{site.hero.ctaSecondary}</span>
+        <span class="hero__cta-arrow" aria-hidden="true">→</span>
+      </a>
     </div>
   </div>
 
@@ -171,12 +174,14 @@ const heroAlt =
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-sm);
+    align-items: stretch;
   }
 
   .hero__cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    gap: 0.5rem;
     padding: 0.65rem 1.2rem;
     border-radius: var(--radius-sm);
     font-size: 0.8125rem;
@@ -185,7 +190,9 @@ const heroAlt =
     transition:
       background var(--duration-fast) var(--ease-out),
       border-color var(--duration-fast) var(--ease-out),
-      color var(--duration-fast) var(--ease-out);
+      color var(--duration-fast) var(--ease-out),
+      box-shadow var(--duration-fast) var(--ease-out),
+      transform var(--duration-fast) var(--ease-out);
   }
 
   .hero__cta--primary {
@@ -198,14 +205,54 @@ const heroAlt =
     background: var(--color-surface-hover);
   }
 
-  .hero__cta--ghost {
-    border: 1px solid var(--color-border);
-    color: var(--color-text-muted);
+  .hero__cta--references {
+    padding: 0.85rem 1.65rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    color: var(--color-text);
+    border: 1px solid rgba(90, 125, 168, 0.55);
+    background: linear-gradient(
+      135deg,
+      rgba(26, 39, 64, 0.95) 0%,
+      rgba(61, 95, 138, 0.42) 100%
+    );
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.06) inset,
+      0 12px 32px rgba(0, 0, 0, 0.35),
+      0 0 0 1px rgba(61, 95, 138, 0.15);
   }
 
-  .hero__cta--ghost:hover {
-    color: var(--color-text);
-    border-color: var(--color-border-strong);
+  .hero__cta--references:hover {
+    border-color: var(--color-accent-soft);
+    background: linear-gradient(
+      135deg,
+      rgba(26, 39, 64, 1) 0%,
+      rgba(61, 95, 138, 0.55) 100%
+    );
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.08) inset,
+      0 16px 40px rgba(0, 0, 0, 0.45),
+      0 0 24px rgba(61, 95, 138, 0.22);
+    transform: translateY(-1px);
+  }
+
+  .hero__cta-arrow {
+    font-size: 1.05em;
+    opacity: 0.85;
+    transition: transform var(--duration-fast) var(--ease-out);
+  }
+
+  .hero__cta--references:hover .hero__cta-arrow {
+    transform: translateX(3px);
+    opacity: 1;
+  }
+
+  @media (max-width: 480px) {
+    .hero__cta--references {
+      flex: 1 1 100%;
+      min-width: 0;
+    }
   }
 
   .hero__visual {

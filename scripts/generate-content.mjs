@@ -212,7 +212,8 @@ const siteTs = `export const site = {
     eyebrow: ${JSON.stringify(content.hero.eyebrow)},
     subtitle: ${JSON.stringify(content.hero.subtitle)},
     ctaPrimary: ${JSON.stringify(content.hero.ctaPrimary)},
-    ctaSecondary: ${JSON.stringify(content.hero.ctaSecondary)},
+    ctaSecondary: 'Referanslarımız',
+    ctaSecondaryHref: '/referanslar',
   },
   footer: {
     title: ${JSON.stringify(content.footer.title)},
