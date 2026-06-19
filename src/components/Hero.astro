@@ -331,6 +331,12 @@ const heroAlt =
       opacity: 0;
     }
 
+    .hero--sequence-complete .hero__seq,
+    .hero--sequence[data-opening='skip'] .hero__seq {
+      opacity: 1;
+      transform: none;
+    }
+
     .hero--sequence:not([data-opening='skip']) .hero__grid {
       animation: hero-grid-reveal 0.55s var(--ease-out) forwards;
     }

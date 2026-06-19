@@ -8,7 +8,7 @@ const { id, title, eyebrow, description, homeTeaser, highlights, cta, image } = 
 const summary = homeTeaser ?? description;
 ---
 
-<article class="section-card" data-reveal aria-labelledby={`${id}-card-title`}>
+<article class="section-card" aria-labelledby={`${id}-card-title`}>
   <a href={cta?.href ?? `#${id}`} class="section-card__media-link">
     <ImagePlaceholder
       src={image.src}
@@ -19,7 +19,7 @@ const summary = homeTeaser ?? description;
     />
   </a>
 
-  <div class="section-card__body">
+  <div class="section-card__body" data-reveal>
     <p class="section-card__eyebrow">{eyebrow}</p>
     <h3 id={`${id}-card-title`} class="section-card__title">
       <a href={cta?.href ?? `#${id}`}>{title}</a>

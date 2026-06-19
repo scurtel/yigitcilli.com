@@ -64,8 +64,9 @@ const ogImageUrl = new URL(ogImage, site.url).href;
     <link rel="apple-touch-icon" href="/images/falcon-logo.png" />
     {
       heroOpening && (
-        <script is:inline>
-          {`(function () {
+        <>
+          <script is:inline>
+            {`(function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   try {
     if (sessionStorage.getItem('yc-hero-opening-v1') === '1') {
@@ -73,7 +74,18 @@ const ogImageUrl = new URL(ogImage, site.url).href;
     }
   } catch (_) {}
 })();`}
-        </script>
+          </script>
+          <script is:inline>
+            {`window.setTimeout(function () {
+  var hero = document.querySelector('[data-hero-opening]');
+  if (!hero || hero.classList.contains('hero--sequence-complete')) return;
+  hero.classList.add('hero--sequence-complete');
+  document.body.classList.add('hero-opening-ready');
+  var header = document.querySelector('.header');
+  if (header) header.classList.add('header--sequence-visible');
+}, 2600);`}
+          </script>
+        </>
       )
     }
     {
@@ -90,6 +102,9 @@ const ogImageUrl = new URL(ogImage, site.url).href;
   </head>
   <body class:list={[heroOpening && 'has-hero-opening']}>
     <slot />
+    <script is:inline>
+      document.documentElement.classList.add('reveal-js');
+    </script>
     <script src="@/scripts/scroll-reveal.ts"></script>
   </body>
 </html>

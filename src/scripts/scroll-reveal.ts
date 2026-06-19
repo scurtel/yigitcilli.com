@@ -1,6 +1,8 @@
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
+document.documentElement.classList.add('reveal-js');
+
 function revealIfInView(el: HTMLElement) {
   const rect = el.getBoundingClientRect();
   const viewportHeight = window.innerHeight || document.documentElement.clientHeight;

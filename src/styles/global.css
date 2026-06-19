@@ -146,8 +146,8 @@ button {
   line-height: 1.7;
 }
 
-/* Scroll reveal */
-[data-reveal] {
+/* Scroll reveal — yalnızca JS aktifken gizle (görsel kırılması önlenir) */
+html.reveal-js [data-reveal]:not(.is-visible) {
   opacity: 0;
   transform: translateY(1rem);
   transition:
@@ -155,13 +155,13 @@ button {
     transform var(--duration-slow) var(--ease-out);
 }
 
-[data-reveal].is-visible {
+html.reveal-js [data-reveal].is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-reveal] {
+  html.reveal-js [data-reveal]:not(.is-visible) {
     opacity: 1;
     transform: none;
     transition: none;
@@ -169,7 +169,7 @@ button {
 }
 
 @media (max-width: 768px) {
-  [data-reveal] {
+  html.reveal-js [data-reveal]:not(.is-visible) {
     transform: translateY(0.5rem);
   }
 
