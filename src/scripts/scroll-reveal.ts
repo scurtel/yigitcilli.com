@@ -1,12 +1,11 @@
 const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
 document.documentElement.classList.add('reveal-js');
 
 function revealIfInView(el: HTMLElement) {
   const rect = el.getBoundingClientRect();
   const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-  if (rect.top < viewportHeight * 0.92 && rect.bottom > 0) {
+  if (rect.top < viewportHeight * 0.85 && rect.bottom > 0) {
     el.classList.add('is-visible');
     return true;
   }
@@ -39,8 +38,8 @@ if (prefersReduced) {
         }
       },
       {
-        threshold: isMobile ? 0.06 : 0.1,
-        rootMargin: isMobile ? '0px 0px -2% 0px' : '0px 0px -5% 0px',
+        threshold: 0.15,
+        rootMargin: '0px 0px -4% 0px',
       },
     );
 

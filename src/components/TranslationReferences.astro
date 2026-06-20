@@ -64,7 +64,6 @@ const isStandalonePage = page && !embedded;
                         'translation-refs__item',
                         index > 0 && 'translation-refs__item--sep',
                       ]}
-                      style={`--item-delay: ${rowIndex * 240 + index * 60}ms`}
                     >
                       <figure class="translation-refs__figure">
                         <div
@@ -99,10 +98,10 @@ const isStandalonePage = page && !embedded;
       {
         isStandalonePage && (
           <div class="translation-refs__actions">
-            <a href="/tercume" class="translation-refs__action translation-refs__action--ghost">
+            <a href="/tercume" class="translation-refs__action translation-refs__action--ghost motion-btn">
               Tercüme alanı
             </a>
-            <a href="/iletisim" class="translation-refs__action translation-refs__action--primary">
+            <a href="/iletisim" class="translation-refs__action translation-refs__action--primary motion-btn">
               Tercüme talebi
             </a>
           </div>
@@ -218,7 +217,6 @@ const isStandalonePage = page && !embedded;
     flex: 1 1 7.5rem;
     min-width: 6.5rem;
     max-width: 11rem;
-    animation: refs-item-in 0.5s var(--ease-out) var(--item-delay, 0ms) both;
   }
 
   .translation-refs__item--sep::before {
@@ -327,10 +325,6 @@ const isStandalonePage = page && !embedded;
     font-size: 0.8125rem;
     font-weight: 500;
     letter-spacing: 0.02em;
-    transition:
-      background var(--duration-fast) var(--ease-out),
-      border-color var(--duration-fast) var(--ease-out),
-      color var(--duration-fast) var(--ease-out);
   }
 
   .translation-refs__action--primary {
@@ -351,17 +345,6 @@ const isStandalonePage = page && !embedded;
   .translation-refs__action--ghost:hover {
     color: var(--color-text);
     border-color: var(--color-border-strong);
-  }
-
-  @keyframes refs-item-in {
-    from {
-      opacity: 0;
-      transform: translateY(6px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
   }
 
   @media (hover: hover) {

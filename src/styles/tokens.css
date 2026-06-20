@@ -49,9 +49,15 @@
 
   /* Motion */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-motion: cubic-bezier(0.16, 1, 0.3, 1);
   --duration-fast: 180ms;
   --duration-base: 280ms;
   --duration-slow: 500ms;
+  --duration-reveal: 700ms;
+  --duration-micro: 250ms;
+  --motion-stagger: 90ms;
+  --motion-rise-offset: 14px;
+  --motion-reveal-offset: 20px;
 
   /* Effects */
   --shadow-panel: 0 1px 0 rgba(255, 255, 255, 0.04) inset, 0 12px 40px rgba(0, 0, 0, 0.35);

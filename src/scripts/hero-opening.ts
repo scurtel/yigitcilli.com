@@ -1,9 +1,10 @@
 const STORAGE_KEY = 'yc-hero-opening-v1';
+const STAGGER_MS = 90;
+const REVEAL_MS = 700;
+const STEPS = 4;
 
 const hero = document.querySelector<HTMLElement>('[data-hero-opening]');
-if (!hero) {
-  /* Ana sayfa dışı */
-} else {
+if (hero) {
   const header = document.querySelector<HTMLElement>('.header');
   const body = document.body;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -18,7 +19,9 @@ if (!hero) {
     finish();
   } else {
     const isShort = hero.dataset.opening === 'short';
-    const durationMs = isShort ? 520 : 1900;
+    const stagger = isShort ? STAGGER_MS / 2 : STAGGER_MS;
+    const duration = isShort ? 450 : REVEAL_MS;
+    const totalMs = (STEPS - 1) * stagger + duration + 80;
 
     window.setTimeout(() => {
       finish();
@@ -29,6 +32,6 @@ if (!hero) {
           /* gizli mod */
         }
       }
-    }, durationMs);
+    }, totalMs);
   }
 }

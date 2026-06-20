@@ -1,4 +1,5 @@
 @import './tokens.css';
+@import './motion.css';
 
 *,
 *::before,
@@ -146,33 +147,9 @@ button {
   line-height: 1.7;
 }
 
-/* Scroll reveal — yalnızca JS aktifken gizle (görsel kırılması önlenir) */
-html.reveal-js [data-reveal]:not(.is-visible) {
-  opacity: 0;
-  transform: translateY(1rem);
-  transition:
-    opacity var(--duration-slow) var(--ease-out),
-    transform var(--duration-slow) var(--ease-out);
-}
-
-html.reveal-js [data-reveal].is-visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-@media (prefers-reduced-motion: reduce) {
-  html.reveal-js [data-reveal]:not(.is-visible) {
-    opacity: 1;
-    transform: none;
-    transition: none;
-  }
-}
+/* Scroll reveal kuralları → motion.css */
 
 @media (max-width: 768px) {
-  html.reveal-js [data-reveal]:not(.is-visible) {
-    transform: translateY(0.5rem);
-  }
-
   body::before {
     background-size: 48px 48px;
     opacity: 0.4;

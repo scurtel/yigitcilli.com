@@ -8,7 +8,7 @@ import { homeNavAnchors } from '@/data/home';
       {
         homeNavAnchors.map((item) => (
           <li>
-            <a href={item.href} class="home-nav__link">
+            <a href={item.href} class="home-nav__link nav-link-underline">
               {item.label}
             </a>
           </li>
@@ -54,6 +54,12 @@ import { homeNavAnchors } from '@/data/home';
   .home-nav__link:hover {
     color: var(--color-text);
     background: rgba(255, 255, 255, 0.04);
+  }
+
+  .home-nav__link::after {
+    left: 0.65rem;
+    right: 0.65rem;
+    bottom: 0.2rem;
   }
 
   @media (min-width: 900px) {
