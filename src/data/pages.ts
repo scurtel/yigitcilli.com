@@ -333,7 +333,7 @@ export const pages: Record<string, PageContent> = {
         'Stoacı düşünce, disiplin ve günlük yaşama uygulanabilir felsefe notları. Sakin, net ve iddiasız bir anlatım.',
       ogDescription:
         'Yiğit Cilli stoacılık alanı: düşünce notları, disiplin ve günlük hayatla bağlantı.',
-      ogImage: '/images/stoicism.webp',
+      ogImage: '/images/stoic.webp',
     },
     hero: {
       eyebrow: 'Alan',
@@ -341,8 +341,8 @@ export const pages: Record<string, PageContent> = {
       description:
         'Stoacı düşünceyi disiplin ve günlük yaşamla buluşturan notlar: sakin, net, uygulanabilir.',
       image: {
-        src: '/images/stoicism.webp',
-        alt: 'Stoacı düşünce ve felsefe yazıları',
+        src: '/images/stoic.webp',
+        alt: 'Stoacılık düşüncesini temsil eden fütüristik çöl ve yapı görseli',
       },
     },
     blocks: [

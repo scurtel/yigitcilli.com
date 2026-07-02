@@ -112,6 +112,55 @@ const { eyebrow, title, description, image, compactTop = false, visibleOnLoad = 
     max-width: 100%;
   }
 
+  .page-hero__media :global(.media-card) {
+    height: 100%;
+  }
+
+  .page-hero__media :global(.media-card__frame) {
+    width: 100%;
+    height: 100%;
+    min-height: clamp(12rem, 34vw, 20rem);
+    aspect-ratio: 16 / 10;
+    max-height: none;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #111827;
+    overflow: hidden;
+    box-shadow: var(--shadow-panel);
+  }
+
+  .page-hero__media :global(.media-card__frame img) {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .page-hero__media :global(.media-card__overlay) {
+    background: linear-gradient(
+      165deg,
+      rgba(7, 8, 12, 0.2) 0%,
+      rgba(7, 8, 12, 0.05) 45%,
+      rgba(7, 8, 12, 0.28) 100%
+    );
+  }
+
+  @media (max-width: 899px) {
+    .page-hero__media {
+      order: 2;
+    }
+
+    .page-hero__copy {
+      order: 1;
+    }
+
+    .page-hero__media :global(.media-card__frame) {
+      min-height: clamp(11rem, 52vw, 16rem);
+      aspect-ratio: 16 / 11;
+    }
+  }
+
   @media (min-width: 900px) {
     .page-hero__inner {
       grid-template-columns: 1fr 1fr;
