@@ -37,6 +37,8 @@ const showStoicPhilosophers = slug === 'stoacilik';
     description={page.hero.description}
     image={page.hero.image}
     compactTop
+    imageFit={showStoicPhilosophers ? 'contain' : 'cover'}
+    imageAspectRatio={showStoicPhilosophers ? '1 / 1' : undefined}
   />
   {showStoicPhilosophers && <StoicPhilosophers />}
   <DetailContent

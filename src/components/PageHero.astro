@@ -12,14 +12,34 @@ interface Props {
   compactTop?: boolean;
   /** İlk yüklemede görünür (scroll-reveal kapalı) */
   visibleOnLoad?: boolean;
+  /** cover: kırparak doldurur; contain: görselin tamamını gösterir */
+  imageFit?: 'cover' | 'contain';
+  /** contain modunda kart oranı (ör. "1 / 1", "4 / 3") */
+  imageAspectRatio?: string;
 }
 
-const { eyebrow, title, description, image, compactTop = false, visibleOnLoad = false } =
-  Astro.props;
+const {
+  eyebrow,
+  title,
+  description,
+  image,
+  compactTop = false,
+  visibleOnLoad = false,
+  imageFit = 'cover',
+  imageAspectRatio = '4 / 3',
+} = Astro.props;
+
+const containImage = imageFit === 'contain';
 ---
 
 <section
-  class:list={['page-hero', 'section', compactTop && 'page-hero--compact']}
+  class:list={[
+    'page-hero',
+    'section',
+    compactTop && 'page-hero--compact',
+    containImage && 'page-hero--contain-image',
+  ]}
+  style={containImage ? `--page-hero-aspect: ${imageAspectRatio}` : undefined}
   aria-labelledby="page-hero-title"
 >
   <div class="page-hero__bg" aria-hidden="true">
@@ -165,6 +185,37 @@ const { eyebrow, title, description, image, compactTop = false, visibleOnLoad = 
     .page-hero__inner {
       grid-template-columns: 1fr 1fr;
       gap: var(--space-grid-lg);
+    }
+  }
+
+  .page-hero--contain-image .page-hero__media :global(.media-card__frame) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: var(--page-hero-aspect, 4 / 3);
+    min-height: clamp(14rem, 42vw, 24rem);
+    max-height: min(28rem, 72vh);
+  }
+
+  .page-hero--contain-image .page-hero__media :global(.media-card__frame img) {
+    object-fit: contain;
+    object-position: center;
+  }
+
+  .page-hero--contain-image .page-hero__media :global(.media-card__overlay) {
+    background: linear-gradient(
+      165deg,
+      rgba(7, 8, 12, 0.08) 0%,
+      transparent 45%,
+      rgba(7, 8, 12, 0.12) 100%
+    );
+  }
+
+  @media (max-width: 899px) {
+    .page-hero--contain-image .page-hero__media :global(.media-card__frame) {
+      aspect-ratio: var(--page-hero-aspect, 4 / 3);
+      min-height: clamp(13rem, 78vw, 20rem);
+      max-height: none;
     }
   }
 </style>
