@@ -1,0 +1,285 @@
+---
+import { stoics, defaultStoicId } from '@/data/stoicism';
+---
+
+<section class="stoic-philosophers section section--tight" aria-labelledby="stoic-philosophers-heading">
+  <div class="container">
+    <header class="stoic-philosophers__header" data-reveal>
+      <p class="section__eyebrow">Önde gelen düşünürler</p>
+      <h2 id="stoic-philosophers-heading" class="section__title">Stoacı filozoflar</h2>
+      <p class="section__description">
+        Marcus Aurelius, Epictetus ve Seneca — disiplin, özgürlük ve günlük yaşam üzerine üç farklı perspektif.
+      </p>
+    </header>
+
+    <div class="stoic-philosophers__grid" role="tablist" aria-label="Stoacı filozoflar" data-reveal>
+      {
+        stoics.map((stoic) => (
+          <button
+            type="button"
+            class:list={['stoic-card', stoic.id === defaultStoicId && 'is-active']}
+            role="tab"
+            id={`stoic-tab-${stoic.id}`}
+            aria-selected={stoic.id === defaultStoicId ? 'true' : 'false'}
+            aria-controls={`stoic-panel-${stoic.id}`}
+            data-stoic-id={stoic.id}
+          >
+            <span class="stoic-card__media">
+              <img
+                src={stoic.image}
+                alt={stoic.imageAlt}
+                width="320"
+                height="320"
+                loading="lazy"
+                decoding="async"
+              />
+            </span>
+            <span class="stoic-card__body">
+              <span class="stoic-card__name">{stoic.name}</span>
+              <span class="stoic-card__tagline">{stoic.tagline}</span>
+            </span>
+          </button>
+        ))
+      }
+    </div>
+
+    <div class="stoic-panel" data-reveal>
+      {
+        stoics.map((stoic) => (
+          <article
+            id={`stoic-panel-${stoic.id}`}
+            class:list={['stoic-panel__content', stoic.id === defaultStoicId && 'is-active']}
+            role="tabpanel"
+            aria-labelledby={`stoic-tab-${stoic.id}`}
+            data-stoic-panel={stoic.id}
+            hidden={stoic.id !== defaultStoicId}
+          >
+            <h3 class="stoic-panel__title">{stoic.name}</h3>
+
+            <div class="stoic-panel__section">
+              <h4 class="stoic-panel__heading">Kısa biyografi</h4>
+              <p class="stoic-panel__text">{stoic.biography}</p>
+            </div>
+
+            <div class="stoic-panel__section">
+              <h4 class="stoic-panel__heading">Stoacılık açısından önemi</h4>
+              <p class="stoic-panel__text">{stoic.importance}</p>
+            </div>
+
+            <div class="stoic-panel__section">
+              <h4 class="stoic-panel__heading">Öne çıkan düşünce</h4>
+              <p class="stoic-panel__text stoic-panel__text--emphasis">{stoic.keyThought}</p>
+            </div>
+
+            <blockquote class="stoic-panel__quote">
+              <h4 class="stoic-panel__heading">Temsilî söz</h4>
+              <p>{stoic.quote}</p>
+            </blockquote>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<script>
+  const root = document.querySelector('.stoic-philosophers');
+  if (root) {
+    const tabs = root.querySelectorAll<HTMLButtonElement>('[data-stoic-id]');
+    const panels = root.querySelectorAll<HTMLElement>('[data-stoic-panel]');
+
+    const selectStoic = (id: string) => {
+      tabs.forEach((tab) => {
+        const active = tab.dataset.stoicId === id;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', String(active));
+      });
+
+      panels.forEach((panel) => {
+        const active = panel.dataset.stoicPanel === id;
+        panel.classList.toggle('is-active', active);
+        panel.hidden = !active;
+      });
+    };
+
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const id = tab.dataset.stoicId;
+        if (id) selectStoic(id);
+      });
+    });
+  }
+</script>
+
+<style>
+  .stoic-philosophers__header {
+    max-width: 42rem;
+    margin-bottom: var(--space-lg);
+  }
+
+  .stoic-philosophers__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+  }
+
+  @media (min-width: 48rem) {
+    .stoic-philosophers__grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-grid);
+    }
+  }
+
+  .stoic-card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    padding: 0;
+    text-align: left;
+    cursor: pointer;
+    font: inherit;
+    color: inherit;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: linear-gradient(165deg, var(--color-bg-elevated) 0%, var(--color-surface) 100%);
+    box-shadow: var(--shadow-panel);
+    overflow: hidden;
+    transition:
+      border-color var(--duration-base) var(--ease-out),
+      transform var(--duration-base) var(--ease-out),
+      box-shadow var(--duration-base) var(--ease-out);
+  }
+
+  @media (hover: hover) {
+    .stoic-card:hover {
+      border-color: var(--color-border-strong);
+      transform: translateY(-3px);
+      box-shadow:
+        var(--shadow-panel),
+        0 8px 24px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(90, 125, 168, 0.12);
+    }
+  }
+
+  .stoic-card:focus-visible {
+    outline: 2px solid var(--color-accent-soft);
+    outline-offset: 2px;
+  }
+
+  .stoic-card.is-active {
+    border-color: var(--color-accent-soft);
+    box-shadow:
+      var(--shadow-panel),
+      0 0 0 1px rgba(90, 125, 168, 0.28),
+      0 0 32px var(--color-glow);
+  }
+
+  .stoic-card__media {
+    display: block;
+    aspect-ratio: 1;
+    overflow: hidden;
+    background: #111827;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .stoic-card__media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .stoic-card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-md);
+  }
+
+  .stoic-card__name {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: -0.01em;
+  }
+
+  .stoic-card__tagline {
+    font-size: 0.9375rem;
+    line-height: 1.55;
+    color: var(--color-text-muted);
+  }
+
+  .stoic-panel {
+    position: relative;
+  }
+
+  .stoic-panel__content {
+    padding: var(--space-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    background: linear-gradient(165deg, var(--color-bg-elevated) 0%, var(--color-surface) 100%);
+    box-shadow: var(--shadow-panel);
+  }
+
+  .stoic-panel__content.is-active {
+    border-color: var(--color-border-strong);
+  }
+
+  .stoic-panel__title {
+    margin: 0 0 var(--space-md);
+    padding-bottom: var(--space-sm);
+    border-bottom: 1px solid var(--color-border);
+    font-size: clamp(1.375rem, 2.5vw, 1.625rem);
+    font-weight: 600;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+  }
+
+  .stoic-panel__section {
+    margin-bottom: var(--space-md);
+  }
+
+  .stoic-panel__section:last-of-type {
+    margin-bottom: var(--space-lg);
+  }
+
+  .stoic-panel__heading {
+    margin: 0 0 var(--space-xs);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-faint);
+  }
+
+  .stoic-panel__text {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--color-text-soft);
+  }
+
+  .stoic-panel__text--emphasis {
+    color: var(--color-text);
+    font-weight: 500;
+  }
+
+  .stoic-panel__quote {
+    margin: 0;
+    padding: var(--space-md);
+    border-radius: var(--radius-md);
+    border-left: 3px solid var(--color-accent);
+    background: rgba(61, 95, 138, 0.1);
+  }
+
+  .stoic-panel__quote p {
+    margin: var(--space-xs) 0 0;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    font-style: italic;
+    color: var(--color-text);
+  }
+</style>

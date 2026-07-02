@@ -3,6 +3,7 @@ import SiteLayout from '@/layouts/SiteLayout.astro';
 import PageHero from '@/components/PageHero.astro';
 import DetailContent from '@/components/DetailContent.astro';
 import DevelopedApps from '@/components/DevelopedApps.astro';
+import StoicPhilosophers from '@/components/StoicPhilosophers.astro';
 import { getPage, pageSlugs } from '@/data/pages';
 import { site } from '@/config/site';
 
@@ -16,6 +17,7 @@ const { slug } = Astro.params;
 const page = getPage(slug!)!;
 const isContact = slug === 'iletisim';
 const showDevelopedApps = slug === 'aplikasyonlar';
+const showStoicPhilosophers = slug === 'stoacilik';
 ---
 
 <SiteLayout
@@ -36,6 +38,7 @@ const showDevelopedApps = slug === 'aplikasyonlar';
     image={page.hero.image}
     compactTop
   />
+  {showStoicPhilosophers && <StoicPhilosophers />}
   <DetailContent
     blocks={page.blocks}
     highlights={page.highlights}
