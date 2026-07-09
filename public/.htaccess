@@ -5,14 +5,21 @@
 RewriteEngine On
 RewriteBase /
 
-# HTTPS (Hostinger SSL aktifse — isteğe bağlı, sorun olursa yorum satırı yapın)
-# RewriteCond %{HTTPS} off
-# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# Canonical host: www -> non-www (her zaman)
+RewriteCond %{HTTP_HOST} ^www\.yigitcilli\.com$ [NC]
+RewriteRule ^ https://yigitcilli.com%{REQUEST_URI} [L,R=301]
+
+# HTTPS zorunlu (proxy/CDN arkasında X-Forwarded-Proto desteğiyle)
+RewriteCond %{HTTP_HOST} ^yigitcilli\.com$ [NC]
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !https
+RewriteRule ^ https://yigitcilli.com%{REQUEST_URI} [L,R=301]
 
 # WordPress kalıntıları → ana site haritası veya ana sayfa
 RewriteRule ^wp-admin - [F,L]
 RewriteRule ^wp-login\.php - [F,L]
 RewriteRule ^wp-content/ - [F,L]
+RewriteRule ^wp-content$ - [F,L]
 RewriteRule ^xmlrpc\.php - [F,L]
 
 RewriteRule ^post-sitemap\.xml$ /sitemap.xml [R=301,L]
@@ -35,6 +42,10 @@ RewriteRule ^(.*)$ /$1/ [R=301,L]
 
 # Önbellek ve sıkıştırma (Hostinger genelde etkin)
 <IfModule mod_headers.c>
+  <FilesMatch "\.(html?)$">
+    Header set Cache-Control "no-cache, max-age=0, must-revalidate"
+  </FilesMatch>
+
   <FilesMatch "\.(webp|png|jpg|jpeg|svg|css|js|woff2)$">
     Header set Cache-Control "public, max-age=31536000, immutable"
   </FilesMatch>
