@@ -1,6 +1,7 @@
 ---
 import '@/styles/global.css';
 import { site } from '@/config/site';
+import SitePreloader from '@/components/SitePreloader.astro';
 
 interface Props {
   title?: string;
@@ -62,6 +63,24 @@ const ogImageUrl = new URL(ogImage, site.url).href;
 
     <link rel="icon" type="image/png" href="/images/falcon-logo.png" />
     <link rel="apple-touch-icon" href="/images/falcon-logo.png" />
+    <link
+      rel="preload"
+      as="image"
+      href="/images/loading/stoic-preloader.webp"
+      type="image/webp"
+      fetchpriority="high"
+    />
+    <script is:inline>
+      {`(function () {
+  var showPreloader = true;
+  try {
+    showPreloader = sessionStorage.getItem('yc-preloader-v1') !== '1';
+  } catch (_) {}
+  if (showPreloader) {
+    document.documentElement.classList.add('preloader-active');
+  }
+})();`}
+    </script>
     {
       heroOpening && (
         <>
@@ -101,6 +120,7 @@ const ogImageUrl = new URL(ogImage, site.url).href;
     }
   </head>
   <body class:list={[heroOpening && 'has-hero-opening']}>
+    <SitePreloader />
     <slot />
     <script is:inline>
       document.documentElement.classList.add('reveal-js');

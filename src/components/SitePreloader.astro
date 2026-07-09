@@ -1,0 +1,111 @@
+<div class="site-preloader" data-site-preloader aria-hidden="true">
+  <div class="site-preloader__inner">
+    <img
+      src="/images/loading/stoic-preloader.webp"
+      alt="Stoacılık temalı yükleme ekranı"
+      width="1024"
+      height="1536"
+      decoding="async"
+      fetchpriority="high"
+    />
+  </div>
+</div>
+
+<script is:inline>
+  (function () {
+    var root = document.documentElement;
+    var preloader = document.querySelector('[data-site-preloader]');
+    if (!preloader || !root.classList.contains('preloader-active')) return;
+
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var finished = false;
+    var fadeDuration = reducedMotion ? 0 : 420;
+
+    var complete = function () {
+      if (finished) return;
+      finished = true;
+      preloader.classList.add('is-done');
+      root.classList.remove('preloader-active');
+      root.classList.add('preloader-done');
+      try {
+        sessionStorage.setItem('yc-preloader-v1', '1');
+      } catch (_) {}
+      window.setTimeout(function () {
+        preloader.setAttribute('hidden', 'true');
+      }, fadeDuration + 40);
+    };
+
+    var onLoaded = function () {
+      if (!reducedMotion) {
+        preloader.classList.add('is-fading');
+      }
+      complete();
+    };
+
+    if (document.readyState === 'complete') {
+      onLoaded();
+    } else {
+      window.addEventListener('load', onLoaded, { once: true });
+      window.setTimeout(onLoaded, 2200);
+    }
+  })();
+</script>
+
+<style>
+  .site-preloader {
+    position: fixed;
+    inset: 0;
+    z-index: 220;
+    display: grid;
+    place-items: center;
+    padding: clamp(1rem, 4vw, 2rem);
+    background: #05060a;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 420ms var(--ease-out), visibility 420ms var(--ease-out);
+  }
+
+  :global(html.preloader-active) .site-preloader {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  :global(html.preloader-active),
+  :global(html.preloader-active body) {
+    overflow: hidden;
+  }
+
+  .site-preloader__inner {
+    width: min(21rem, 88vw);
+    max-height: 88vh;
+    display: grid;
+    place-items: center;
+  }
+
+  .site-preloader__inner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 88vh;
+    object-fit: contain;
+    object-position: center;
+    filter: saturate(0.96) contrast(1.01);
+  }
+
+  .site-preloader.is-fading {
+    opacity: 0;
+  }
+
+  .site-preloader.is-done {
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .site-preloader {
+      transition: none;
+    }
+  }
+</style>

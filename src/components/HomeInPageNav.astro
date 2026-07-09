@@ -3,6 +3,9 @@ import { homeNavAnchors } from '@/data/home';
 ---
 
 <nav class="home-nav" aria-label="Sayfa içi gezinme">
+  <div class="home-nav__progress" aria-hidden="true">
+    <span class="home-nav__progress-bar" data-scroll-progress></span>
+  </div>
   <div class="container">
     <ul class="home-nav__list" role="list">
       {
@@ -18,6 +21,32 @@ import { homeNavAnchors } from '@/data/home';
   </div>
 </nav>
 
+<script>
+  const progressBar = document.querySelector<HTMLElement>('[data-scroll-progress]');
+  if (progressBar && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let ticking = false;
+
+    const updateProgress = () => {
+      const doc = document.documentElement;
+      const maxScroll = doc.scrollHeight - window.innerHeight;
+      const ratio = maxScroll > 0 ? Math.min(Math.max(window.scrollY / maxScroll, 0), 1) : 0;
+      progressBar.style.transform = `scaleX(${ratio})`;
+      ticking = false;
+    };
+
+    const onScroll = () => {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(updateProgress);
+      }
+    };
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    updateProgress();
+  }
+</script>
+
 <style>
   .home-nav {
     position: sticky;
@@ -26,6 +55,22 @@ import { homeNavAnchors } from '@/data/home';
     border-bottom: 1px solid var(--color-border);
     background: rgba(5, 6, 10, 0.92);
     backdrop-filter: blur(10px);
+  }
+
+  .home-nav__progress {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+  }
+
+  .home-nav__progress-bar {
+    display: block;
+    width: 100%;
+    height: 100%;
+    transform-origin: left center;
+    transform: scaleX(0);
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-soft));
+    box-shadow: 0 0 18px rgba(90, 125, 168, 0.25);
   }
 
   .home-nav__list {
