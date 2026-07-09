@@ -26,6 +26,7 @@ const {
 } = Astro.props;
 
 const resolvedOgDescription = ogDescription ?? site.ogDescription ?? description;
+const isHomePage = Astro.url.pathname === '/';
 
 const ogImageUrl = new URL(ogImage, site.url).href;
 ---
@@ -63,24 +64,28 @@ const ogImageUrl = new URL(ogImage, site.url).href;
 
     <link rel="icon" type="image/png" href="/images/falcon-logo.png" />
     <link rel="apple-touch-icon" href="/images/falcon-logo.png" />
-    <link
-      rel="preload"
-      as="image"
-      href="/images/loading/stoic-preloader.webp"
-      type="image/webp"
-      fetchpriority="high"
-    />
-    <script is:inline>
-      {`(function () {
+    {
+      isHomePage && (
+        <script is:inline>
+          {`(function () {
   var showPreloader = true;
   try {
     showPreloader = sessionStorage.getItem('yc-preloader-v1') !== '1';
   } catch (_) {}
+  var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection;
+  var saveData = !!(conn && conn.saveData);
+  var slowNetwork = !!(conn && /(2g|slow-2g)/i.test(conn.effectiveType || ''));
+  var mobileViewport = window.matchMedia('(max-width: 900px)').matches;
+  if (saveData || slowNetwork || mobileViewport) {
+    showPreloader = false;
+  }
   if (showPreloader) {
     document.documentElement.classList.add('preloader-active');
   }
 })();`}
-    </script>
+        </script>
+      )
+    }
     {
       heroOpening && (
         <>
@@ -120,7 +125,7 @@ const ogImageUrl = new URL(ogImage, site.url).href;
     }
   </head>
   <body class:list={[heroOpening && 'has-hero-opening']}>
-    <SitePreloader />
+    {isHomePage && <SitePreloader />}
     <slot />
     <script is:inline>
       document.documentElement.classList.add('reveal-js');

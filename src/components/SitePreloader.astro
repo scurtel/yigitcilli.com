@@ -6,7 +6,7 @@
       width="1024"
       height="1536"
       decoding="async"
-      fetchpriority="high"
+      fetchpriority="auto"
     />
   </div>
 </div>
@@ -19,7 +19,7 @@
 
     var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     var finished = false;
-    var fadeDuration = reducedMotion ? 0 : 420;
+    var fadeDuration = reducedMotion ? 0 : 260;
 
     var complete = function () {
       if (finished) return;
@@ -42,11 +42,16 @@
       complete();
     };
 
+    // Let first paint happen, then clear preloader quickly.
+    window.requestAnimationFrame(function () {
+      window.requestAnimationFrame(onLoaded);
+    });
+
     if (document.readyState === 'complete') {
       onLoaded();
     } else {
       window.addEventListener('load', onLoaded, { once: true });
-      window.setTimeout(onLoaded, 2200);
+      window.setTimeout(onLoaded, 900);
     }
   })();
 </script>
@@ -63,7 +68,7 @@
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
-    transition: opacity 420ms var(--ease-out), visibility 420ms var(--ease-out);
+    transition: opacity 260ms var(--ease-out), visibility 260ms var(--ease-out);
   }
 
   :global(html.preloader-active) .site-preloader {
