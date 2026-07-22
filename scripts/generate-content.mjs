@@ -105,16 +105,26 @@ Her section için 2-4 highlight maddesi. cta sadece anlamlıysa ekle, yoksa null
 
 const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
 
+const searchEnabled = process.env.GEMINI_GOOGLE_SEARCH_ENABLED === 'true';
+const generationConfig = {
+  temperature: 0.7,
+};
+if (!searchEnabled) {
+  generationConfig.responseMimeType = 'application/json';
+}
+
+const requestBody = {
+  contents: [{ parts: [{ text: prompt }] }],
+  generationConfig,
+};
+if (searchEnabled) {
+  requestBody.tools = [{ google_search: {} }];
+}
+
 const response = await fetch(url, {
   method: 'POST',
   headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    contents: [{ parts: [{ text: prompt }] }],
-    generationConfig: {
-      temperature: 0.7,
-      responseMimeType: 'application/json',
-    },
-  }),
+  body: JSON.stringify(requestBody),
 });
 
 if (!response.ok) {
@@ -131,6 +141,18 @@ if (!text) {
   process.exit(1);
 }
 
+function extractGroundingSources(apiData) {
+  const gm = apiData?.candidates?.[0]?.groundingMetadata;
+  if (!gm?.groundingChunks?.length) return null;
+  const sources = gm.groundingChunks
+    .map((chunk) => ({
+      title: chunk.web?.title || chunk.retrievedContext?.title || null,
+      url: chunk.web?.uri || chunk.retrievedContext?.uri || null,
+    }))
+    .filter((s) => s.url);
+  return sources.length ? sources : null;
+}
+
 let content;
 try {
   content = JSON.parse(text);
@@ -141,6 +163,11 @@ try {
     process.exit(1);
   }
   content = JSON.parse(match[0]);
+}
+
+const groundingSources = extractGroundingSources(data);
+if (groundingSources) {
+  content.groundingSources = groundingSources;
 }
 
 const imageMap = {

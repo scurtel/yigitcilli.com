@@ -220,16 +220,23 @@ JSON şeması (markdown yok):
 blocks: en az 4 section, her section 2-3 paragraf. faq: 3-4 soru. Paragraflarda doğal anahtar kelime; iç linkleri metin içinde de anabilirsin ama relatedLinks zorunlu.`;
 
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${encodeURIComponent(apiKey)}`;
+  const searchEnabled = process.env.GEMINI_GOOGLE_SEARCH_ENABLED === 'true';
+  const generationConfig = { temperature: 0.65 };
+  if (!searchEnabled) {
+    generationConfig.responseMimeType = 'application/json';
+  }
+  const requestBody = {
+    contents: [{ parts: [{ text: prompt }] }],
+    generationConfig,
+  };
+  if (searchEnabled) {
+    requestBody.tools = [{ google_search: {} }];
+  }
+
   const response = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.65,
-        responseMimeType: 'application/json',
-      },
-    }),
+    body: JSON.stringify(requestBody),
   });
 
   if (!response.ok) {
@@ -240,7 +247,18 @@ blocks: en az 4 section, her section 2-3 paragraf. faq: 3-4 soru. Paragraflarda 
   const text = data.candidates?.[0]?.content?.parts?.[0]?.text;
   if (!text) throw new Error(`Gemini boş yanıt: ${slug}`);
 
-  return parseGeminiJson(text, slug);
+  const parsed = parseGeminiJson(text, slug);
+  const gm = data?.candidates?.[0]?.groundingMetadata;
+  if (gm?.groundingChunks?.length) {
+    const sources = gm.groundingChunks
+      .map((chunk) => ({
+        title: chunk.web?.title || chunk.retrievedContext?.title || null,
+        url: chunk.web?.uri || chunk.retrievedContext?.uri || null,
+      }))
+      .filter((s) => s.url);
+    if (sources.length) parsed.groundingSources = sources;
+  }
+  return parsed;
 }
 
 function parseGeminiJson(text, slug) {
